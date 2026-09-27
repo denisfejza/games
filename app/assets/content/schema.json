@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pip's World content",
+  "description": "Files under assets/content/worlds/ must match #/$defs/world; files under assets/content/games/ must match #/$defs/game.",
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9_]+(\\.[a-z0-9_]+)*$" },
+    "key": { "type": "string", "pattern": "^[a-z][a-zA-Z0-9_.]*$" },
+    "ageBand": { "enum": ["2-3", "4-5", "6-7"] },
+    "ageBands": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ageBand" },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "pillar": {
+      "description": "CLAUDE.md: every game scores at least 2 (of 3) on each pillar before shipping.",
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 3
+    },
+    "world": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "order", "titleKey", "icon", "ageBands"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "order": { "type": "integer", "minimum": 1 },
+        "titleKey": { "$ref": "#/$defs/key" },
+        "icon": { "type": "string" },
+        "ageBands": { "$ref": "#/$defs/ageBands" }
+      }
+    },
+    "game": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "world", "level", "game", "ageBands", "skills", "params", "pillars", "offscreen"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "world": { "$ref": "#/$defs/id" },
+        "level": { "type": "integer", "minimum": 1 },
+        "game": {
+          "enum": [
+            "sound_match",
+            "drag_to_target",
+            "tap_count",
+            "trace_path",
+            "pairs_memory",
+            "sequence_pattern",
+            "sort_bins",
+            "blend_tiles"
+          ]
+        },
+        "ageBands": { "$ref": "#/$defs/ageBands" },
+        "skills": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "curriculum": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "eyfs": { "type": "array", "items": { "type": "string" } },
+            "ccss": { "type": "array", "items": { "type": "string" } },
+            "al": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "params": { "type": "object" },
+        "difficulty": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["raiseAfter", "lowerAfter", "steps"],
+          "properties": {
+            "raiseAfter": { "type": "integer", "minimum": 1 },
+            "lowerAfter": { "type": "integer", "minimum": 1 },
+            "steps": { "type": "array", "items": { "type": "object" }, "minItems": 1 }
+          }
+        },
+        "pillars": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["active", "engaged", "meaningful", "social"],
+          "properties": {
+            "active": { "$ref": "#/$defs/pillar" },
+            "engaged": { "$ref": "#/$defs/pillar" },
+            "meaningful": { "$ref": "#/$defs/pillar" },
+            "social": { "$ref": "#/$defs/pillar" }
+          }
+        },
+        "offscreen": { "type": "string", "pattern": "^offscreen\\.[a-z0-9_]+$" }
+      }
+    }
+  }
+}

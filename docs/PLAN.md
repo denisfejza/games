@@ -1,3 +1,6 @@
+> **Superseded** by [`/PLAN.md`](../PLAN.md) and [`/CLAUDE.md`](../CLAUDE.md) (Pip's World, Flutter). Kept for history;
+> the TypeScript prototype it describes is still in `apps/` and `packages/`.
+
 # Children's Games — Project Plan
 
 ## Goals

@@ -18,20 +18,26 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: subosito/flutter-action@v2
         with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run typecheck
-      - run: npm test
-      - run: npm run build
+          channel: stable
+          flutter-version: 3.47.5
+          cache: true
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test
+      # Web preview of the app. --no-web-resources-cdn keeps the renderer on our own site;
+      # PIP_DEBUG_MENU shows the (gated) settings button for testers.
+      - run: flutter build web --release --no-web-resources-cdn --base-href /games/ --dart-define=PIP_DEBUG_MENU=true
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
         with:
-          path: dist
+          path: app/build/web
 
   deploy:
     # PRs only build and test; main publishes to GitHub Pages.

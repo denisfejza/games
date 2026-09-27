@@ -1,33 +1,37 @@
-# games
+# Pip's World
 
-Kid-safe games for ages 3–7, in English and Albanian (Shqip). They run in the
-browser (hosted on GitHub Pages) and will also be packaged as Android/iOS apps.
+Learning games for children aged 2–7 in Albanian and English, guided by Pip the fox.
+Built with Flutter for Android, iOS and the web. The web build is hosted on GitHub Pages.
 
-- Plan: [docs/PLAN.md](docs/PLAN.md)
-- Live site (after the first deploy): https://denisfejza.github.io/games/
-
-## Games
-
-| Game | Folder | Status |
-| --- | --- | --- |
-| Animal Memory / Kujtesa e Kafshëve | `apps/memory-match` | Playable (placeholder art) |
+- Product rules and stack: [CLAUDE.md](CLAUDE.md)
+- Build plan and progress: [PLAN.md](PLAN.md)
+- Decisions: [docs/adr/](docs/adr/) · Dependencies: [docs/DEPENDENCIES.md](docs/DEPENDENCIES.md) · Changelog: [docs/CHANGELOG.md](docs/CHANGELOG.md)
+- Web preview (after the first deploy): https://denisfejza.github.io/games/
 
 ## Development
 
-Requires Node 22+.
+Requires Flutter 3.47 (stable). All commands run in `app/`:
 
 ```sh
-npm install
-npm run dev          # play Animal Memory at http://localhost:5173
-npm run dev:launcher # the games home page
-npm test             # unit tests (game logic, i18n)
-npm run typecheck
-npm run build        # everything into dist/ (what GitHub Pages serves)
-npm run preview      # serve dist/ locally
+cd app
+flutter pub get
+flutter run -d chrome        # or an Android/iOS device
+flutter analyze
+flutter test                 # unit, widget and golden tests
+flutter test --update-goldens  # after an intended visual change (render on Linux)
+dart run build_runner build  # after changing lib/core/storage/database.dart
+flutter build web --release --no-web-resources-cdn --base-href /games/
 ```
+
+Adding content: drop a JSON file in `app/assets/content/games/<world>/` that matches
+`app/assets/content/schema.json`. A new folder also needs a line under `assets:` in `app/pubspec.yaml`.
 
 ## Deploying
 
-Every push to `main` builds and publishes `dist/` to GitHub Pages
-(`.github/workflows/deploy.yml`). One-time setup: **Settings → Pages →
-Build and deployment → Source: GitHub Actions**.
+Every push to `main` runs analyze, tests and the web build, then publishes to GitHub Pages
+(`.github/workflows/deploy.yml`). One-time setup: **Settings → Pages → Source: GitHub Actions**.
+
+## Earlier prototype
+
+`apps/`, `packages/` and the root `package.json` hold the first TypeScript/Phaser prototype
+(Animal Memory). It's no longer built or deployed; `pairs_memory` (PLAN 2.5) replaces it.
