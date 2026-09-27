@@ -14,9 +14,9 @@ class ContentSchema {
 
   /// Returns human-readable errors; empty when [json] is valid.
   List<String> validate(ContentKind kind, Object? json) => [
-        for (final e in _schemas[kind]!.validate(json).errors)
-          '${e.instancePath.isEmpty ? '/' : e.instancePath}: ${e.message}',
-      ];
+    for (final e in _schemas[kind]!.validate(json).errors)
+      '${e.instancePath.isEmpty ? '/' : e.instancePath}: ${e.message}',
+  ];
 }
 
 /// Kinds of content file; each name matches a `$defs` entry in schema.json.

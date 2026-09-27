@@ -1,26 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../app/providers.dart';
 import '../app/ui/caption_bar.dart';
-import '../app/ui/palm_rejecting_gesture_detector.dart';
-import '../companion/pip_placeholder.dart';
+import '../companion/pip_view.dart';
 
 const groundHeight = 84.0;
 const _groundColor = Color(0xFFFF4F6D);
 
 /// Wavy ground along the bottom of a screen, with Pip standing on the left
-/// and the caption bar next to him. Tapping Pip repeats his greeting.
-class GroundWithPip extends ConsumerWidget {
-  const GroundWithPip({super.key, this.pipSize = 110, this.pipLine = 'helloPip'});
+/// (poke him: he names the body part) and the caption bar next to him.
+class GroundWithPip extends StatelessWidget {
+  const GroundWithPip({super.key, this.pipSize = 110});
 
+  /// Pip's height.
   final double pipSize;
 
-  /// Narration key Pip says when tapped.
-  final String pipLine;
-
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final bottom = MediaQuery.paddingOf(context).bottom;
     return SizedBox(
       height: groundHeight + 24 + bottom + (pipSize - 90).clamp(0, 40),
@@ -36,14 +31,7 @@ class GroundWithPip extends ConsumerWidget {
           Positioned(
             left: 12,
             bottom: 8 + bottom,
-            child: PalmRejectingGestureDetector(
-              onTap: () => ref.read(audioServiceProvider).say(pipLine, interrupt: true),
-              child: Semantics(
-                label: 'Pip',
-                button: true,
-                child: PipPlaceholder(size: pipSize),
-              ),
-            ),
+            child: PokeablePip(width: pipSize / 1.2, feedable: false),
           ),
           Positioned(
             left: pipSize + 20,

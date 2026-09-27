@@ -72,15 +72,6 @@ class AppLocalizationsSq extends AppLocalizations {
   String get gateCancel => 'Anulo';
 
   @override
-  String get debugMenu => 'Cilësimet';
-
-  @override
-  String get debugLanguage => 'Gjuha';
-
-  @override
-  String get debugAgeBand => 'Mosha';
-
-  @override
   String get languageEnglish => 'English';
 
   @override
@@ -439,4 +430,113 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get shapeDiamond => 'Romb';
+
+  @override
+  String get parentTitle => 'Për të rriturit';
+
+  @override
+  String get parentLanguage => 'Gjuha';
+
+  @override
+  String get parentAgeBand => 'Mosha';
+
+  @override
+  String get pipBelly => 'Bark';
+
+  @override
+  String get pipTickle => 'Hi hi! Më gudulis!';
+
+  @override
+  String get pipYum => 'Mmm! Faleminderit!';
+
+  @override
+  String get pipHmm => 'Hmm, le ta shohim përsëri.';
+
+  @override
+  String get episodeIntro => 'Hajde të luajmë bashkë!';
+
+  @override
+  String get companionClap => 'Duartrokit me Pipin!';
+
+  @override
+  String get companionThanks => 'Urra! Je shok i mrekullueshëm.';
+
+  @override
+  String get offscreenIntro => 'Tani një lojë larg ekranit!';
+
+  @override
+  String get offscreenDone => 'E bëmë!';
+
+  @override
+  String get episodeDone => 'Mbaruam! Luajte shumë bukur.';
+
+  @override
+  String get levelNotYet => 'Le ta luajmë këtë më parë!';
+
+  @override
+  String get bedtimePipSleepy => 'Pipit po i vjen gjumë. Është koha për pushim!';
+
+  @override
+  String get bedtimeAllDone => 'Mbaruam për sot';
+
+  @override
+  String get talkBackPrompt => 'Thuaji diçka Pipit!';
+
+  @override
+  String parentExtraTime(int minutes) {
+    return '+$minutes minuta sot';
+  }
+
+  @override
+  String get parentDailyLimit => 'Koha e lojës në ditë';
+
+  @override
+  String get parentLimitOff => 'Pa kufi';
+
+  @override
+  String parentMinutes(int minutes) {
+    return '$minutes min';
+  }
+
+  @override
+  String parentPlayedToday(int minutes) {
+    return 'Luajti sot: $minutes min';
+  }
+
+  @override
+  String get parentSound => 'Zëri';
+
+  @override
+  String get parentCaptions => 'Titrat';
+
+  @override
+  String get parentReducedMotion => 'Më pak lëvizje';
+
+  @override
+  String get parentMicrophone => 'Mikrofoni (Pipi përsërit)';
+
+  @override
+  String get parentMicHelp =>
+      'Pipi përsërit me zë qesharak atë që thotë fëmija. Zëri nuk ruhet dhe nuk dërgohet askund.';
+
+  @override
+  String get parentMicUnavailable => 'Ende nuk funksionon në këtë pajisje.';
+
+  @override
+  String get parentMicDenied => 'Leja për mikrofonin nuk u dha. Mund ta ndryshoni te cilësimet e pajisjes.';
+
+  @override
+  String get parentPipDemo => 'Demo e Pipit (për provë)';
+
+  @override
+  String get praiseGreat => 'Shumë mirë!';
+
+  @override
+  String get praiseWellDone => 'Të lumtë!';
+
+  @override
+  String get praiseYouDidIt => 'Ia dole!';
+
+  @override
+  String get praiseSuper => 'Super!';
 }

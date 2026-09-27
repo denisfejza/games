@@ -20,8 +20,12 @@ class AudioplayersBackend implements AudioBackend {
   Future<Set<String>>? _available;
 
   /// Bundled audio files, so missing recordings are skipped without a failed request.
-  Future<Set<String>> get _assets => _available ??= AssetManifest.loadFromAssetBundle(_bundle)
-      .then((m) => {for (final a in m.listAssets()) if (a.startsWith('assets/audio/')) a.substring(7)});
+  Future<Set<String>> get _assets => _available ??= AssetManifest.loadFromAssetBundle(_bundle).then(
+    (m) => {
+      for (final a in m.listAssets())
+        if (a.startsWith('assets/audio/')) a.substring(7),
+    },
+  );
 
   @override
   Future<bool> playNarration(String assetPath) async {

@@ -12,6 +12,7 @@ class PalmRejectingGestureDetector extends StatefulWidget {
     super.key,
     required this.child,
     this.onTap,
+    this.onTapAt,
     this.onTapDown,
     this.onTapCancel,
     this.debounce = const Duration(milliseconds: 300),
@@ -21,6 +22,9 @@ class PalmRejectingGestureDetector extends StatefulWidget {
 
   final Widget child;
   final VoidCallback? onTap;
+
+  /// Like [onTap], with where the finger went down (local coordinates).
+  final ValueChanged<Offset>? onTapAt;
   final VoidCallback? onTapDown;
   final VoidCallback? onTapCancel;
   final Duration debounce;
@@ -39,6 +43,7 @@ class _PalmRejectingGestureDetectorState extends State<PalmRejectingGestureDetec
   final Set<int> _down = {};
   int? _candidate;
   Offset _start = Offset.zero;
+  Offset _startLocal = Offset.zero;
   DateTime? _lastTap;
 
   void _cancel() {
@@ -53,6 +58,7 @@ class _PalmRejectingGestureDetectorState extends State<PalmRejectingGestureDetec
     if (e.radiusMajor > widget.maxContactRadius) return;
     _candidate = e.pointer;
     _start = e.position;
+    _startLocal = e.localPosition;
     widget.onTapDown?.call();
   }
 
@@ -72,6 +78,7 @@ class _PalmRejectingGestureDetectorState extends State<PalmRejectingGestureDetec
     }
     _lastTap = now;
     widget.onTap?.call();
+    widget.onTapAt?.call(_startLocal);
   }
 
   void _onCancel(PointerCancelEvent e) {

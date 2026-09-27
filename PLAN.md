@@ -41,26 +41,32 @@ Configure `en` and `sq` locales with ARB files; add a rounded child-friendly fon
 **1.1 Pip Rive integration**
 Load `assets/rive/pip.riv` with a state machine: `idle, listening, talking, happy, thinking, sleepy, celebrate`. `PipController` maps game events → inputs. Placeholder .riv with simple shapes until the artist delivers.
 - ✅ Demo screen cycles all states; talking state lip-flaps from audio amplitude.
+> ✔ Done 2026-09-27 with placeholder art: `PipController` + drawn fox; `RivePip` binds `mood`/`mouth` view-model numbers once `assets/rive/pip.riv` exists (spec: docs/PIP_RIVE_SPEC.md). Lip-flap is timed, not amplitude-driven, until recordings exist (TODO(asset)). Demo: parent area → Pip demo.
 
 **1.2 Poke & react**
 Tap Pip's nose/ears/belly/feet → named body part narration + reaction. Tickle = fast repeated taps → giggle. Feed = drag an item to mouth.
 - ✅ Every tap responds < 100 ms; body-part names come from ARB + audio keys.
+> ✔ Done 2026-09-27. Nose/ears/belly/feet/hands/mouth named from ARB + audio keys; 3 quick belly taps = tickle; drag food onto Pip to feed. Visual + sound response on the same frame as the tap.
 
 **1.3 Talk-back (mic)**
 Native plugin: record to memory buffer, pitch-shift +6 semitones, play back, discard buffer. Voice-activity detection exposes `onChildSpoke`. Permission is requested only via the parent area.
 - ✅ No file written to disk (test asserts); app works with permission denied; buffer cleared after playback.
+> ◐ Dart logic + web implementation done 2026-09-27 (VAD, +6 st playback, buffer discarded after playback, test asserts no file access, works with mic off/denied; permission only from the parent area). **Native Kotlin/Swift plugin not built yet** — Android/iOS report "not available".
 
 **1.4 World map (main menu)**
 Scrollable map with big world icons: Animals, Numbers, Letters, Shapes & Colours, Board Games, Pip's House. Pip narrates each world on first tap; second tap enters. Locked worlds show only as "coming soon" in the parent area, never as padlocks on the map.
 - ✅ Map usable with no text; works in both locales; golden tests at 3 age-band themes.
+> ✔ Done 2026-09-27: colour-stripe map, first tap names, second enters; goldens for all 3 age bands × en/sq. Not a scrolling illustrated map yet (needs art).
 
 **1.5 Level select + episode runner**
 Level path inside a world (1…N), stars per level, `EpisodeRunner` that plays: intro (Pip) → 3–5 games → companion moment → off-screen challenge → wind-down/stop screen. No autoplay into the next level.
 - ✅ Integration test runs a full episode with stub games and records mastery.
+> ✔ Done 2026-09-27: level path with stars, unlock by mastery (≥ 80% independent, min 5 rounds — TODO(pedagogy)), `EpisodeScreen` runs intro → 3–5 games → companion → off-screen → wind-down; integration test with stub games.
 
 **1.6 Wind-down + parent timer**
 Parent-set daily limit; at the limit Pip yawns and goes to bed; a friendly "all done" screen. No nagging.
 - ✅ Timer persists across restarts; child cannot dismiss without the gate.
+> ✔ Done 2026-09-27: daily limit in the parent area, counted while the app is in front, persisted per day; bedtime screen blocks play (back can't close it) until a grown-up passes the gate (+10/+30 min or settings). During an episode it waits for the wind-down.
 
 ---
 

@@ -2,8 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'app/app.dart';
+import 'app/providers.dart';
+import 'core/storage/database.dart';
+import 'core/storage/settings_store.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const ProviderScope(child: PipsWorldApp()));
+  final db = AppDatabase();
+  final settings = await DriftSettingsStore(db).loadAll();
+  runApp(
+    ProviderScope(
+      overrides: [databaseProvider.overrideWithValue(db), initialSettingsProvider.overrideWithValue(settings)],
+      child: const PipsWorldApp(),
+    ),
+  );
 }

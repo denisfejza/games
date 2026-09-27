@@ -36,9 +36,6 @@
   "gateTryAgain": "Not quite. Here is a new number.",
   "gateDelete": "Delete",
   "gateCancel": "Cancel",
-  "debugMenu": "Settings",
-  "debugLanguage": "Language",
-  "debugAgeBand": "Age band",
   "languageEnglish": "English",
   "languageAlbanian": "Shqip",
   "vocabCow": "Cow",
@@ -158,5 +155,60 @@
   "shapeStar": "Star",
   "shapeHeart": "Heart",
   "shapeOval": "Oval",
-  "shapeDiamond": "Diamond"
+  "shapeDiamond": "Diamond",
+  "parentTitle": "For grown-ups",
+  "parentLanguage": "Language",
+  "parentAgeBand": "Age band",
+  "pipBelly": "Belly",
+  "pipTickle": "Hee hee! That tickles!",
+  "pipYum": "Mmm! Thank you!",
+  "pipHmm": "Hmm, let's look again.",
+  "episodeIntro": "Let's play together!",
+  "companionClap": "Clap with Pip!",
+  "companionThanks": "Yay! You're a great friend.",
+  "offscreenIntro": "Now a game away from the screen!",
+  "offscreenDone": "We did it!",
+  "episodeDone": "All done! You played so well.",
+  "levelNotYet": "Let's play this one first!",
+  "bedtimePipSleepy": "Pip is getting sleepy. Time to rest!",
+  "bedtimeAllDone": "All done for today",
+  "talkBackPrompt": "Say something to Pip!",
+  "parentExtraTime": "+{minutes} minutes today",
+  "@parentExtraTime": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "parentDailyLimit": "Daily play time",
+  "parentLimitOff": "No limit",
+  "parentMinutes": "{minutes} min",
+  "@parentMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "parentPlayedToday": "Played today: {minutes} min",
+  "@parentPlayedToday": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "parentSound": "Sound",
+  "parentCaptions": "Captions",
+  "parentReducedMotion": "Less motion",
+  "parentMicrophone": "Microphone (Pip repeats)",
+  "parentMicHelp": "Pip repeats what your child says in a funny voice. The sound is never saved or sent anywhere.",
+  "parentMicUnavailable": "Not available on this device yet.",
+  "parentMicDenied": "Microphone permission was not given. You can change it in the device settings.",
+  "parentPipDemo": "Pip demo (for testing)",
+  "praiseGreat": "Great job!",
+  "praiseWellDone": "Well done!",
+  "praiseYouDidIt": "You did it!",
+  "praiseSuper": "Super!"
 }

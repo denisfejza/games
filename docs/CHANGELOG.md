@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- Phase 1: Pip companion (moods, event mapping, placeholder full-body fox, Rive adapter per docs/PIP_RIVE_SPEC.md,
+  lip-flap while narrating); poke/tickle/feed reactions; talk-back (VAD, +6 semitone echo, in-memory only, web
+  implementation, native pending); level path with stars and mastery-based unlocks (faded, never padlocked);
+  episode runner (intro → games → companion → off-screen → wind-down); daily play limit with bedtime screen that only
+  a grown-up can dismiss; parent area replaces the debug menu; settings persist on the device.
+- Content foundations: vocab table (118 items), generated string lookup, PipEmoji placeholder font, placeholder
+  audio, recording script.
 - More colourful map: one patterned colour stripe per world, sticker-style world tiles with drawn pictures,
   ribbon title, wavy ground with a placeholder Pip (tap him to hear the greeting); world screens use their
   world's colour. Glossy `BigButton`, new sticker style; goldens regenerated.

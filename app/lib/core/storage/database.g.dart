@@ -608,15 +608,408 @@ class ProfileRowsCompanion extends UpdateCompanion<ProfileRow> {
   }
 }
 
+class $SettingRowsTable extends SettingRows with TableInfo<$SettingRowsTable, SettingRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $SettingRowsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _keyMeta = const VerificationMeta('key');
+  @override
+  late final GeneratedColumn<String> key = GeneratedColumn<String>(
+    'key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _valueMeta = const VerificationMeta('value');
+  @override
+  late final GeneratedColumn<String> value = GeneratedColumn<String>(
+    'value',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [key, value];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'setting_rows';
+  @override
+  VerificationContext validateIntegrity(Insertable<SettingRow> instance, {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('key')) {
+      context.handle(_keyMeta, key.isAcceptableOrUnknown(data['key']!, _keyMeta));
+    } else if (isInserting) {
+      context.missing(_keyMeta);
+    }
+    if (data.containsKey('value')) {
+      context.handle(_valueMeta, value.isAcceptableOrUnknown(data['value']!, _valueMeta));
+    } else if (isInserting) {
+      context.missing(_valueMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {key};
+  @override
+  SettingRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return SettingRow(
+      key: attachedDatabase.typeMapping.read(DriftSqlType.string, data['${effectivePrefix}key'])!,
+      value: attachedDatabase.typeMapping.read(DriftSqlType.string, data['${effectivePrefix}value'])!,
+    );
+  }
+
+  @override
+  $SettingRowsTable createAlias(String alias) {
+    return $SettingRowsTable(attachedDatabase, alias);
+  }
+}
+
+class SettingRow extends DataClass implements Insertable<SettingRow> {
+  final String key;
+  final String value;
+  const SettingRow({required this.key, required this.value});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['key'] = Variable<String>(key);
+    map['value'] = Variable<String>(value);
+    return map;
+  }
+
+  SettingRowsCompanion toCompanion(bool nullToAbsent) {
+    return SettingRowsCompanion(key: Value(key), value: Value(value));
+  }
+
+  factory SettingRow.fromJson(Map<String, dynamic> json, {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return SettingRow(key: serializer.fromJson<String>(json['key']), value: serializer.fromJson<String>(json['value']));
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{'key': serializer.toJson<String>(key), 'value': serializer.toJson<String>(value)};
+  }
+
+  SettingRow copyWith({String? key, String? value}) => SettingRow(key: key ?? this.key, value: value ?? this.value);
+  SettingRow copyWithCompanion(SettingRowsCompanion data) {
+    return SettingRow(
+      key: data.key.present ? data.key.value : this.key,
+      value: data.value.present ? data.value.value : this.value,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SettingRow(')
+          ..write('key: $key, ')
+          ..write('value: $value')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(key, value);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) || (other is SettingRow && other.key == this.key && other.value == this.value);
+}
+
+class SettingRowsCompanion extends UpdateCompanion<SettingRow> {
+  final Value<String> key;
+  final Value<String> value;
+  final Value<int> rowid;
+  const SettingRowsCompanion({
+    this.key = const Value.absent(),
+    this.value = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  SettingRowsCompanion.insert({required String key, required String value, this.rowid = const Value.absent()})
+    : key = Value(key),
+      value = Value(value);
+  static Insertable<SettingRow> custom({Expression<String>? key, Expression<String>? value, Expression<int>? rowid}) {
+    return RawValuesInsertable({
+      if (key != null) 'key': key,
+      if (value != null) 'value': value,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  SettingRowsCompanion copyWith({Value<String>? key, Value<String>? value, Value<int>? rowid}) {
+    return SettingRowsCompanion(key: key ?? this.key, value: value ?? this.value, rowid: rowid ?? this.rowid);
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (key.present) {
+      map['key'] = Variable<String>(key.value);
+    }
+    if (value.present) {
+      map['value'] = Variable<String>(value.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SettingRowsCompanion(')
+          ..write('key: $key, ')
+          ..write('value: $value, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $LevelProgressRowsTable extends LevelProgressRows with TableInfo<$LevelProgressRowsTable, LevelProgressRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $LevelProgressRowsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _levelMeta = const VerificationMeta('level');
+  @override
+  late final GeneratedColumn<String> level = GeneratedColumn<String>(
+    'level',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _starsMeta = const VerificationMeta('stars');
+  @override
+  late final GeneratedColumn<int> stars = GeneratedColumn<int>(
+    'stars',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _completedAtMeta = const VerificationMeta('completedAt');
+  @override
+  late final GeneratedColumn<DateTime> completedAt = GeneratedColumn<DateTime>(
+    'completed_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [level, stars, completedAt];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'level_progress_rows';
+  @override
+  VerificationContext validateIntegrity(Insertable<LevelProgressRow> instance, {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('level')) {
+      context.handle(_levelMeta, level.isAcceptableOrUnknown(data['level']!, _levelMeta));
+    } else if (isInserting) {
+      context.missing(_levelMeta);
+    }
+    if (data.containsKey('stars')) {
+      context.handle(_starsMeta, stars.isAcceptableOrUnknown(data['stars']!, _starsMeta));
+    } else if (isInserting) {
+      context.missing(_starsMeta);
+    }
+    if (data.containsKey('completed_at')) {
+      context.handle(_completedAtMeta, completedAt.isAcceptableOrUnknown(data['completed_at']!, _completedAtMeta));
+    } else if (isInserting) {
+      context.missing(_completedAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {level};
+  @override
+  LevelProgressRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return LevelProgressRow(
+      level: attachedDatabase.typeMapping.read(DriftSqlType.string, data['${effectivePrefix}level'])!,
+      stars: attachedDatabase.typeMapping.read(DriftSqlType.int, data['${effectivePrefix}stars'])!,
+      completedAt: attachedDatabase.typeMapping.read(DriftSqlType.dateTime, data['${effectivePrefix}completed_at'])!,
+    );
+  }
+
+  @override
+  $LevelProgressRowsTable createAlias(String alias) {
+    return $LevelProgressRowsTable(attachedDatabase, alias);
+  }
+}
+
+class LevelProgressRow extends DataClass implements Insertable<LevelProgressRow> {
+  /// `<world>.l<number>`, e.g. `animals.l1`.
+  final String level;
+  final int stars;
+  final DateTime completedAt;
+  const LevelProgressRow({required this.level, required this.stars, required this.completedAt});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['level'] = Variable<String>(level);
+    map['stars'] = Variable<int>(stars);
+    map['completed_at'] = Variable<DateTime>(completedAt);
+    return map;
+  }
+
+  LevelProgressRowsCompanion toCompanion(bool nullToAbsent) {
+    return LevelProgressRowsCompanion(level: Value(level), stars: Value(stars), completedAt: Value(completedAt));
+  }
+
+  factory LevelProgressRow.fromJson(Map<String, dynamic> json, {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return LevelProgressRow(
+      level: serializer.fromJson<String>(json['level']),
+      stars: serializer.fromJson<int>(json['stars']),
+      completedAt: serializer.fromJson<DateTime>(json['completedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'level': serializer.toJson<String>(level),
+      'stars': serializer.toJson<int>(stars),
+      'completedAt': serializer.toJson<DateTime>(completedAt),
+    };
+  }
+
+  LevelProgressRow copyWith({String? level, int? stars, DateTime? completedAt}) => LevelProgressRow(
+    level: level ?? this.level,
+    stars: stars ?? this.stars,
+    completedAt: completedAt ?? this.completedAt,
+  );
+  LevelProgressRow copyWithCompanion(LevelProgressRowsCompanion data) {
+    return LevelProgressRow(
+      level: data.level.present ? data.level.value : this.level,
+      stars: data.stars.present ? data.stars.value : this.stars,
+      completedAt: data.completedAt.present ? data.completedAt.value : this.completedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LevelProgressRow(')
+          ..write('level: $level, ')
+          ..write('stars: $stars, ')
+          ..write('completedAt: $completedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(level, stars, completedAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is LevelProgressRow &&
+          other.level == this.level &&
+          other.stars == this.stars &&
+          other.completedAt == this.completedAt);
+}
+
+class LevelProgressRowsCompanion extends UpdateCompanion<LevelProgressRow> {
+  final Value<String> level;
+  final Value<int> stars;
+  final Value<DateTime> completedAt;
+  final Value<int> rowid;
+  const LevelProgressRowsCompanion({
+    this.level = const Value.absent(),
+    this.stars = const Value.absent(),
+    this.completedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  LevelProgressRowsCompanion.insert({
+    required String level,
+    required int stars,
+    required DateTime completedAt,
+    this.rowid = const Value.absent(),
+  }) : level = Value(level),
+       stars = Value(stars),
+       completedAt = Value(completedAt);
+  static Insertable<LevelProgressRow> custom({
+    Expression<String>? level,
+    Expression<int>? stars,
+    Expression<DateTime>? completedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (level != null) 'level': level,
+      if (stars != null) 'stars': stars,
+      if (completedAt != null) 'completed_at': completedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  LevelProgressRowsCompanion copyWith({
+    Value<String>? level,
+    Value<int>? stars,
+    Value<DateTime>? completedAt,
+    Value<int>? rowid,
+  }) {
+    return LevelProgressRowsCompanion(
+      level: level ?? this.level,
+      stars: stars ?? this.stars,
+      completedAt: completedAt ?? this.completedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (level.present) {
+      map['level'] = Variable<String>(level.value);
+    }
+    if (stars.present) {
+      map['stars'] = Variable<int>(stars.value);
+    }
+    if (completedAt.present) {
+      map['completed_at'] = Variable<DateTime>(completedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LevelProgressRowsCompanion(')
+          ..write('level: $level, ')
+          ..write('stars: $stars, ')
+          ..write('completedAt: $completedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
   late final $SkillStatsRowsTable skillStatsRows = $SkillStatsRowsTable(this);
   late final $ProfileRowsTable profileRows = $ProfileRowsTable(this);
+  late final $SettingRowsTable settingRows = $SettingRowsTable(this);
+  late final $LevelProgressRowsTable levelProgressRows = $LevelProgressRowsTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables => allSchemaEntities.whereType<TableInfo<Table, Object?>>();
   @override
-  List<DatabaseSchemaEntity> get allSchemaEntities => [skillStatsRows, profileRows];
+  List<DatabaseSchemaEntity> get allSchemaEntities => [skillStatsRows, profileRows, settingRows, levelProgressRows];
 }
 
 typedef $$SkillStatsRowsTableCreateCompanionBuilder = SkillStatsRowsCompanion Function({
@@ -935,10 +1328,252 @@ typedef $$ProfileRowsTableProcessedTableManager =
       ProfileRow,
       PrefetchHooks Function()
     >;
+typedef $$SettingRowsTableCreateCompanionBuilder = SettingRowsCompanion Function({
+  required String key,
+  required String value,
+  Value<int> rowid,
+});
+typedef $$SettingRowsTableUpdateCompanionBuilder = SettingRowsCompanion Function({
+  Value<String> key,
+  Value<String> value,
+  Value<int> rowid,
+});
+
+class $$SettingRowsTableFilterComposer extends Composer<_$AppDatabase, $SettingRowsTable> {
+  $$SettingRowsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get key => $composableBuilder(column: $table.key, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get value =>
+      $composableBuilder(column: $table.value, builder: (column) => ColumnFilters(column));
+}
+
+class $$SettingRowsTableOrderingComposer extends Composer<_$AppDatabase, $SettingRowsTable> {
+  $$SettingRowsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get key =>
+      $composableBuilder(column: $table.key, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get value =>
+      $composableBuilder(column: $table.value, builder: (column) => ColumnOrderings(column));
+}
+
+class $$SettingRowsTableAnnotationComposer extends Composer<_$AppDatabase, $SettingRowsTable> {
+  $$SettingRowsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get key => $composableBuilder(column: $table.key, builder: (column) => column);
+
+  GeneratedColumn<String> get value => $composableBuilder(column: $table.value, builder: (column) => column);
+}
+
+class $$SettingRowsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $SettingRowsTable,
+          SettingRow,
+          $$SettingRowsTableFilterComposer,
+          $$SettingRowsTableOrderingComposer,
+          $$SettingRowsTableAnnotationComposer,
+          $$SettingRowsTableCreateCompanionBuilder,
+          $$SettingRowsTableUpdateCompanionBuilder,
+          (SettingRow, BaseReferences<_$AppDatabase, $SettingRowsTable, SettingRow>),
+          SettingRow,
+          PrefetchHooks Function()
+        > {
+  $$SettingRowsTableTableManager(_$AppDatabase db, $SettingRowsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () => $$SettingRowsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () => $$SettingRowsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () => $$SettingRowsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<String> key = const Value.absent(),
+            Value<String> value = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) => SettingRowsCompanion(key: key, value: value, rowid: rowid),
+          createCompanionCallback: ({
+            required String key,
+            required String value,
+            Value<int> rowid = const Value.absent(),
+          }) => SettingRowsCompanion.insert(key: key, value: value, rowid: rowid),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<$SettingRowsTable, SettingRow>(table),
+                  BaseReferences<_$AppDatabase, $SettingRowsTable, SettingRow>(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$SettingRowsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $SettingRowsTable,
+      SettingRow,
+      $$SettingRowsTableFilterComposer,
+      $$SettingRowsTableOrderingComposer,
+      $$SettingRowsTableAnnotationComposer,
+      $$SettingRowsTableCreateCompanionBuilder,
+      $$SettingRowsTableUpdateCompanionBuilder,
+      (SettingRow, BaseReferences<_$AppDatabase, $SettingRowsTable, SettingRow>),
+      SettingRow,
+      PrefetchHooks Function()
+    >;
+typedef $$LevelProgressRowsTableCreateCompanionBuilder = LevelProgressRowsCompanion Function({
+  required String level,
+  required int stars,
+  required DateTime completedAt,
+  Value<int> rowid,
+});
+typedef $$LevelProgressRowsTableUpdateCompanionBuilder = LevelProgressRowsCompanion Function({
+  Value<String> level,
+  Value<int> stars,
+  Value<DateTime> completedAt,
+  Value<int> rowid,
+});
+
+class $$LevelProgressRowsTableFilterComposer extends Composer<_$AppDatabase, $LevelProgressRowsTable> {
+  $$LevelProgressRowsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get level =>
+      $composableBuilder(column: $table.level, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get stars => $composableBuilder(column: $table.stars, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<DateTime> get completedAt =>
+      $composableBuilder(column: $table.completedAt, builder: (column) => ColumnFilters(column));
+}
+
+class $$LevelProgressRowsTableOrderingComposer extends Composer<_$AppDatabase, $LevelProgressRowsTable> {
+  $$LevelProgressRowsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get level =>
+      $composableBuilder(column: $table.level, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get stars =>
+      $composableBuilder(column: $table.stars, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<DateTime> get completedAt =>
+      $composableBuilder(column: $table.completedAt, builder: (column) => ColumnOrderings(column));
+}
+
+class $$LevelProgressRowsTableAnnotationComposer extends Composer<_$AppDatabase, $LevelProgressRowsTable> {
+  $$LevelProgressRowsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get level => $composableBuilder(column: $table.level, builder: (column) => column);
+
+  GeneratedColumn<int> get stars => $composableBuilder(column: $table.stars, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get completedAt =>
+      $composableBuilder(column: $table.completedAt, builder: (column) => column);
+}
+
+class $$LevelProgressRowsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $LevelProgressRowsTable,
+          LevelProgressRow,
+          $$LevelProgressRowsTableFilterComposer,
+          $$LevelProgressRowsTableOrderingComposer,
+          $$LevelProgressRowsTableAnnotationComposer,
+          $$LevelProgressRowsTableCreateCompanionBuilder,
+          $$LevelProgressRowsTableUpdateCompanionBuilder,
+          (LevelProgressRow, BaseReferences<_$AppDatabase, $LevelProgressRowsTable, LevelProgressRow>),
+          LevelProgressRow,
+          PrefetchHooks Function()
+        > {
+  $$LevelProgressRowsTableTableManager(_$AppDatabase db, $LevelProgressRowsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () => $$LevelProgressRowsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () => $$LevelProgressRowsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () => $$LevelProgressRowsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<String> level = const Value.absent(),
+            Value<int> stars = const Value.absent(),
+            Value<DateTime> completedAt = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) => LevelProgressRowsCompanion(level: level, stars: stars, completedAt: completedAt, rowid: rowid),
+          createCompanionCallback: ({
+            required String level,
+            required int stars,
+            required DateTime completedAt,
+            Value<int> rowid = const Value.absent(),
+          }) => LevelProgressRowsCompanion.insert(level: level, stars: stars, completedAt: completedAt, rowid: rowid),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<$LevelProgressRowsTable, LevelProgressRow>(table),
+                  BaseReferences<_$AppDatabase, $LevelProgressRowsTable, LevelProgressRow>(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$LevelProgressRowsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $LevelProgressRowsTable,
+      LevelProgressRow,
+      $$LevelProgressRowsTableFilterComposer,
+      $$LevelProgressRowsTableOrderingComposer,
+      $$LevelProgressRowsTableAnnotationComposer,
+      $$LevelProgressRowsTableCreateCompanionBuilder,
+      $$LevelProgressRowsTableUpdateCompanionBuilder,
+      (LevelProgressRow, BaseReferences<_$AppDatabase, $LevelProgressRowsTable, LevelProgressRow>),
+      LevelProgressRow,
+      PrefetchHooks Function()
+    >;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
   $AppDatabaseManager(this._db);
   $$SkillStatsRowsTableTableManager get skillStatsRows => $$SkillStatsRowsTableTableManager(_db, _db.skillStatsRows);
   $$ProfileRowsTableTableManager get profileRows => $$ProfileRowsTableTableManager(_db, _db.profileRows);
+  $$SettingRowsTableTableManager get settingRows => $$SettingRowsTableTableManager(_db, _db.settingRows);
+  $$LevelProgressRowsTableTableManager get levelProgressRows =>
+      $$LevelProgressRowsTableTableManager(_db, _db.levelProgressRows);
 }

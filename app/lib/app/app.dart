@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../l10n/app_localizations.dart';
 import '../worlds/world_map_screen.dart';
+import 'bedtime.dart';
 import 'providers.dart';
 import 'ui/tokens.dart';
 
@@ -23,6 +24,7 @@ class PipsWorldApp extends ConsumerWidget {
       GlobalCupertinoLocalizations.delegate,
     ],
     theme: buildTheme(ref.watch(ageBandProvider)),
+    builder: (context, child) => PlayTimeGuard(child: child!),
     home: const WorldMapScreen(),
   );
 }

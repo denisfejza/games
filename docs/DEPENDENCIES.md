@@ -16,6 +16,7 @@ child-facing app). Update this file in the same change that adds a package.
 | `in_app_purchase` | ^3.3.1 | BSD-3-Clause | One-time full unlock (PLAN 5.2) | Talks only to the App Store / Google Play billing, and only after the parental gate. No web support; the purchase UI must be hidden on web. |
 | `flutter_localizations`, `intl` | SDK, ^0.20.3 | BSD-3-Clause | en/sq strings, ICU plurals | Pure Dart. |
 | `json_schema` | ^5.2.2 | BSL-1.0 | Validates content JSON against `assets/content/schema.json` | Pulls in `http` to fetch remote `$ref`s; our schema has none, so it never fetches anything. |
+| `web` | ^1.1.1 | BSD-3-Clause | Browser microphone for talk-back (Web Audio, MediaRecorder) | Dart team package. Audio stays in memory (Blob), is played back once and discarded; nothing is uploaded or stored. Mic permission is only requested from the parent area. |
 | `clock` | ^1.1.3 | Apache-2.0 | Testable time for tap debouncing | Pure Dart (Dart team). |
 | `cupertino_icons` | ^1.0.8 | MIT | Flutter template default | Font only. |
 

@@ -206,24 +206,6 @@ abstract class AppLocalizations {
   /// **'Cancel'**
   String get gateCancel;
 
-  /// No description provided for @debugMenu.
-  ///
-  /// In en, this message translates to:
-  /// **'Settings'**
-  String get debugMenu;
-
-  /// No description provided for @debugLanguage.
-  ///
-  /// In en, this message translates to:
-  /// **'Language'**
-  String get debugLanguage;
-
-  /// No description provided for @debugAgeBand.
-  ///
-  /// In en, this message translates to:
-  /// **'Age band'**
-  String get debugAgeBand;
-
   /// No description provided for @languageEnglish.
   ///
   /// In en, this message translates to:
@@ -943,6 +925,210 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Diamond'**
   String get shapeDiamond;
+
+  /// No description provided for @parentTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'For grown-ups'**
+  String get parentTitle;
+
+  /// No description provided for @parentLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get parentLanguage;
+
+  /// No description provided for @parentAgeBand.
+  ///
+  /// In en, this message translates to:
+  /// **'Age band'**
+  String get parentAgeBand;
+
+  /// No description provided for @pipBelly.
+  ///
+  /// In en, this message translates to:
+  /// **'Belly'**
+  String get pipBelly;
+
+  /// No description provided for @pipTickle.
+  ///
+  /// In en, this message translates to:
+  /// **'Hee hee! That tickles!'**
+  String get pipTickle;
+
+  /// No description provided for @pipYum.
+  ///
+  /// In en, this message translates to:
+  /// **'Mmm! Thank you!'**
+  String get pipYum;
+
+  /// No description provided for @pipHmm.
+  ///
+  /// In en, this message translates to:
+  /// **'Hmm, let\'s look again.'**
+  String get pipHmm;
+
+  /// No description provided for @episodeIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s play together!'**
+  String get episodeIntro;
+
+  /// No description provided for @companionClap.
+  ///
+  /// In en, this message translates to:
+  /// **'Clap with Pip!'**
+  String get companionClap;
+
+  /// No description provided for @companionThanks.
+  ///
+  /// In en, this message translates to:
+  /// **'Yay! You\'re a great friend.'**
+  String get companionThanks;
+
+  /// No description provided for @offscreenIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Now a game away from the screen!'**
+  String get offscreenIntro;
+
+  /// No description provided for @offscreenDone.
+  ///
+  /// In en, this message translates to:
+  /// **'We did it!'**
+  String get offscreenDone;
+
+  /// No description provided for @episodeDone.
+  ///
+  /// In en, this message translates to:
+  /// **'All done! You played so well.'**
+  String get episodeDone;
+
+  /// No description provided for @levelNotYet.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s play this one first!'**
+  String get levelNotYet;
+
+  /// No description provided for @bedtimePipSleepy.
+  ///
+  /// In en, this message translates to:
+  /// **'Pip is getting sleepy. Time to rest!'**
+  String get bedtimePipSleepy;
+
+  /// No description provided for @bedtimeAllDone.
+  ///
+  /// In en, this message translates to:
+  /// **'All done for today'**
+  String get bedtimeAllDone;
+
+  /// No description provided for @talkBackPrompt.
+  ///
+  /// In en, this message translates to:
+  /// **'Say something to Pip!'**
+  String get talkBackPrompt;
+
+  /// No description provided for @parentExtraTime.
+  ///
+  /// In en, this message translates to:
+  /// **'+{minutes} minutes today'**
+  String parentExtraTime(int minutes);
+
+  /// No description provided for @parentDailyLimit.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily play time'**
+  String get parentDailyLimit;
+
+  /// No description provided for @parentLimitOff.
+  ///
+  /// In en, this message translates to:
+  /// **'No limit'**
+  String get parentLimitOff;
+
+  /// No description provided for @parentMinutes.
+  ///
+  /// In en, this message translates to:
+  /// **'{minutes} min'**
+  String parentMinutes(int minutes);
+
+  /// No description provided for @parentPlayedToday.
+  ///
+  /// In en, this message translates to:
+  /// **'Played today: {minutes} min'**
+  String parentPlayedToday(int minutes);
+
+  /// No description provided for @parentSound.
+  ///
+  /// In en, this message translates to:
+  /// **'Sound'**
+  String get parentSound;
+
+  /// No description provided for @parentCaptions.
+  ///
+  /// In en, this message translates to:
+  /// **'Captions'**
+  String get parentCaptions;
+
+  /// No description provided for @parentReducedMotion.
+  ///
+  /// In en, this message translates to:
+  /// **'Less motion'**
+  String get parentReducedMotion;
+
+  /// No description provided for @parentMicrophone.
+  ///
+  /// In en, this message translates to:
+  /// **'Microphone (Pip repeats)'**
+  String get parentMicrophone;
+
+  /// No description provided for @parentMicHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'Pip repeats what your child says in a funny voice. The sound is never saved or sent anywhere.'**
+  String get parentMicHelp;
+
+  /// No description provided for @parentMicUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Not available on this device yet.'**
+  String get parentMicUnavailable;
+
+  /// No description provided for @parentMicDenied.
+  ///
+  /// In en, this message translates to:
+  /// **'Microphone permission was not given. You can change it in the device settings.'**
+  String get parentMicDenied;
+
+  /// No description provided for @parentPipDemo.
+  ///
+  /// In en, this message translates to:
+  /// **'Pip demo (for testing)'**
+  String get parentPipDemo;
+
+  /// No description provided for @praiseGreat.
+  ///
+  /// In en, this message translates to:
+  /// **'Great job!'**
+  String get praiseGreat;
+
+  /// No description provided for @praiseWellDone.
+  ///
+  /// In en, this message translates to:
+  /// **'Well done!'**
+  String get praiseWellDone;
+
+  /// No description provided for @praiseYouDidIt.
+  ///
+  /// In en, this message translates to:
+  /// **'You did it!'**
+  String get praiseYouDidIt;
+
+  /// No description provided for @praiseSuper.
+  ///
+  /// In en, this message translates to:
+  /// **'Super!'**
+  String get praiseSuper;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

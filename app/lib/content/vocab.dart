@@ -44,13 +44,13 @@ class VocabItem {
   });
 
   factory VocabItem.fromJson(Map<String, dynamic> json) => VocabItem(
-        id: json['id'] as String,
-        nameKey: json['nameKey'] as String,
-        picture: Picture.fromJson(json),
-        tags: {for (final t in json['tags'] as List<dynamic>) t as String},
-        soundKey: json['soundKey'] as String?,
-        props: {for (final e in (json['props'] as Map<String, dynamic>? ?? const {}).entries) e.key: e.value as String},
-      );
+    id: json['id'] as String,
+    nameKey: json['nameKey'] as String,
+    picture: Picture.fromJson(json),
+    tags: {for (final t in json['tags'] as List<dynamic>) t as String},
+    soundKey: json['soundKey'] as String?,
+    props: {for (final e in (json['props'] as Map<String, dynamic>? ?? const {}).entries) e.key: e.value as String},
+  );
 
   final String id;
 

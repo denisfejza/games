@@ -72,15 +72,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get gateCancel => 'Cancel';
 
   @override
-  String get debugMenu => 'Settings';
-
-  @override
-  String get debugLanguage => 'Language';
-
-  @override
-  String get debugAgeBand => 'Age band';
-
-  @override
   String get languageEnglish => 'English';
 
   @override
@@ -439,4 +430,113 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get shapeDiamond => 'Diamond';
+
+  @override
+  String get parentTitle => 'For grown-ups';
+
+  @override
+  String get parentLanguage => 'Language';
+
+  @override
+  String get parentAgeBand => 'Age band';
+
+  @override
+  String get pipBelly => 'Belly';
+
+  @override
+  String get pipTickle => 'Hee hee! That tickles!';
+
+  @override
+  String get pipYum => 'Mmm! Thank you!';
+
+  @override
+  String get pipHmm => 'Hmm, let\'s look again.';
+
+  @override
+  String get episodeIntro => 'Let\'s play together!';
+
+  @override
+  String get companionClap => 'Clap with Pip!';
+
+  @override
+  String get companionThanks => 'Yay! You\'re a great friend.';
+
+  @override
+  String get offscreenIntro => 'Now a game away from the screen!';
+
+  @override
+  String get offscreenDone => 'We did it!';
+
+  @override
+  String get episodeDone => 'All done! You played so well.';
+
+  @override
+  String get levelNotYet => 'Let\'s play this one first!';
+
+  @override
+  String get bedtimePipSleepy => 'Pip is getting sleepy. Time to rest!';
+
+  @override
+  String get bedtimeAllDone => 'All done for today';
+
+  @override
+  String get talkBackPrompt => 'Say something to Pip!';
+
+  @override
+  String parentExtraTime(int minutes) {
+    return '+$minutes minutes today';
+  }
+
+  @override
+  String get parentDailyLimit => 'Daily play time';
+
+  @override
+  String get parentLimitOff => 'No limit';
+
+  @override
+  String parentMinutes(int minutes) {
+    return '$minutes min';
+  }
+
+  @override
+  String parentPlayedToday(int minutes) {
+    return 'Played today: $minutes min';
+  }
+
+  @override
+  String get parentSound => 'Sound';
+
+  @override
+  String get parentCaptions => 'Captions';
+
+  @override
+  String get parentReducedMotion => 'Less motion';
+
+  @override
+  String get parentMicrophone => 'Microphone (Pip repeats)';
+
+  @override
+  String get parentMicHelp =>
+      'Pip repeats what your child says in a funny voice. The sound is never saved or sent anywhere.';
+
+  @override
+  String get parentMicUnavailable => 'Not available on this device yet.';
+
+  @override
+  String get parentMicDenied => 'Microphone permission was not given. You can change it in the device settings.';
+
+  @override
+  String get parentPipDemo => 'Pip demo (for testing)';
+
+  @override
+  String get praiseGreat => 'Great job!';
+
+  @override
+  String get praiseWellDone => 'Well done!';
+
+  @override
+  String get praiseYouDidIt => 'You did it!';
+
+  @override
+  String get praiseSuper => 'Super!';
 }

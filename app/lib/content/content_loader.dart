@@ -90,8 +90,10 @@ class ContentLibrary {
   VocabItem item(String id) => vocab[id] ?? (throw ContentException(['unknown vocab item "$id"']));
 
   /// Items carrying all of [tags], in id order.
-  List<VocabItem> itemsTagged(Set<String> tags) =>
-      [for (final v in vocab.values) if (v.tags.containsAll(tags)) v]..sort((a, b) => a.id.compareTo(b.id));
+  List<VocabItem> itemsTagged(Set<String> tags) => [
+    for (final v in vocab.values)
+      if (v.tags.containsAll(tags)) v,
+  ]..sort((a, b) => a.id.compareTo(b.id));
 
   /// Finds the game with this id, or null.
   GameDef? game(String id) {

@@ -18,6 +18,9 @@ class GateChallenge {
   String get input => _input;
   String words(String locale) => numberToWords(_number, locale);
 
+  /// The words shown for [n] (tests use this to answer the gate).
+  static String wordsFor(int n, String locale) => numberToWords(n, locale);
+
   /// Adds a digit. When three are entered, returns whether they match; a
   /// wrong answer picks a fresh number so guessing gets no easier.
   GateResult enter(int digit) {

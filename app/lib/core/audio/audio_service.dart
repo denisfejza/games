@@ -56,7 +56,8 @@ class AudioService {
   static String assetPath(String locale, String key) =>
       key.startsWith('sfx.') ? 'audio/sfx/${arbKey(key.substring(4))}.ogg' : 'audio/$locale/${arbKey(key)}.ogg';
 
-  static String effectPath(Effect e) => 'audio/sfx/${switch (e) {
+  static String effectPath(Effect e) =>
+      'audio/sfx/${switch (e) {
         Effect.tryAgain => 'try_again',
         _ => e.name,
       }}.wav';

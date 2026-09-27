@@ -24,13 +24,43 @@ class ProfileRows extends Table {
   TextColumn get locale => text()();
 }
 
+/// Parent settings and small counters (daily play time), as text key/values.
+class SettingRows extends Table {
+  TextColumn get key => text()();
+  TextColumn get value => text()();
+
+  @override
+  Set<Column<Object>> get primaryKey => {key};
+}
+
+/// Best result per level. Only completed levels have a row (no 0-star state).
+class LevelProgressRows extends Table {
+  /// `<world>.l<number>`, e.g. `animals.l1`.
+  TextColumn get level => text()();
+  IntColumn get stars => integer()();
+  DateTimeColumn get completedAt => dateTime()();
+
+  @override
+  Set<Column<Object>> get primaryKey => {level};
+}
+
 /// The app's single on-device database. Nothing in it ever leaves the device.
-@DriftDatabase(tables: [SkillStatsRows, ProfileRows])
+@DriftDatabase(tables: [SkillStatsRows, ProfileRows, SettingRows, LevelProgressRows])
 class AppDatabase extends _$AppDatabase {
   AppDatabase([QueryExecutor? executor]) : super(executor ?? _open());
 
   @override
-  int get schemaVersion => 1;
+  int get schemaVersion => 2;
+
+  @override
+  MigrationStrategy get migration => MigrationStrategy(
+    onUpgrade: (m, from, to) async {
+      if (from < 2) {
+        await m.createTable(settingRows);
+        await m.createTable(levelProgressRows);
+      }
+    },
+  );
 
   static QueryExecutor _open() => driftDatabase(
     name: 'pips_world',

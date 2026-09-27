@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../app/debug_menu.dart';
+import '../parent/parent_area.dart';
 import '../app/providers.dart';
 import '../app/strings.dart';
 import '../app/ui/big_button.dart';
@@ -16,8 +16,8 @@ import 'title_banner.dart';
 import 'world_screen.dart';
 import 'world_style.dart';
 
-/// Shows the settings button in debug builds and in preview builds made with
-/// `--dart-define=PIP_DEBUG_MENU=true`. It is behind the parental gate either way.
+/// Shows developer extras (Pip demo) in the parent area in debug builds and in
+/// preview builds made with `--dart-define=PIP_DEBUG_MENU=true`.
 const showDebugMenu = kDebugMode || bool.fromEnvironment('PIP_DEBUG_MENU');
 
 const _headerHeight = 136.0;
@@ -152,7 +152,7 @@ class _Map extends ConsumerWidget {
                         ),
                       ),
                     ),
-                    if (showDebugMenu) const _SettingsButton() else const SizedBox(width: 56),
+                    const _SettingsButton(),
                   ],
                 ),
               ),
@@ -198,11 +198,11 @@ class _SettingsButton extends StatelessWidget {
     elevation: 3,
     child: IconButton(
       key: const Key('openSettings'),
-      tooltip: AppLocalizations.of(context).debugMenu,
+      tooltip: AppLocalizations.of(context).parentTitle,
       iconSize: 30,
       color: const Color(0xFF3B2C4A),
       icon: const Icon(Icons.settings_rounded),
-      onPressed: () => ParentalGate.open(context, (_) => const DebugMenu()),
+      onPressed: () => ParentalGate.open(context, (_) => const ParentArea()),
     ),
   );
 }
