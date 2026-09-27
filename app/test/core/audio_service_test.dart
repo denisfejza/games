@@ -81,4 +81,20 @@ void main() {
       expect(audio.caption.value, isNull);
     });
   });
+
+  test('an interrupt ends a held caption straight away (web: audio blocked before first tap)', () {
+    fakeAsync((async) {
+      backend.recordingsExist = false;
+      audio.say('helloPip');
+      async.elapse(const Duration(milliseconds: 200));
+      expect(audio.caption.value, 'helloPip');
+      audio.say('worldNumbers', interrupt: true);
+      async.elapse(const Duration(milliseconds: 150));
+      expect(audio.caption.value, 'worldNumbers');
+      expect(backend.played.last, 'audio/sq/worldNumbers.ogg');
+      async.elapse(const Duration(seconds: 2));
+      expect(audio.caption.value, isNull);
+      expect(audio.speaking.value, isFalse);
+    });
+  });
 }

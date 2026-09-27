@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:collection';
 
+import 'package:clock/clock.dart';
 import 'package:flutter/foundation.dart';
 
 import '../keys.dart';
@@ -63,6 +64,9 @@ class AudioService {
   final ValueNotifier<bool> speaking = ValueNotifier(false);
   bool _playing = false;
   bool _muted = false;
+
+  /// Bumped on every interrupt so a pending caption hold ends early.
+  int _generation = 0;
   String? _lastKey;
 
   /// The last line spoken, for the "hear again" button.
@@ -84,6 +88,7 @@ class AudioService {
   Future<void> say(String key, {bool interrupt = false}) async {
     if (interrupt) {
       _queue.clear();
+      _generation++;
       if (_playing) await _backend.stopNarration();
     }
     _queue.add(key);
@@ -126,8 +131,15 @@ class AudioService {
       final played = !_muted && await _backend.playNarration(assetPath(locale(), key));
       final second = secondLocale?.call();
       if (second != null && isName(key) && !_muted) await _backend.playNarration(assetPath(second, key));
-      // TODO(asset): recordings are missing; keep the caption up long enough to read.
-      if (!played && _queue.isEmpty) await Future<void>.delayed(missingHold);
+      // TODO(asset): recordings are missing; keep the caption up long enough to read,
+      // unless something else interrupts.
+      if (!played && _queue.isEmpty) {
+        final gen = _generation;
+        final until = clock.now().add(missingHold);
+        while (gen == _generation && _queue.isEmpty && clock.now().isBefore(until)) {
+          await Future<void>.delayed(const Duration(milliseconds: 50));
+        }
+      }
     }
     caption.value = null;
     speaking.value = false;

@@ -17,7 +17,7 @@ Create the Flutter project (`pips_world`), add Flame, Rive, Riverpod, Isar, flut
 **0.2 Locales + fonts**
 Configure `en` and `sq` locales with ARB files; add a rounded child-friendly font that renders ë/ç; add a `LocaleSwitcher` in a debug menu.
 - ✅ A test asserts every ARB key in `en` exists in `sq`; sample screen shows "Përshëndetje, Pip!" correctly.
-> ✔ Done 2026-09-27. Font: Nunito (OFL). `LocaleSwitcher` is in `lib/app/debug_menu.dart`, behind the parental gate.
+> ✔ Done 2026-09-27. Font: Nunito (OFL). `LocaleSwitcher` is in the parent area (`lib/parent/parent_area.dart`), behind the parental gate.
 
 **0.3 Content engine**
 `ContentLoader` reads `assets/content/**/*.json`, validates against `content/schema.json`, exposes worlds → levels → games. Include the JSON example from CLAUDE.md as the first fixture.

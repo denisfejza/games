@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Fix (found in the browser): narration could hang when the browser blocks audio before the first tap, leaving the
+  first caption on screen and Pip "talking"; every audio call now has a time limit and interrupts end a line at once.
 - Phase 5/6: parent dashboard, bilingual mode, extra-large buttons, sampler + one-time unlock (in_app_purchase),
   privacy page and policy, store listing drafts, compliance checklist, CI child-safety audit, release check, Rive
   web CDN blocked unless self-hosted.
