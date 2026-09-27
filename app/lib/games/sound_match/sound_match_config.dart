@@ -25,7 +25,18 @@ class SoundMatchConfig {
       SoundMatchConfig._(params, resolveItems(lib, params['items']));
 
   static const modes = {
-    'name', 'sound', 'colour', 'shape', 'number', 'letter', 'starts_with', 'more', 'fewer', 'bond', 'sum', 'take_away', //
+    'name',
+    'sound',
+    'colour',
+    'shape',
+    'number',
+    'letter',
+    'starts_with',
+    'more',
+    'fewer',
+    'bond',
+    'sum',
+    'take_away', //
   };
 
   final Map<String, dynamic> params;
@@ -44,7 +55,10 @@ class SoundMatchConfig {
 
   static List<String> validate(GameDef def, ContentLibrary lib) {
     final errors = <String>[];
-    final steps = [def.params, for (final s in def.difficulty?.steps ?? const <Map<String, dynamic>>[]) {...def.params, ...s}];
+    final steps = [
+      def.params,
+      for (final s in def.difficulty?.steps ?? const <Map<String, dynamic>>[]) {...def.params, ...s},
+    ];
     for (final p in steps) {
       final c = SoundMatchConfig.parse(p, lib);
       if (!modes.contains(c.mode)) errors.add('${def.id}: unknown mode "${c.mode}"');
@@ -91,7 +105,10 @@ class ChoiceRounds {
 
   ChoiceRound next(SoundMatchConfig c) {
     final r = switch (c.mode) {
-      'sound' => _pictures(c, [for (final i in c.items) if (i.soundKey != null) i], (t) => ['gameWhoSays', t.soundKey!]),
+      'sound' => _pictures(c, [
+        for (final i in c.items)
+          if (i.soundKey != null) i,
+      ], (t) => ['gameWhoSays', t.soundKey!]),
       'colour' => _pictures(c, c.items, (t) => ['gameFindColour', t.nameKey]),
       'shape' => _pictures(c, c.items, (t) => ['gameFindShape', t.nameKey]),
       'number' => _number(c),
@@ -107,13 +124,24 @@ class ChoiceRounds {
   }
 
   T _fresh<T>(List<T> pool) {
-    final options = pool.length > 1 ? [for (final p in pool) if (p != _last) p] : pool;
+    final options = pool.length > 1
+        ? [
+            for (final p in pool)
+              if (p != _last) p,
+          ]
+        : pool;
     final t = options[random.nextInt(options.length)];
     _last = t;
     return t;
   }
 
-  ChoiceRound _shuffled(CardFace answer, List<CardFace> others, List<String> prompt, {List<CardFace> stage = const [], String? op}) {
+  ChoiceRound _shuffled(
+    CardFace answer,
+    List<CardFace> others,
+    List<String> prompt, {
+    List<CardFace> stage = const [],
+    String? op,
+  }) {
     final faces = [answer, ...others]..shuffle(random);
     return ChoiceRound(faces: faces, answer: faces.indexOf(answer), prompt: prompt, stage: stage, op: op);
   }
@@ -154,10 +182,19 @@ class ChoiceRounds {
   ChoiceRound _startsWith(SoundMatchConfig c) {
     String? first(VocabItem i) => firstLetter(text(i.nameKey) ?? '', locale);
     final letters = c.letters.isEmpty ? {for (final i in c.items) ?first(i)}.toList() : c.letters;
-    final usable = [for (final l in letters) if (c.items.any((i) => first(i) == l)) l];
+    final usable = [
+      for (final l in letters)
+        if (c.items.any((i) => first(i) == l)) l,
+    ];
     final letter = _fresh(usable);
-    final target = pick(random, [for (final i in c.items) if (first(i) == letter) i], 1).single;
-    final others = pick(random, [for (final i in c.items) if (first(i) != letter) i], c.choices - 1);
+    final target = pick(random, [
+      for (final i in c.items)
+        if (first(i) == letter) i,
+    ], 1).single;
+    final others = pick(random, [
+      for (final i in c.items)
+        if (first(i) != letter) i,
+    ], c.choices - 1);
     return _shuffled(
       PictureFace(target.picture),
       [for (final o in others) PictureFace(o.picture)],
@@ -172,13 +209,19 @@ class ChoiceRounds {
     final answer = more ? counts.last : counts.first;
     return _shuffled(
       GroupFace(pic, answer),
-      [for (final n in counts) if (n != answer) GroupFace(pic, n)],
+      [
+        for (final n in counts)
+          if (n != answer) GroupFace(pic, n),
+      ],
       [more ? 'gameWhichMore' : 'gameWhichFewer'],
     );
   }
 
   List<CardFace> _numerals(SoundMatchConfig c, int answer, int max) {
-    final pool = [for (var i = 0; i <= max; i++) if (i != answer) i];
+    final pool = [
+      for (var i = 0; i <= max; i++)
+        if (i != answer) i,
+    ];
     return [for (final n in pick(random, pool, c.choices - 1)) TextFace('$n')];
   }
 
@@ -212,6 +255,11 @@ class ChoiceRounds {
     final a = 2 + random.nextInt(max(1, hi - 1));
     final b = 1 + random.nextInt(a - 1);
     final pic = c.items.isEmpty ? _star : _fresh(c.items).picture;
-    return _shuffled(TextFace('${a - b}'), _numerals(c, a - b, hi), ['gameTakeAway'], stage: [CrossedGroupFace(pic, a, b)]);
+    return _shuffled(
+      TextFace('${a - b}'),
+      _numerals(c, a - b, hi),
+      ['gameTakeAway'],
+      stage: [CrossedGroupFace(pic, a, b)],
+    );
   }
 }

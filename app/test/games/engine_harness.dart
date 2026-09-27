@@ -111,3 +111,5 @@ Future<void> expectGolden(WidgetTester tester, String name) async {
   await expectLater(find.byType(Scaffold).first, matchesGoldenFile('../../goldens/games/$name.png'));
   await settle(tester, seconds: 3);
 }
+
+Future<ContentLibrary> loadBundledContentForTest() => loadBundledContent();

@@ -6,7 +6,7 @@ import '../../companion/pip_view.dart' show ShapePainter;
 import '../../content/vocab.dart';
 
 /// What a card shows. Shared by every engine (Flame and Flutter).
-sealed class CardFace {
+abstract class CardFace {
   const CardFace();
 
   /// Paints the face centred in [rect].
@@ -150,6 +150,39 @@ class CrossedGroupFace extends CardFace {
       canvas.drawLine(c + Offset(-d, d), c + Offset(d, -d), pen);
     }
   }
+}
+
+/// A dark outline of a picture: the "hole" a shape goes into.
+class SilhouetteFace extends CardFace {
+  const SilhouetteFace(this.picture);
+  final Picture picture;
+
+  @override
+  void paint(Canvas canvas, Rect rect) {
+    canvas.saveLayer(rect.inflate(4), Paint());
+    paintPicture(canvas, picture, rect);
+    canvas.drawRect(
+      rect.inflate(4),
+      Paint()
+        ..color = const Color(0xFF3B2C4A).withValues(alpha: 0.55)
+        ..blendMode = BlendMode.srcIn,
+    );
+    canvas.restore();
+  }
+}
+
+/// A picture drawn smaller (a baby next to its big mummy).
+class SmallFace extends CardFace {
+  const SmallFace(this.picture, {this.scale = 0.6});
+  final Picture picture;
+  final double scale;
+
+  @override
+  void paint(Canvas canvas, Rect rect) => paintPicture(
+    canvas,
+    picture,
+    Rect.fromCenter(center: rect.center, width: rect.width * scale, height: rect.height * scale),
+  );
 }
 
 /// Question mark for an empty slot (patterns).

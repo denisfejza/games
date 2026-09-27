@@ -20,14 +20,13 @@ class SoundMatchEngine implements GameEngine {
   List<String> validate(GameDef def, ContentLibrary content) => SoundMatchConfig.validate(def, content);
 
   @override
-  Widget build(GameContext context) =>
-      GameScreen(context: context, create: (host) => SoundMatchGame(host));
+  Widget build(GameContext context) => GameScreen(context: context, create: (host) => SoundMatchGame(host));
 }
 
 /// Hear a prompt, tap the matching card.
 class SoundMatchGame extends PipGame {
   SoundMatchGame(super.host)
-      : _rounds = ChoiceRounds(host.random, text: host.context.text, locale: host.context.locale);
+    : _rounds = ChoiceRounds(host.random, text: host.context.text, locale: host.context.locale);
 
   final ChoiceRounds _rounds;
   ChoiceRound? round;
@@ -55,7 +54,12 @@ class SoundMatchGame extends PipGame {
             text: r.op,
             anchor: Anchor.center,
             textRenderer: TextPaint(
-              style: const TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w800, fontSize: 64, color: Colors.white),
+              style: const TextStyle(
+                fontFamily: 'Nunito',
+                fontWeight: FontWeight.w800,
+                fontSize: 64,
+                color: Colors.white,
+              ),
             ),
           );
     await addAll([...cards, ..._stage, ?_op]);

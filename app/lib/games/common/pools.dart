@@ -19,18 +19,24 @@ List<VocabItem> resolveItems(ContentLibrary lib, Object? spec) {
     }
   }
   final seen = <String>{};
-  return [for (final i in out) if (seen.add(i.id)) i];
+  return [
+    for (final i in out)
+      if (seen.add(i.id)) i,
+  ];
 }
 
 /// Ids in [spec] that don't name a vocab item (for validate()).
 List<String> unknownItems(ContentLibrary lib, Object? spec) => [
-      for (final e in spec is List ? spec.cast<Object?>() : [spec])
-        if (e is String && !e.startsWith('tag') && !lib.vocab.containsKey(e)) e,
-    ];
+  for (final e in spec is List ? spec.cast<Object?>() : [spec])
+    if (e is String && !e.startsWith('tag') && !lib.vocab.containsKey(e)) e,
+];
 
 /// [n] distinct random picks from [pool], never [exclude].
 List<T> pick<T>(Random r, List<T> pool, int n, {Iterable<T> exclude = const []}) {
-  final options = [for (final p in pool) if (!exclude.contains(p)) p]..shuffle(r);
+  final options = [
+    for (final p in pool)
+      if (!exclude.contains(p)) p,
+  ]..shuffle(r);
   return options.take(n).toList();
 }
 
@@ -43,8 +49,32 @@ const sqLetters = [
 ];
 
 const enLetters = [
-  'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
-  'x', 'y', 'z',
+  'a',
+  'b',
+  'c',
+  'd',
+  'e',
+  'f',
+  'g',
+  'h',
+  'i',
+  'j',
+  'k',
+  'l',
+  'm',
+  'n',
+  'o',
+  'p',
+  'q',
+  'r',
+  's',
+  't',
+  'u',
+  'v',
+  'w',
+  'x',
+  'y',
+  'z',
 ];
 
 /// Splits [word] into letters of [locale]'s alphabet ("mollë" → m, o, ll, ë).
