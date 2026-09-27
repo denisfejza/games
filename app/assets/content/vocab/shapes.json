@@ -1,0 +1,69 @@
+{
+ "category": "shapes",
+ "items": [
+  {
+   "id": "circle",
+   "nameKey": "shape.circle",
+   "shape": "circle",
+   "tags": [
+    "shape"
+   ]
+  },
+  {
+   "id": "square",
+   "nameKey": "shape.square",
+   "shape": "square",
+   "tags": [
+    "shape"
+   ]
+  },
+  {
+   "id": "triangle",
+   "nameKey": "shape.triangle",
+   "shape": "triangle",
+   "tags": [
+    "shape"
+   ]
+  },
+  {
+   "id": "rectangle",
+   "nameKey": "shape.rectangle",
+   "shape": "rectangle",
+   "tags": [
+    "shape"
+   ]
+  },
+  {
+   "id": "star",
+   "nameKey": "shape.star",
+   "shape": "star",
+   "tags": [
+    "shape"
+   ]
+  },
+  {
+   "id": "heart",
+   "nameKey": "shape.heart",
+   "shape": "heart",
+   "tags": [
+    "shape"
+   ]
+  },
+  {
+   "id": "oval",
+   "nameKey": "shape.oval",
+   "shape": "oval",
+   "tags": [
+    "shape"
+   ]
+  },
+  {
+   "id": "diamond",
+   "nameKey": "shape.diamond",
+   "shape": "diamond",
+   "tags": [
+    "shape"
+   ]
+  }
+ ]
+}

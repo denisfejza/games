@@ -21,12 +21,14 @@ child-facing app). Update this file in the same change that adds a package.
 
 ## Development only (not shipped)
 
-`flutter_test`, `flutter_lints`, `flame_test`, `drift_dev`, `build_runner`.
+`flutter_test`, `flutter_lints`, `flame_test`, `drift_dev`, `build_runner`, `fake_async`.
 
 ## Other bundled assets
 
 | Asset | License | Note |
 | --- | --- | --- |
+| PipEmoji font (`app/assets/fonts/PipEmoji.ttf`) | SIL OFL 1.1 (`NotoColorEmoji-OFL.txt`) | **Placeholder art.** A 250 KB subset of Noto Color Emoji built by `tool/subset_emoji.sh`, so pictures look the same on every device until the illustrations arrive. |
+| Placeholder sounds (`app/assets/audio/placeholder.wav`, `audio/sfx/*.wav`) | Generated here | Simple tones. The soft blip stands in for missing narration recordings. |
 | Nunito font (`app/assets/fonts/`) | SIL OFL 1.1 (`OFL.txt`) | Static Regular/ExtraBold instances cut from the Google Fonts variable font. Covers ë, ç, Ë, Ç. |
 
 ## Build flags

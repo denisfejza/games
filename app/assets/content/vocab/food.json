@@ -1,0 +1,226 @@
+{
+ "category": "food",
+ "items": [
+  {
+   "id": "grass",
+   "nameKey": "vocab.grass",
+   "emoji": "🌿",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "green"
+   }
+  },
+  {
+   "id": "carrot",
+   "nameKey": "vocab.carrot",
+   "emoji": "🥕",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "orange"
+   }
+  },
+  {
+   "id": "banana",
+   "nameKey": "vocab.banana",
+   "emoji": "🍌",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "yellow"
+   }
+  },
+  {
+   "id": "bone",
+   "nameKey": "vocab.bone",
+   "emoji": "🦴",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "white"
+   }
+  },
+  {
+   "id": "milk",
+   "nameKey": "vocab.milk",
+   "emoji": "🥛",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "white"
+   }
+  },
+  {
+   "id": "apple",
+   "nameKey": "vocab.apple",
+   "emoji": "🍎",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "red"
+   }
+  },
+  {
+   "id": "cheese",
+   "nameKey": "vocab.cheese",
+   "emoji": "🧀",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "yellow"
+   }
+  },
+  {
+   "id": "corn",
+   "nameKey": "vocab.corn",
+   "emoji": "🌽",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "yellow"
+   }
+  },
+  {
+   "id": "honey",
+   "nameKey": "vocab.honey",
+   "emoji": "🍯",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "orange"
+   }
+  },
+  {
+   "id": "leaf",
+   "nameKey": "vocab.leaf",
+   "emoji": "🍃",
+   "tags": [
+    "food",
+    "nature"
+   ],
+   "props": {
+    "colour": "green"
+   }
+  },
+  {
+   "id": "grapes",
+   "nameKey": "vocab.grapes",
+   "emoji": "🍇",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "purple"
+   }
+  },
+  {
+   "id": "orange_fruit",
+   "nameKey": "vocab.orange_fruit",
+   "emoji": "🍊",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "orange"
+   }
+  },
+  {
+   "id": "strawberry",
+   "nameKey": "vocab.strawberry",
+   "emoji": "🍓",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "red"
+   }
+  },
+  {
+   "id": "pear",
+   "nameKey": "vocab.pear",
+   "emoji": "🍐",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "green"
+   }
+  },
+  {
+   "id": "bread",
+   "nameKey": "vocab.bread",
+   "emoji": "🍞",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "brown"
+   }
+  },
+  {
+   "id": "egg",
+   "nameKey": "vocab.egg",
+   "emoji": "🥚",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "white"
+   }
+  },
+  {
+   "id": "watermelon",
+   "nameKey": "vocab.watermelon",
+   "emoji": "🍉",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "red"
+   }
+  },
+  {
+   "id": "cherry",
+   "nameKey": "vocab.cherry",
+   "emoji": "🍒",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "red"
+   }
+  },
+  {
+   "id": "cake",
+   "nameKey": "vocab.cake",
+   "emoji": "🎂",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "pink"
+   }
+  },
+  {
+   "id": "pizza",
+   "nameKey": "vocab.pizza",
+   "emoji": "🍕",
+   "tags": [
+    "food"
+   ],
+   "props": {
+    "colour": "orange"
+   }
+  }
+ ]
+}

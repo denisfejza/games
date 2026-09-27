@@ -1,0 +1,85 @@
+{
+ "category": "colours",
+ "items": [
+  {
+   "id": "red",
+   "nameKey": "colour.red",
+   "colour": "#E53935",
+   "tags": [
+    "colour"
+   ]
+  },
+  {
+   "id": "blue",
+   "nameKey": "colour.blue",
+   "colour": "#1E88E5",
+   "tags": [
+    "colour"
+   ]
+  },
+  {
+   "id": "yellow",
+   "nameKey": "colour.yellow",
+   "colour": "#FDD835",
+   "tags": [
+    "colour"
+   ]
+  },
+  {
+   "id": "green",
+   "nameKey": "colour.green",
+   "colour": "#43A047",
+   "tags": [
+    "colour"
+   ]
+  },
+  {
+   "id": "orange",
+   "nameKey": "colour.orange",
+   "colour": "#FB8C00",
+   "tags": [
+    "colour"
+   ]
+  },
+  {
+   "id": "purple",
+   "nameKey": "colour.purple",
+   "colour": "#8E24AA",
+   "tags": [
+    "colour"
+   ]
+  },
+  {
+   "id": "pink",
+   "nameKey": "colour.pink",
+   "colour": "#F06292",
+   "tags": [
+    "colour"
+   ]
+  },
+  {
+   "id": "brown",
+   "nameKey": "colour.brown",
+   "colour": "#8D6E63",
+   "tags": [
+    "colour"
+   ]
+  },
+  {
+   "id": "black",
+   "nameKey": "colour.black",
+   "colour": "#212121",
+   "tags": [
+    "colour"
+   ]
+  },
+  {
+   "id": "white",
+   "nameKey": "colour.white",
+   "colour": "#FFFFFF",
+   "tags": [
+    "colour"
+   ]
+  }
+ ]
+}

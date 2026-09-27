@@ -1,0 +1,408 @@
+{
+ "category": "objects",
+ "items": [
+  {
+   "id": "sun",
+   "nameKey": "vocab.sun",
+   "emoji": "☀️",
+   "tags": [
+    "object",
+    "nature"
+   ],
+   "props": {
+    "colour": "yellow",
+    "shape": "circle"
+   }
+  },
+  {
+   "id": "moon",
+   "nameKey": "vocab.moon",
+   "emoji": "🌙",
+   "tags": [
+    "object",
+    "nature"
+   ],
+   "props": {
+    "colour": "yellow"
+   }
+  },
+  {
+   "id": "star_obj",
+   "nameKey": "vocab.star_obj",
+   "emoji": "⭐",
+   "tags": [
+    "object",
+    "nature"
+   ],
+   "props": {
+    "colour": "yellow",
+    "shape": "star"
+   }
+  },
+  {
+   "id": "rain",
+   "nameKey": "vocab.rain",
+   "emoji": "🌧️",
+   "tags": [
+    "object",
+    "nature"
+   ],
+   "props": {
+    "colour": "blue"
+   }
+  },
+  {
+   "id": "rainbow",
+   "nameKey": "vocab.rainbow",
+   "emoji": "🌈",
+   "tags": [
+    "object",
+    "nature"
+   ],
+   "props": {}
+  },
+  {
+   "id": "flower",
+   "nameKey": "vocab.flower",
+   "emoji": "🌸",
+   "tags": [
+    "object",
+    "nature"
+   ],
+   "props": {
+    "colour": "pink"
+   }
+  },
+  {
+   "id": "tree",
+   "nameKey": "vocab.tree",
+   "emoji": "🌳",
+   "tags": [
+    "object",
+    "nature"
+   ],
+   "props": {
+    "colour": "green"
+   }
+  },
+  {
+   "id": "ball",
+   "nameKey": "vocab.ball",
+   "emoji": "⚽",
+   "tags": [
+    "object",
+    "toy"
+   ],
+   "props": {
+    "colour": "white",
+    "shape": "circle"
+   }
+  },
+  {
+   "id": "balloon",
+   "nameKey": "vocab.balloon",
+   "emoji": "🎈",
+   "tags": [
+    "object",
+    "toy"
+   ],
+   "props": {
+    "colour": "red"
+   }
+  },
+  {
+   "id": "gift",
+   "nameKey": "vocab.gift",
+   "emoji": "🎁",
+   "tags": [
+    "object",
+    "toy"
+   ],
+   "props": {
+    "colour": "red",
+    "shape": "square"
+   }
+  },
+  {
+   "id": "book",
+   "nameKey": "vocab.book",
+   "emoji": "📕",
+   "tags": [
+    "object",
+    "home"
+   ],
+   "props": {
+    "colour": "red",
+    "shape": "rectangle"
+   }
+  },
+  {
+   "id": "key",
+   "nameKey": "vocab.key",
+   "emoji": "🔑",
+   "tags": [
+    "object",
+    "home"
+   ],
+   "props": {
+    "colour": "yellow"
+   }
+  },
+  {
+   "id": "house",
+   "nameKey": "vocab.house",
+   "emoji": "🏠",
+   "tags": [
+    "object",
+    "home"
+   ],
+   "props": {}
+  },
+  {
+   "id": "tent",
+   "nameKey": "vocab.tent",
+   "emoji": "⛺",
+   "tags": [
+    "object",
+    "home"
+   ],
+   "props": {
+    "shape": "triangle"
+   }
+  },
+  {
+   "id": "bed",
+   "nameKey": "vocab.bed",
+   "emoji": "🛏️",
+   "tags": [
+    "object",
+    "home"
+   ],
+   "props": {}
+  },
+  {
+   "id": "cup",
+   "nameKey": "vocab.cup",
+   "emoji": "☕",
+   "tags": [
+    "object",
+    "home"
+   ],
+   "props": {}
+  },
+  {
+   "id": "clock",
+   "nameKey": "vocab.clock",
+   "emoji": "🕒",
+   "tags": [
+    "object",
+    "home"
+   ],
+   "props": {
+    "colour": "white",
+    "shape": "circle"
+   }
+  },
+  {
+   "id": "heart_obj",
+   "nameKey": "vocab.heart_obj",
+   "emoji": "❤️",
+   "tags": [
+    "object",
+    "toy"
+   ],
+   "props": {
+    "colour": "red",
+    "shape": "heart"
+   }
+  },
+  {
+   "id": "car",
+   "nameKey": "vocab.car",
+   "emoji": "🚗",
+   "tags": [
+    "object",
+    "vehicle"
+   ],
+   "props": {
+    "colour": "red"
+   }
+  },
+  {
+   "id": "bus",
+   "nameKey": "vocab.bus",
+   "emoji": "🚌",
+   "tags": [
+    "object",
+    "vehicle"
+   ],
+   "props": {
+    "colour": "yellow"
+   }
+  },
+  {
+   "id": "train",
+   "nameKey": "vocab.train",
+   "emoji": "🚂",
+   "tags": [
+    "object",
+    "vehicle"
+   ],
+   "props": {}
+  },
+  {
+   "id": "plane",
+   "nameKey": "vocab.plane",
+   "emoji": "✈️",
+   "tags": [
+    "object",
+    "vehicle"
+   ],
+   "props": {}
+  },
+  {
+   "id": "boat",
+   "nameKey": "vocab.boat",
+   "emoji": "⛵",
+   "tags": [
+    "object",
+    "vehicle"
+   ],
+   "props": {}
+  },
+  {
+   "id": "bike",
+   "nameKey": "vocab.bike",
+   "emoji": "🚲",
+   "tags": [
+    "object",
+    "vehicle"
+   ],
+   "props": {}
+  },
+  {
+   "id": "umbrella",
+   "nameKey": "vocab.umbrella",
+   "emoji": "☂️",
+   "tags": [
+    "object",
+    "clothes"
+   ],
+   "props": {
+    "colour": "purple"
+   }
+  },
+  {
+   "id": "hat",
+   "nameKey": "vocab.hat",
+   "emoji": "👒",
+   "tags": [
+    "object",
+    "clothes"
+   ],
+   "props": {
+    "colour": "yellow"
+   }
+  },
+  {
+   "id": "socks",
+   "nameKey": "vocab.socks",
+   "emoji": "🧦",
+   "tags": [
+    "object",
+    "clothes"
+   ],
+   "props": {
+    "colour": "red"
+   }
+  },
+  {
+   "id": "jacket",
+   "nameKey": "vocab.jacket",
+   "emoji": "🧥",
+   "tags": [
+    "object",
+    "clothes"
+   ],
+   "props": {
+    "colour": "brown"
+   }
+  },
+  {
+   "id": "hand",
+   "nameKey": "vocab.hand",
+   "emoji": "✋",
+   "tags": [
+    "object",
+    "body"
+   ],
+   "props": {}
+  },
+  {
+   "id": "nose",
+   "nameKey": "vocab.nose",
+   "emoji": "👃",
+   "tags": [
+    "object",
+    "body"
+   ],
+   "props": {}
+  },
+  {
+   "id": "ear",
+   "nameKey": "vocab.ear",
+   "emoji": "👂",
+   "tags": [
+    "object",
+    "body"
+   ],
+   "props": {}
+  },
+  {
+   "id": "mouth",
+   "nameKey": "vocab.mouth",
+   "emoji": "👄",
+   "tags": [
+    "object",
+    "body"
+   ],
+   "props": {
+    "colour": "red"
+   }
+  },
+  {
+   "id": "foot",
+   "nameKey": "vocab.foot",
+   "emoji": "🦶",
+   "tags": [
+    "object",
+    "body"
+   ],
+   "props": {}
+  },
+  {
+   "id": "nest",
+   "nameKey": "vocab.nest",
+   "emoji": "🪺",
+   "tags": [
+    "object",
+    "nature"
+   ],
+   "props": {
+    "colour": "brown"
+   }
+  },
+  {
+   "id": "circus",
+   "nameKey": "vocab.circus",
+   "emoji": "🎪",
+   "tags": [
+    "object",
+    "toy"
+   ],
+   "props": {
+    "colour": "red"
+   }
+  }
+ ]
+}

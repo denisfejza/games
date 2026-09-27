@@ -16,8 +16,19 @@ class FakeAudioBackend implements AudioBackend {
   final List<double> musicVolumes = [];
   int stops = 0;
 
+  final List<String> effects = [];
+
+  /// Pretend every recording exists unless told otherwise.
+  bool recordingsExist = true;
+
   @override
-  Future<void> playNarration(String assetPath) async => played.add(assetPath);
+  Future<bool> playNarration(String assetPath) async {
+    played.add(assetPath);
+    return recordingsExist;
+  }
+
+  @override
+  Future<void> playEffect(String assetPath) async => effects.add(assetPath);
 
   @override
   Future<void> stopNarration() async => stops++;

@@ -1,3 +1,4 @@
+import 'package:fake_async/fake_async.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pips_world/core/audio/audio_service.dart';
 
@@ -49,5 +50,35 @@ void main() {
     expect(backend.stops, 1);
     expect(backend.played, isNot(contains('audio/sq/b.ogg')));
     expect(backend.played.last, 'audio/sq/c.ogg');
+  });
+
+  test('sayAll plays keys in order, named by ARB key', () async {
+    await audio.sayAll(['gameFindThis', 'vocab.cow']);
+    expect(backend.played, ['audio/sq/gameFindThis.ogg', 'audio/sq/vocabCow.ogg']);
+  });
+
+  test('animal noises are language-independent', () async {
+    await audio.say('sfx.animal.cow');
+    expect(backend.played, ['audio/sfx/animalCow.ogg']);
+  });
+
+  test('effects play unless muted', () async {
+    await audio.effect(Effect.correct);
+    audio.muted = true;
+    await audio.effect(Effect.tap);
+    expect(backend.effects, ['audio/sfx/correct.wav']);
+  });
+
+  test('a missing recording keeps the caption up long enough to read', () {
+    fakeAsync((async) {
+      backend.recordingsExist = false;
+      audio.say('helloPip');
+      async.flushMicrotasks();
+      expect(audio.caption.value, 'helloPip');
+      async.elapse(const Duration(milliseconds: 1000));
+      expect(audio.caption.value, 'helloPip');
+      async.elapse(const Duration(milliseconds: 500));
+      expect(audio.caption.value, isNull);
+    });
   });
 }

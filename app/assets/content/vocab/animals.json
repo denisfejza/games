@@ -1,0 +1,651 @@
+{
+ "category": "animals",
+ "items": [
+  {
+   "id": "cow",
+   "nameKey": "vocab.cow",
+   "emoji": "🐄",
+   "tags": [
+    "animal",
+    "farm"
+   ],
+   "soundKey": "sfx.animal.cow",
+   "props": {
+    "size": "big",
+    "lives": "land",
+    "food": "grass"
+   }
+  },
+  {
+   "id": "sheep",
+   "nameKey": "vocab.sheep",
+   "emoji": "🐑",
+   "tags": [
+    "animal",
+    "farm"
+   ],
+   "soundKey": "sfx.animal.sheep",
+   "props": {
+    "size": "big",
+    "lives": "land",
+    "food": "grass"
+   }
+  },
+  {
+   "id": "pig",
+   "nameKey": "vocab.pig",
+   "emoji": "🐖",
+   "tags": [
+    "animal",
+    "farm"
+   ],
+   "soundKey": "sfx.animal.pig",
+   "props": {
+    "size": "big",
+    "lives": "land",
+    "food": "apple"
+   }
+  },
+  {
+   "id": "hen",
+   "nameKey": "vocab.hen",
+   "emoji": "🐔",
+   "tags": [
+    "animal",
+    "farm"
+   ],
+   "soundKey": "sfx.animal.hen",
+   "props": {
+    "size": "small",
+    "lives": "land",
+    "food": "corn"
+   }
+  },
+  {
+   "id": "horse",
+   "nameKey": "vocab.horse",
+   "emoji": "🐴",
+   "tags": [
+    "animal",
+    "farm"
+   ],
+   "soundKey": "sfx.animal.horse",
+   "props": {
+    "size": "big",
+    "lives": "land",
+    "food": "carrot"
+   }
+  },
+  {
+   "id": "duck",
+   "nameKey": "vocab.duck",
+   "emoji": "🦆",
+   "tags": [
+    "animal",
+    "farm"
+   ],
+   "soundKey": "sfx.animal.duck",
+   "props": {
+    "size": "small",
+    "lives": "water",
+    "food": "corn"
+   }
+  },
+  {
+   "id": "goat",
+   "nameKey": "vocab.goat",
+   "emoji": "🐐",
+   "tags": [
+    "animal",
+    "farm"
+   ],
+   "soundKey": "sfx.animal.goat",
+   "props": {
+    "size": "big",
+    "lives": "land",
+    "food": "grass"
+   }
+  },
+  {
+   "id": "rooster",
+   "nameKey": "vocab.rooster",
+   "emoji": "🐓",
+   "tags": [
+    "animal",
+    "farm"
+   ],
+   "soundKey": "sfx.animal.rooster",
+   "props": {
+    "size": "small",
+    "lives": "land",
+    "food": "corn"
+   }
+  },
+  {
+   "id": "dog",
+   "nameKey": "vocab.dog",
+   "emoji": "🐶",
+   "tags": [
+    "animal",
+    "pet"
+   ],
+   "soundKey": "sfx.animal.dog",
+   "props": {
+    "size": "small",
+    "lives": "land",
+    "food": "bone"
+   }
+  },
+  {
+   "id": "cat",
+   "nameKey": "vocab.cat",
+   "emoji": "🐱",
+   "tags": [
+    "animal",
+    "pet"
+   ],
+   "soundKey": "sfx.animal.cat",
+   "props": {
+    "size": "small",
+    "lives": "land",
+    "food": "milk"
+   }
+  },
+  {
+   "id": "rabbit",
+   "nameKey": "vocab.rabbit",
+   "emoji": "🐰",
+   "tags": [
+    "animal",
+    "pet"
+   ],
+   "soundKey": "sfx.animal.rabbit",
+   "props": {
+    "size": "small",
+    "lives": "land",
+    "food": "carrot"
+   }
+  },
+  {
+   "id": "fish",
+   "nameKey": "vocab.fish",
+   "emoji": "🐟",
+   "tags": [
+    "animal",
+    "pet",
+    "ocean"
+   ],
+   "props": {
+    "size": "small",
+    "lives": "water"
+   }
+  },
+  {
+   "id": "parrot",
+   "nameKey": "vocab.parrot",
+   "emoji": "🦜",
+   "tags": [
+    "animal",
+    "pet",
+    "jungle"
+   ],
+   "soundKey": "sfx.animal.parrot",
+   "props": {
+    "size": "small",
+    "lives": "land",
+    "food": "corn"
+   }
+  },
+  {
+   "id": "hamster",
+   "nameKey": "vocab.hamster",
+   "emoji": "🐹",
+   "tags": [
+    "animal",
+    "pet"
+   ],
+   "props": {
+    "size": "small",
+    "lives": "land",
+    "food": "corn"
+   }
+  },
+  {
+   "id": "turtle",
+   "nameKey": "vocab.turtle",
+   "emoji": "🐢",
+   "tags": [
+    "animal",
+    "pet"
+   ],
+   "props": {
+    "size": "small",
+    "lives": "land",
+    "food": "leaf"
+   }
+  },
+  {
+   "id": "mouse",
+   "nameKey": "vocab.mouse",
+   "emoji": "🐭",
+   "tags": [
+    "animal",
+    "pet"
+   ],
+   "soundKey": "sfx.animal.mouse",
+   "props": {
+    "size": "small",
+    "lives": "land",
+    "food": "cheese"
+   }
+  },
+  {
+   "id": "lion",
+   "nameKey": "vocab.lion",
+   "emoji": "🦁",
+   "tags": [
+    "animal",
+    "jungle"
+   ],
+   "soundKey": "sfx.animal.lion",
+   "props": {
+    "size": "big",
+    "lives": "land"
+   }
+  },
+  {
+   "id": "elephant",
+   "nameKey": "vocab.elephant",
+   "emoji": "🐘",
+   "tags": [
+    "animal",
+    "jungle"
+   ],
+   "soundKey": "sfx.animal.elephant",
+   "props": {
+    "size": "big",
+    "lives": "land",
+    "food": "banana"
+   }
+  },
+  {
+   "id": "monkey",
+   "nameKey": "vocab.monkey",
+   "emoji": "🐒",
+   "tags": [
+    "animal",
+    "jungle"
+   ],
+   "soundKey": "sfx.animal.monkey",
+   "props": {
+    "size": "small",
+    "lives": "land",
+    "food": "banana"
+   }
+  },
+  {
+   "id": "giraffe",
+   "nameKey": "vocab.giraffe",
+   "emoji": "🦒",
+   "tags": [
+    "animal",
+    "jungle"
+   ],
+   "props": {
+    "size": "big",
+    "lives": "land",
+    "food": "leaf"
+   }
+  },
+  {
+   "id": "zebra",
+   "nameKey": "vocab.zebra",
+   "emoji": "🦓",
+   "tags": [
+    "animal",
+    "jungle"
+   ],
+   "props": {
+    "size": "big",
+    "lives": "land",
+    "food": "grass"
+   }
+  },
+  {
+   "id": "tiger",
+   "nameKey": "vocab.tiger",
+   "emoji": "🐅",
+   "tags": [
+    "animal",
+    "jungle"
+   ],
+   "soundKey": "sfx.animal.tiger",
+   "props": {
+    "size": "big",
+    "lives": "land"
+   }
+  },
+  {
+   "id": "snake",
+   "nameKey": "vocab.snake",
+   "emoji": "🐍",
+   "tags": [
+    "animal",
+    "jungle"
+   ],
+   "soundKey": "sfx.animal.snake",
+   "props": {
+    "size": "small",
+    "lives": "land"
+   }
+  },
+  {
+   "id": "crocodile",
+   "nameKey": "vocab.crocodile",
+   "emoji": "🐊",
+   "tags": [
+    "animal",
+    "jungle"
+   ],
+   "props": {
+    "size": "big",
+    "lives": "water"
+   }
+  },
+  {
+   "id": "whale",
+   "nameKey": "vocab.whale",
+   "emoji": "🐳",
+   "tags": [
+    "animal",
+    "ocean"
+   ],
+   "soundKey": "sfx.animal.whale",
+   "props": {
+    "size": "big",
+    "lives": "water"
+   }
+  },
+  {
+   "id": "dolphin",
+   "nameKey": "vocab.dolphin",
+   "emoji": "🐬",
+   "tags": [
+    "animal",
+    "ocean"
+   ],
+   "soundKey": "sfx.animal.dolphin",
+   "props": {
+    "size": "big",
+    "lives": "water",
+    "food": "fish"
+   }
+  },
+  {
+   "id": "octopus",
+   "nameKey": "vocab.octopus",
+   "emoji": "🐙",
+   "tags": [
+    "animal",
+    "ocean"
+   ],
+   "props": {
+    "size": "small",
+    "lives": "water"
+   }
+  },
+  {
+   "id": "crab",
+   "nameKey": "vocab.crab",
+   "emoji": "🦀",
+   "tags": [
+    "animal",
+    "ocean"
+   ],
+   "props": {
+    "size": "small",
+    "lives": "water"
+   }
+  },
+  {
+   "id": "shark",
+   "nameKey": "vocab.shark",
+   "emoji": "🦈",
+   "tags": [
+    "animal",
+    "ocean"
+   ],
+   "props": {
+    "size": "big",
+    "lives": "water"
+   }
+  },
+  {
+   "id": "penguin",
+   "nameKey": "vocab.penguin",
+   "emoji": "🐧",
+   "tags": [
+    "animal",
+    "snow"
+   ],
+   "soundKey": "sfx.animal.penguin",
+   "props": {
+    "size": "small",
+    "lives": "land",
+    "food": "fish"
+   }
+  },
+  {
+   "id": "seal",
+   "nameKey": "vocab.seal",
+   "emoji": "🦭",
+   "tags": [
+    "animal",
+    "snow",
+    "ocean"
+   ],
+   "soundKey": "sfx.animal.seal",
+   "props": {
+    "size": "big",
+    "lives": "water",
+    "food": "fish"
+   }
+  },
+  {
+   "id": "fox",
+   "nameKey": "vocab.fox",
+   "emoji": "🦊",
+   "tags": [
+    "animal",
+    "snow"
+   ],
+   "soundKey": "sfx.animal.fox",
+   "props": {
+    "size": "small",
+    "lives": "land"
+   }
+  },
+  {
+   "id": "owl",
+   "nameKey": "vocab.owl",
+   "emoji": "🦉",
+   "tags": [
+    "animal",
+    "snow"
+   ],
+   "soundKey": "sfx.animal.owl",
+   "props": {
+    "size": "small",
+    "lives": "land"
+   }
+  },
+  {
+   "id": "bear",
+   "nameKey": "vocab.bear",
+   "emoji": "🐻",
+   "tags": [
+    "animal",
+    "snow"
+   ],
+   "soundKey": "sfx.animal.bear",
+   "props": {
+    "size": "big",
+    "lives": "land",
+    "food": "honey"
+   }
+  },
+  {
+   "id": "bee",
+   "nameKey": "vocab.bee",
+   "emoji": "🐝",
+   "tags": [
+    "animal",
+    "garden"
+   ],
+   "soundKey": "sfx.animal.bee",
+   "props": {
+    "size": "small",
+    "lives": "land"
+   }
+  },
+  {
+   "id": "frog",
+   "nameKey": "vocab.frog",
+   "emoji": "🐸",
+   "tags": [
+    "animal",
+    "garden"
+   ],
+   "soundKey": "sfx.animal.frog",
+   "props": {
+    "size": "small",
+    "lives": "water"
+   }
+  },
+  {
+   "id": "toad",
+   "nameKey": "vocab.toad",
+   "emoji": "🐸",
+   "tags": [
+    "animal",
+    "garden"
+   ],
+   "soundKey": "sfx.animal.toad",
+   "props": {
+    "size": "small",
+    "lives": "water"
+   }
+  },
+  {
+   "id": "bird",
+   "nameKey": "vocab.bird",
+   "emoji": "🐦",
+   "tags": [
+    "animal",
+    "garden"
+   ],
+   "soundKey": "sfx.animal.bird",
+   "props": {
+    "size": "small",
+    "lives": "land",
+    "food": "corn"
+   }
+  },
+  {
+   "id": "butterfly",
+   "nameKey": "vocab.butterfly",
+   "emoji": "🦋",
+   "tags": [
+    "animal",
+    "garden"
+   ],
+   "props": {
+    "size": "small",
+    "lives": "land"
+   }
+  },
+  {
+   "id": "ant",
+   "nameKey": "vocab.ant",
+   "emoji": "🐜",
+   "tags": [
+    "animal",
+    "garden"
+   ],
+   "props": {
+    "size": "small",
+    "lives": "land"
+   }
+  },
+  {
+   "id": "snail",
+   "nameKey": "vocab.snail",
+   "emoji": "🐌",
+   "tags": [
+    "animal",
+    "garden"
+   ],
+   "props": {
+    "size": "small",
+    "lives": "land",
+    "food": "leaf"
+   }
+  },
+  {
+   "id": "ladybird",
+   "nameKey": "vocab.ladybird",
+   "emoji": "🐞",
+   "tags": [
+    "animal",
+    "garden"
+   ],
+   "props": {
+    "size": "small",
+    "lives": "land"
+   }
+  },
+  {
+   "id": "boar",
+   "nameKey": "vocab.boar",
+   "emoji": "🐗",
+   "tags": [
+    "animal",
+    "forest"
+   ],
+   "soundKey": "sfx.animal.boar",
+   "props": {
+    "size": "big",
+    "lives": "land",
+    "food": "apple"
+   }
+  },
+  {
+   "id": "kangaroo",
+   "nameKey": "vocab.kangaroo",
+   "emoji": "🦘",
+   "tags": [
+    "animal",
+    "jungle"
+   ],
+   "props": {
+    "size": "big",
+    "lives": "land",
+    "food": "grass"
+   }
+  },
+  {
+   "id": "panda",
+   "nameKey": "vocab.panda",
+   "emoji": "🐼",
+   "tags": [
+    "animal",
+    "jungle"
+   ],
+   "props": {
+    "size": "big",
+    "lives": "land",
+    "food": "leaf"
+   }
+  }
+ ]
+}

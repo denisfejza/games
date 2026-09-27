@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 
 import 'content_schema.dart';
 import 'models.dart';
+import 'vocab.dart';
 
 const contentRoot = 'assets/content/';
 const schemaPath = '${contentRoot}schema.json';
@@ -19,7 +20,7 @@ class ContentException implements Exception {
 
 /// All worlds, levels and games, validated and linked.
 class ContentLibrary {
-  ContentLibrary._(this.worlds);
+  ContentLibrary._(this.worlds, this.vocab);
 
   /// Builds the tree from raw files keyed by asset path.
   ///
@@ -30,11 +31,12 @@ class ContentLibrary {
     final worldJson = <String, Map<String, dynamic>>{};
     final games = <GameDef>[];
     final gameIds = <String>{};
+    final vocab = <String, VocabItem>{};
 
     for (final MapEntry(key: path, value: source) in files.entries) {
       final kind = _kindOf(path);
       if (kind == null) {
-        errors.add('$path: not under worlds/ or games/');
+        errors.add('$path: not under worlds/, games/ or vocab/');
         continue;
       }
       final Object? json;
@@ -50,6 +52,14 @@ class ContentLibrary {
         continue;
       }
       final map = json as Map<String, dynamic>;
+      if (kind == ContentKind.vocab) {
+        for (final raw in map['items'] as List<dynamic>) {
+          final item = VocabItem.fromJson(raw as Map<String, dynamic>);
+          if (vocab.containsKey(item.id)) errors.add('$path: duplicate vocab id "${item.id}"');
+          vocab[item.id] = item;
+        }
+        continue;
+      }
       final id = map['id'] as String;
       if (kind == ContentKind.world) {
         if (worldJson.containsKey(id)) errors.add('$path: duplicate world id "$id"');
@@ -69,10 +79,27 @@ class ContentLibrary {
       for (final MapEntry(key: id, value: json) in worldJson.entries)
         worldFromJson(json, levels: _levels(id, games.where((g) => g.world == id))),
     ]..sort((a, b) => a.order.compareTo(b.order));
-    return ContentLibrary._(List.unmodifiable(worlds));
+    return ContentLibrary._(List.unmodifiable(worlds), Map.unmodifiable(vocab));
   }
 
   final List<World> worlds;
+
+  /// Every picture item by id.
+  final Map<String, VocabItem> vocab;
+
+  VocabItem item(String id) => vocab[id] ?? (throw ContentException(['unknown vocab item "$id"']));
+
+  /// Items carrying all of [tags], in id order.
+  List<VocabItem> itemsTagged(Set<String> tags) =>
+      [for (final v in vocab.values) if (v.tags.containsAll(tags)) v]..sort((a, b) => a.id.compareTo(b.id));
+
+  /// Finds the game with this id, or null.
+  GameDef? game(String id) {
+    for (final g in allGames) {
+      if (g.id == id) return g;
+    }
+    return null;
+  }
 
   World world(String id) => worlds.firstWhere((w) => w.id == id);
 
@@ -82,6 +109,7 @@ class ContentLibrary {
     final rel = path.startsWith(contentRoot) ? path.substring(contentRoot.length) : path;
     if (rel.startsWith('worlds/')) return ContentKind.world;
     if (rel.startsWith('games/')) return ContentKind.game;
+    if (rel.startsWith('vocab/')) return ContentKind.vocab;
     return null;
   }
 
