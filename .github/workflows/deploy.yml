@@ -13,7 +13,8 @@ permissions:
 
 concurrency:
   group: pages-${{ github.ref }}
-  cancel-in-progress: true
+  # Never cancel a Pages deployment mid-flight on main; superseded PR builds can go.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
@@ -48,5 +49,8 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # Fails fast with a clear message if Pages is not enabled with source "GitHub Actions"
+      # (Settings → Pages → Build and deployment → Source). deploy-pages only reports a bare 404.
+      - uses: actions/configure-pages@v5
       - id: deployment
         uses: actions/deploy-pages@v4
