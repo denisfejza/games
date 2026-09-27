@@ -1,0 +1,14 @@
+{
+  "name": "memory-match",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc -p ."
+  },
+  "dependencies": {
+    "@kids-games/shared": "*",
+    "phaser": "^4.2.1"
+  }
+}

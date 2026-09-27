@@ -1,0 +1,22 @@
+{
+  "name": "kids-games",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w memory-match",
+    "dev:launcher": "npm run dev -w launcher",
+    "build": "npm run build -w launcher && npm run build -w memory-match",
+    "preview": "vite preview --outDir dist",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1",
+    "vitest": "^5.0.2"
+  }
+}
