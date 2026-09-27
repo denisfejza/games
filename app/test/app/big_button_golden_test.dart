@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:pips_world/app/strings.dart';
 import 'package:pips_world/app/ui/big_button.dart';
 import 'package:pips_world/l10n/app_localizations.dart';
+import 'package:pips_world/worlds/world_style.dart';
 
 import '../helpers.dart';
 
@@ -24,7 +25,8 @@ void main() {
                   body: Center(
                     child: RepaintBoundary(
                       key: const Key('golden'),
-                      child: Padding(
+                      child: Container(
+                        color: const Color(0xFF8E5CF7),
                         padding: const EdgeInsets.all(12),
                         child: Wrap(
                           spacing: 12,
@@ -38,6 +40,18 @@ void main() {
                               BigButton(
                                 key: Key(key),
                                 icon: icon,
+                                speakKey: key,
+                                label: lookupString(l, key),
+                                onPressed: () {},
+                              ),
+                            // Sticker tiles as used on the world map.
+                            for (final (key, world) in [('worldNumbers', 'numbers'), ('worldLetters', 'letters')])
+                              BigButton(
+                                key: Key(key),
+                                art: WorldStyle.of(world).art,
+                                sticker: true,
+                                outlinedLabel: true,
+                                color: WorldStyle.of(world).color,
                                 speakKey: key,
                                 label: lookupString(l, key),
                                 onPressed: () {},

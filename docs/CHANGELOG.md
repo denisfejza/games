@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- More colourful map: one patterned colour stripe per world, sticker-style world tiles with drawn pictures,
+  ribbon title, wavy ground with a placeholder Pip (tap him to hear the greeting); world screens use their
+  world's colour. Glossy `BigButton`, new sticker style; goldens regenerated.
 - 0.1 Flutter project `pips_world` in `app/` with Flame, Rive, Riverpod, Drift, flutter_localizations, audioplayers,
   in_app_purchase; map screen; `docs/DEPENDENCIES.md`; GitHub Pages deploys the web build.
 - 0.2 en/sq ARB files with ICU plurals, Nunito font (ë/ç), `LocaleSwitcher` in the gated debug menu; test that en and sq
