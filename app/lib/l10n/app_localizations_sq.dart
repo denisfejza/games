@@ -539,4 +539,370 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get praiseSuper => 'Super!';
+
+  @override
+  String get vocabHabitatFarm => 'Fermë';
+
+  @override
+  String get vocabHabitatHome => 'Shtëpi';
+
+  @override
+  String get vocabHabitatJungle => 'Xhungël';
+
+  @override
+  String get vocabHabitatSea => 'Det';
+
+  @override
+  String get vocabHabitatSnow => 'Borë';
+
+  @override
+  String get vocabHabitatGarden => 'Kopsht';
+
+  @override
+  String get vocabHabitatForest => 'Pyll';
+
+  @override
+  String get num0 => 'zero';
+
+  @override
+  String get num1 => 'një';
+
+  @override
+  String get num2 => 'dy';
+
+  @override
+  String get num3 => 'tre';
+
+  @override
+  String get num4 => 'katër';
+
+  @override
+  String get num5 => 'pesë';
+
+  @override
+  String get num6 => 'gjashtë';
+
+  @override
+  String get num7 => 'shtatë';
+
+  @override
+  String get num8 => 'tetë';
+
+  @override
+  String get num9 => 'nëntë';
+
+  @override
+  String get num10 => 'dhjetë';
+
+  @override
+  String get num11 => 'njëmbëdhjetë';
+
+  @override
+  String get num12 => 'dymbëdhjetë';
+
+  @override
+  String get num13 => 'trembëdhjetë';
+
+  @override
+  String get num14 => 'katërmbëdhjetë';
+
+  @override
+  String get num15 => 'pesëmbëdhjetë';
+
+  @override
+  String get num16 => 'gjashtëmbëdhjetë';
+
+  @override
+  String get num17 => 'shtatëmbëdhjetë';
+
+  @override
+  String get num18 => 'tetëmbëdhjetë';
+
+  @override
+  String get num19 => 'nëntëmbëdhjetë';
+
+  @override
+  String get num20 => 'njëzet';
+
+  @override
+  String get letterEnA => 'a';
+
+  @override
+  String get letterEnB => 'b';
+
+  @override
+  String get letterEnC => 'c';
+
+  @override
+  String get letterEnD => 'd';
+
+  @override
+  String get letterEnE => 'e';
+
+  @override
+  String get letterEnF => 'f';
+
+  @override
+  String get letterEnG => 'g';
+
+  @override
+  String get letterEnH => 'h';
+
+  @override
+  String get letterEnI => 'i';
+
+  @override
+  String get letterEnJ => 'j';
+
+  @override
+  String get letterEnK => 'k';
+
+  @override
+  String get letterEnL => 'l';
+
+  @override
+  String get letterEnM => 'm';
+
+  @override
+  String get letterEnN => 'n';
+
+  @override
+  String get letterEnO => 'o';
+
+  @override
+  String get letterEnP => 'p';
+
+  @override
+  String get letterEnQ => 'q';
+
+  @override
+  String get letterEnR => 'r';
+
+  @override
+  String get letterEnS => 's';
+
+  @override
+  String get letterEnT => 't';
+
+  @override
+  String get letterEnU => 'u';
+
+  @override
+  String get letterEnV => 'v';
+
+  @override
+  String get letterEnW => 'w';
+
+  @override
+  String get letterEnX => 'x';
+
+  @override
+  String get letterEnY => 'y';
+
+  @override
+  String get letterEnZ => 'z';
+
+  @override
+  String get letterSqA => 'a';
+
+  @override
+  String get letterSqB => 'b';
+
+  @override
+  String get letterSqC => 'c';
+
+  @override
+  String get letterSqCCedilla => 'ç';
+
+  @override
+  String get letterSqD => 'd';
+
+  @override
+  String get letterSqDh => 'dh';
+
+  @override
+  String get letterSqE => 'e';
+
+  @override
+  String get letterSqEDiaeresis => 'ë';
+
+  @override
+  String get letterSqF => 'f';
+
+  @override
+  String get letterSqG => 'g';
+
+  @override
+  String get letterSqGj => 'gj';
+
+  @override
+  String get letterSqH => 'h';
+
+  @override
+  String get letterSqI => 'i';
+
+  @override
+  String get letterSqJ => 'j';
+
+  @override
+  String get letterSqK => 'k';
+
+  @override
+  String get letterSqL => 'l';
+
+  @override
+  String get letterSqLl => 'll';
+
+  @override
+  String get letterSqM => 'm';
+
+  @override
+  String get letterSqN => 'n';
+
+  @override
+  String get letterSqNj => 'nj';
+
+  @override
+  String get letterSqO => 'o';
+
+  @override
+  String get letterSqP => 'p';
+
+  @override
+  String get letterSqQ => 'q';
+
+  @override
+  String get letterSqR => 'r';
+
+  @override
+  String get letterSqRr => 'rr';
+
+  @override
+  String get letterSqS => 's';
+
+  @override
+  String get letterSqSh => 'sh';
+
+  @override
+  String get letterSqT => 't';
+
+  @override
+  String get letterSqTh => 'th';
+
+  @override
+  String get letterSqU => 'u';
+
+  @override
+  String get letterSqV => 'v';
+
+  @override
+  String get letterSqX => 'x';
+
+  @override
+  String get letterSqXh => 'xh';
+
+  @override
+  String get letterSqY => 'y';
+
+  @override
+  String get letterSqZ => 'z';
+
+  @override
+  String get letterSqZh => 'zh';
+
+  @override
+  String get gameFindThis => 'Gjeje këtë!';
+
+  @override
+  String get gameWhoSays => 'Kush e bën këtë zë?';
+
+  @override
+  String get gameFindNumber => 'Gjej numrin!';
+
+  @override
+  String get gameHowMany => 'Sa janë?';
+
+  @override
+  String get gameWhichMore => 'Cili ka më shumë?';
+
+  @override
+  String get gameWhichFewer => 'Cili ka më pak?';
+
+  @override
+  String get gameStartsWith => 'Çfarë fillon me këtë tingull?';
+
+  @override
+  String get gameFindLetter => 'Gjej shkronjën!';
+
+  @override
+  String get gameFindColour => 'Gjej ngjyrën!';
+
+  @override
+  String get gameFindShape => 'Gjej formën!';
+
+  @override
+  String get gameFeed => 'Jepi ushqimin kafshës së duhur!';
+
+  @override
+  String get gameWhereLives => 'Ku jeton?';
+
+  @override
+  String get gameFindMummy => 'Ndihmoje të voglin të gjejë mamanë!';
+
+  @override
+  String get gameShapeHole => 'Vendose formën në vrimën e saj!';
+
+  @override
+  String get gameCountTap => 'Prek secilin dhe numëro!';
+
+  @override
+  String get praiseCountedAll => 'I numërove një nga një!';
+
+  @override
+  String get gameTrace => 'Ndiqe me gisht!';
+
+  @override
+  String get praiseTraced => 'Shumë bukur!';
+
+  @override
+  String get gameFindPairs => 'Gjej çiftet!';
+
+  @override
+  String get praisePair => 'Një çift!';
+
+  @override
+  String get gameWhatNext => 'Çfarë vjen më pas?';
+
+  @override
+  String get gameSortBins => 'Vendose secilin në vendin e duhur!';
+
+  @override
+  String get gameBuildWord => 'Bashko tingujt!';
+
+  @override
+  String get gameBondTo5 => 'Sa duhen që të bëhen pesë?';
+
+  @override
+  String get gameBondTo10 => 'Sa duhen që të bëhen dhjetë?';
+
+  @override
+  String get gameSumWhat => 'Sa janë gjithsej?';
+
+  @override
+  String get gameTakeAway => 'Sa mbeten?';
+
+  @override
+  String get gameListen => 'Dëgjo!';
+
+  @override
+  String get binBig => 'I madh';
+
+  @override
+  String get binSmall => 'I vogël';
+
+  @override
+  String get binLand => 'Tokë';
+
+  @override
+  String get binWater => 'Ujë';
 }

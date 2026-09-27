@@ -13,7 +13,8 @@
    "props": {
     "size": "big",
     "lives": "land",
-    "food": "grass"
+    "food": "grass",
+    "habitat": "habitat_farm"
    }
   },
   {
@@ -28,7 +29,8 @@
    "props": {
     "size": "big",
     "lives": "land",
-    "food": "grass"
+    "food": "grass",
+    "habitat": "habitat_farm"
    }
   },
   {
@@ -43,7 +45,8 @@
    "props": {
     "size": "big",
     "lives": "land",
-    "food": "apple"
+    "food": "apple",
+    "habitat": "habitat_farm"
    }
   },
   {
@@ -58,7 +61,8 @@
    "props": {
     "size": "small",
     "lives": "land",
-    "food": "corn"
+    "food": "corn",
+    "habitat": "habitat_farm"
    }
   },
   {
@@ -73,7 +77,8 @@
    "props": {
     "size": "big",
     "lives": "land",
-    "food": "carrot"
+    "food": "carrot",
+    "habitat": "habitat_farm"
    }
   },
   {
@@ -88,7 +93,8 @@
    "props": {
     "size": "small",
     "lives": "water",
-    "food": "corn"
+    "food": "corn",
+    "habitat": "habitat_farm"
    }
   },
   {
@@ -103,7 +109,8 @@
    "props": {
     "size": "big",
     "lives": "land",
-    "food": "grass"
+    "food": "grass",
+    "habitat": "habitat_farm"
    }
   },
   {
@@ -118,7 +125,8 @@
    "props": {
     "size": "small",
     "lives": "land",
-    "food": "corn"
+    "food": "corn",
+    "habitat": "habitat_farm"
    }
   },
   {
@@ -133,7 +141,8 @@
    "props": {
     "size": "small",
     "lives": "land",
-    "food": "bone"
+    "food": "bone",
+    "habitat": "habitat_home"
    }
   },
   {
@@ -148,7 +157,8 @@
    "props": {
     "size": "small",
     "lives": "land",
-    "food": "milk"
+    "food": "milk",
+    "habitat": "habitat_home"
    }
   },
   {
@@ -163,7 +173,8 @@
    "props": {
     "size": "small",
     "lives": "land",
-    "food": "carrot"
+    "food": "carrot",
+    "habitat": "habitat_home"
    }
   },
   {
@@ -177,7 +188,8 @@
    ],
    "props": {
     "size": "small",
-    "lives": "water"
+    "lives": "water",
+    "habitat": "habitat_home"
    }
   },
   {
@@ -193,7 +205,8 @@
    "props": {
     "size": "small",
     "lives": "land",
-    "food": "corn"
+    "food": "corn",
+    "habitat": "habitat_home"
    }
   },
   {
@@ -207,7 +220,8 @@
    "props": {
     "size": "small",
     "lives": "land",
-    "food": "corn"
+    "food": "corn",
+    "habitat": "habitat_home"
    }
   },
   {
@@ -221,7 +235,8 @@
    "props": {
     "size": "small",
     "lives": "land",
-    "food": "leaf"
+    "food": "leaf",
+    "habitat": "habitat_home"
    }
   },
   {
@@ -236,7 +251,8 @@
    "props": {
     "size": "small",
     "lives": "land",
-    "food": "cheese"
+    "food": "cheese",
+    "habitat": "habitat_home"
    }
   },
   {
@@ -250,7 +266,8 @@
    "soundKey": "sfx.animal.lion",
    "props": {
     "size": "big",
-    "lives": "land"
+    "lives": "land",
+    "habitat": "habitat_jungle"
    }
   },
   {
@@ -265,7 +282,8 @@
    "props": {
     "size": "big",
     "lives": "land",
-    "food": "banana"
+    "food": "banana",
+    "habitat": "habitat_jungle"
    }
   },
   {
@@ -280,7 +298,8 @@
    "props": {
     "size": "small",
     "lives": "land",
-    "food": "banana"
+    "food": "banana",
+    "habitat": "habitat_jungle"
    }
   },
   {
@@ -294,7 +313,8 @@
    "props": {
     "size": "big",
     "lives": "land",
-    "food": "leaf"
+    "food": "leaf",
+    "habitat": "habitat_jungle"
    }
   },
   {
@@ -308,7 +328,8 @@
    "props": {
     "size": "big",
     "lives": "land",
-    "food": "grass"
+    "food": "grass",
+    "habitat": "habitat_jungle"
    }
   },
   {
@@ -322,7 +343,8 @@
    "soundKey": "sfx.animal.tiger",
    "props": {
     "size": "big",
-    "lives": "land"
+    "lives": "land",
+    "habitat": "habitat_jungle"
    }
   },
   {
@@ -336,7 +358,8 @@
    "soundKey": "sfx.animal.snake",
    "props": {
     "size": "small",
-    "lives": "land"
+    "lives": "land",
+    "habitat": "habitat_jungle"
    }
   },
   {
@@ -349,7 +372,8 @@
    ],
    "props": {
     "size": "big",
-    "lives": "water"
+    "lives": "water",
+    "habitat": "habitat_jungle"
    }
   },
   {
@@ -363,7 +387,8 @@
    "soundKey": "sfx.animal.whale",
    "props": {
     "size": "big",
-    "lives": "water"
+    "lives": "water",
+    "habitat": "habitat_sea"
    }
   },
   {
@@ -378,7 +403,8 @@
    "props": {
     "size": "big",
     "lives": "water",
-    "food": "fish"
+    "food": "fish",
+    "habitat": "habitat_sea"
    }
   },
   {
@@ -391,7 +417,8 @@
    ],
    "props": {
     "size": "small",
-    "lives": "water"
+    "lives": "water",
+    "habitat": "habitat_sea"
    }
   },
   {
@@ -404,7 +431,8 @@
    ],
    "props": {
     "size": "small",
-    "lives": "water"
+    "lives": "water",
+    "habitat": "habitat_sea"
    }
   },
   {
@@ -417,7 +445,8 @@
    ],
    "props": {
     "size": "big",
-    "lives": "water"
+    "lives": "water",
+    "habitat": "habitat_sea"
    }
   },
   {
@@ -432,7 +461,8 @@
    "props": {
     "size": "small",
     "lives": "land",
-    "food": "fish"
+    "food": "fish",
+    "habitat": "habitat_snow"
    }
   },
   {
@@ -448,7 +478,8 @@
    "props": {
     "size": "big",
     "lives": "water",
-    "food": "fish"
+    "food": "fish",
+    "habitat": "habitat_snow"
    }
   },
   {
@@ -462,7 +493,8 @@
    "soundKey": "sfx.animal.fox",
    "props": {
     "size": "small",
-    "lives": "land"
+    "lives": "land",
+    "habitat": "habitat_snow"
    }
   },
   {
@@ -476,7 +508,8 @@
    "soundKey": "sfx.animal.owl",
    "props": {
     "size": "small",
-    "lives": "land"
+    "lives": "land",
+    "habitat": "habitat_snow"
    }
   },
   {
@@ -491,7 +524,8 @@
    "props": {
     "size": "big",
     "lives": "land",
-    "food": "honey"
+    "food": "honey",
+    "habitat": "habitat_snow"
    }
   },
   {
@@ -505,7 +539,8 @@
    "soundKey": "sfx.animal.bee",
    "props": {
     "size": "small",
-    "lives": "land"
+    "lives": "land",
+    "habitat": "habitat_garden"
    }
   },
   {
@@ -519,7 +554,8 @@
    "soundKey": "sfx.animal.frog",
    "props": {
     "size": "small",
-    "lives": "water"
+    "lives": "water",
+    "habitat": "habitat_garden"
    }
   },
   {
@@ -533,7 +569,8 @@
    "soundKey": "sfx.animal.toad",
    "props": {
     "size": "small",
-    "lives": "water"
+    "lives": "water",
+    "habitat": "habitat_garden"
    }
   },
   {
@@ -548,7 +585,8 @@
    "props": {
     "size": "small",
     "lives": "land",
-    "food": "corn"
+    "food": "corn",
+    "habitat": "habitat_garden"
    }
   },
   {
@@ -561,7 +599,8 @@
    ],
    "props": {
     "size": "small",
-    "lives": "land"
+    "lives": "land",
+    "habitat": "habitat_garden"
    }
   },
   {
@@ -574,7 +613,8 @@
    ],
    "props": {
     "size": "small",
-    "lives": "land"
+    "lives": "land",
+    "habitat": "habitat_garden"
    }
   },
   {
@@ -588,7 +628,8 @@
    "props": {
     "size": "small",
     "lives": "land",
-    "food": "leaf"
+    "food": "leaf",
+    "habitat": "habitat_garden"
    }
   },
   {
@@ -601,7 +642,8 @@
    ],
    "props": {
     "size": "small",
-    "lives": "land"
+    "lives": "land",
+    "habitat": "habitat_garden"
    }
   },
   {
@@ -616,7 +658,8 @@
    "props": {
     "size": "big",
     "lives": "land",
-    "food": "apple"
+    "food": "apple",
+    "habitat": "habitat_forest"
    }
   },
   {
@@ -630,7 +673,8 @@
    "props": {
     "size": "big",
     "lives": "land",
-    "food": "grass"
+    "food": "grass",
+    "habitat": "habitat_jungle"
    }
   },
   {
@@ -644,7 +688,8 @@
    "props": {
     "size": "big",
     "lives": "land",
-    "food": "leaf"
+    "food": "leaf",
+    "habitat": "habitat_jungle"
    }
   }
  ]

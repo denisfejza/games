@@ -15,6 +15,7 @@ class GameContext {
     required this.band,
     required this.locale,
     required this.onFinished,
+    required this.text,
     Random? random,
   }) : random = random ?? Random();
 
@@ -23,6 +24,9 @@ class GameContext {
   final AgeBand band;
   final String locale;
   final Random random;
+
+  /// The string for a content key in the current language (names, letters).
+  final String? Function(String key) text;
 
   /// Called once, after the game's short celebration.
   final void Function(MiniGameResult result) onFinished;
@@ -38,5 +42,5 @@ abstract interface class GameEngine {
   Widget build(GameContext context);
 }
 
-/// Engines by `game` type. Overridden in tests with stub engines.
-final gameRegistryProvider = Provider<Map<String, GameEngine>>((ref) => const {});
+/// Engines by `game` type (lib/games/registry.dart). Overridden in tests with stub engines.
+final gameRegistryProvider = Provider<Map<String, GameEngine>>((ref) => throw UnimplementedError('set in main.dart'));

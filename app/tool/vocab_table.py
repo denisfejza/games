@@ -123,6 +123,16 @@ OBJECTS = [
     ("circus", "🎪", "Circus", "Cirk", "toy", "red", ""),
 ]
 
+# id, emoji, en, sq  (drag_to_target "where does it live?")
+HABITATS = [
+    ("habitat_farm", "🚜", "Farm", "Fermë"), ("habitat_home", "🏡", "Home", "Shtëpi"),
+    ("habitat_jungle", "🌴", "Jungle", "Xhungël"), ("habitat_sea", "🌊", "Sea", "Det"),
+    ("habitat_snow", "❄️", "Snow", "Borë"), ("habitat_garden", "🌷", "Garden", "Kopsht"),
+    ("habitat_forest", "🌲", "Forest", "Pyll"),
+]
+HABITAT_OF_TAG = {"farm": "habitat_farm", "pet": "habitat_home", "jungle": "habitat_jungle", "ocean": "habitat_sea",
+                  "snow": "habitat_snow", "garden": "habitat_garden", "forest": "habitat_forest"}
+
 COLOURS = [
     ("red", "#E53935", "Red", "E kuqe"), ("blue", "#1E88E5", "Blue", "Blu"),
     ("yellow", "#FDD835", "Yellow", "E verdhë"), ("green", "#43A047", "Green", "Jeshile"),
@@ -158,6 +168,7 @@ def main():
                 "tags": ["animal"] + tags.split()}
         if props.pop("sound"):
             item["soundKey"] = f"sfx.animal.{id_}"
+        props["habitat"] = HABITAT_OF_TAG[tags.split()[0]]
         item["props"] = {k: v for k, v in props.items() if v}
         animals.append(item)
     files["animals"] = animals
@@ -171,6 +182,10 @@ def main():
         {"id": id_, "nameKey": add_name("vocab", id_, en, sq), "emoji": emoji, "tags": ["object"] + tags.split(),
          "props": {k: v for k, v in dict(colour=colour, shape=shape).items() if v}}
         for id_, emoji, en, sq, tags, colour, shape in OBJECTS
+    ]
+    files["habitats"] = [
+        {"id": id_, "nameKey": add_name("vocab", id_, en, sq), "emoji": emoji, "tags": ["habitat"]}
+        for id_, emoji, en, sq in HABITATS
     ]
     files["colours"] = [
         {"id": id_, "nameKey": add_name("colour", id_, en, sq), "colour": hexv, "tags": ["colour"]}

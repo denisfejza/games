@@ -9,6 +9,7 @@ Future<void> testExecutable(FutureOr<void> Function() testMain) async {
   TestWidgetsFlutterBinding.ensureInitialized();
   await _load('Nunito', ['assets/fonts/Nunito-Regular.ttf', 'assets/fonts/Nunito-ExtraBold.ttf']);
   await _load('MaterialIcons', ['fonts/MaterialIcons-Regular.otf']);
+  await _load('PipEmoji', ['assets/fonts/PipEmoji.ttf']);
   await testMain();
 }
 

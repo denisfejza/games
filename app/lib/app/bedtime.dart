@@ -75,10 +75,9 @@ class BedtimeScreen extends StatelessWidget {
   const BedtimeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) =>
-      HeroControllerScope.none(
-        child: Navigator(onGenerateRoute: (_) => MaterialPageRoute<void>(builder: (_) => const _Bedtime())),
-      );
+  Widget build(BuildContext context) => HeroControllerScope.none(
+    child: Navigator(onGenerateRoute: (_) => MaterialPageRoute<void>(builder: (_) => const _Bedtime())),
+  );
 }
 
 class _Bedtime extends ConsumerStatefulWidget {

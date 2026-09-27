@@ -539,4 +539,370 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get praiseSuper => 'Super!';
+
+  @override
+  String get vocabHabitatFarm => 'Farm';
+
+  @override
+  String get vocabHabitatHome => 'Home';
+
+  @override
+  String get vocabHabitatJungle => 'Jungle';
+
+  @override
+  String get vocabHabitatSea => 'Sea';
+
+  @override
+  String get vocabHabitatSnow => 'Snow';
+
+  @override
+  String get vocabHabitatGarden => 'Garden';
+
+  @override
+  String get vocabHabitatForest => 'Forest';
+
+  @override
+  String get num0 => 'zero';
+
+  @override
+  String get num1 => 'one';
+
+  @override
+  String get num2 => 'two';
+
+  @override
+  String get num3 => 'three';
+
+  @override
+  String get num4 => 'four';
+
+  @override
+  String get num5 => 'five';
+
+  @override
+  String get num6 => 'six';
+
+  @override
+  String get num7 => 'seven';
+
+  @override
+  String get num8 => 'eight';
+
+  @override
+  String get num9 => 'nine';
+
+  @override
+  String get num10 => 'ten';
+
+  @override
+  String get num11 => 'eleven';
+
+  @override
+  String get num12 => 'twelve';
+
+  @override
+  String get num13 => 'thirteen';
+
+  @override
+  String get num14 => 'fourteen';
+
+  @override
+  String get num15 => 'fifteen';
+
+  @override
+  String get num16 => 'sixteen';
+
+  @override
+  String get num17 => 'seventeen';
+
+  @override
+  String get num18 => 'eighteen';
+
+  @override
+  String get num19 => 'nineteen';
+
+  @override
+  String get num20 => 'twenty';
+
+  @override
+  String get letterEnA => 'a';
+
+  @override
+  String get letterEnB => 'b';
+
+  @override
+  String get letterEnC => 'c';
+
+  @override
+  String get letterEnD => 'd';
+
+  @override
+  String get letterEnE => 'e';
+
+  @override
+  String get letterEnF => 'f';
+
+  @override
+  String get letterEnG => 'g';
+
+  @override
+  String get letterEnH => 'h';
+
+  @override
+  String get letterEnI => 'i';
+
+  @override
+  String get letterEnJ => 'j';
+
+  @override
+  String get letterEnK => 'k';
+
+  @override
+  String get letterEnL => 'l';
+
+  @override
+  String get letterEnM => 'm';
+
+  @override
+  String get letterEnN => 'n';
+
+  @override
+  String get letterEnO => 'o';
+
+  @override
+  String get letterEnP => 'p';
+
+  @override
+  String get letterEnQ => 'q';
+
+  @override
+  String get letterEnR => 'r';
+
+  @override
+  String get letterEnS => 's';
+
+  @override
+  String get letterEnT => 't';
+
+  @override
+  String get letterEnU => 'u';
+
+  @override
+  String get letterEnV => 'v';
+
+  @override
+  String get letterEnW => 'w';
+
+  @override
+  String get letterEnX => 'x';
+
+  @override
+  String get letterEnY => 'y';
+
+  @override
+  String get letterEnZ => 'z';
+
+  @override
+  String get letterSqA => 'a';
+
+  @override
+  String get letterSqB => 'b';
+
+  @override
+  String get letterSqC => 'c';
+
+  @override
+  String get letterSqCCedilla => 'ç';
+
+  @override
+  String get letterSqD => 'd';
+
+  @override
+  String get letterSqDh => 'dh';
+
+  @override
+  String get letterSqE => 'e';
+
+  @override
+  String get letterSqEDiaeresis => 'ë';
+
+  @override
+  String get letterSqF => 'f';
+
+  @override
+  String get letterSqG => 'g';
+
+  @override
+  String get letterSqGj => 'gj';
+
+  @override
+  String get letterSqH => 'h';
+
+  @override
+  String get letterSqI => 'i';
+
+  @override
+  String get letterSqJ => 'j';
+
+  @override
+  String get letterSqK => 'k';
+
+  @override
+  String get letterSqL => 'l';
+
+  @override
+  String get letterSqLl => 'll';
+
+  @override
+  String get letterSqM => 'm';
+
+  @override
+  String get letterSqN => 'n';
+
+  @override
+  String get letterSqNj => 'nj';
+
+  @override
+  String get letterSqO => 'o';
+
+  @override
+  String get letterSqP => 'p';
+
+  @override
+  String get letterSqQ => 'q';
+
+  @override
+  String get letterSqR => 'r';
+
+  @override
+  String get letterSqRr => 'rr';
+
+  @override
+  String get letterSqS => 's';
+
+  @override
+  String get letterSqSh => 'sh';
+
+  @override
+  String get letterSqT => 't';
+
+  @override
+  String get letterSqTh => 'th';
+
+  @override
+  String get letterSqU => 'u';
+
+  @override
+  String get letterSqV => 'v';
+
+  @override
+  String get letterSqX => 'x';
+
+  @override
+  String get letterSqXh => 'xh';
+
+  @override
+  String get letterSqY => 'y';
+
+  @override
+  String get letterSqZ => 'z';
+
+  @override
+  String get letterSqZh => 'zh';
+
+  @override
+  String get gameFindThis => 'Find this one!';
+
+  @override
+  String get gameWhoSays => 'Who makes this sound?';
+
+  @override
+  String get gameFindNumber => 'Find the number!';
+
+  @override
+  String get gameHowMany => 'How many?';
+
+  @override
+  String get gameWhichMore => 'Which has more?';
+
+  @override
+  String get gameWhichFewer => 'Which has fewer?';
+
+  @override
+  String get gameStartsWith => 'What starts with this sound?';
+
+  @override
+  String get gameFindLetter => 'Find the letter!';
+
+  @override
+  String get gameFindColour => 'Find the colour!';
+
+  @override
+  String get gameFindShape => 'Find the shape!';
+
+  @override
+  String get gameFeed => 'Give the food to the right animal!';
+
+  @override
+  String get gameWhereLives => 'Where does it live?';
+
+  @override
+  String get gameFindMummy => 'Help the baby find its mummy!';
+
+  @override
+  String get gameShapeHole => 'Put the shape in its hole!';
+
+  @override
+  String get gameCountTap => 'Tap each one and count!';
+
+  @override
+  String get praiseCountedAll => 'You counted every one!';
+
+  @override
+  String get gameTrace => 'Trace it with your finger!';
+
+  @override
+  String get praiseTraced => 'Beautiful tracing!';
+
+  @override
+  String get gameFindPairs => 'Find the pairs!';
+
+  @override
+  String get praisePair => 'A pair!';
+
+  @override
+  String get gameWhatNext => 'What comes next?';
+
+  @override
+  String get gameSortBins => 'Put each one in the right place!';
+
+  @override
+  String get gameBuildWord => 'Put the sounds together!';
+
+  @override
+  String get gameBondTo5 => 'How many more to make five?';
+
+  @override
+  String get gameBondTo10 => 'How many more to make ten?';
+
+  @override
+  String get gameSumWhat => 'How many altogether?';
+
+  @override
+  String get gameTakeAway => 'How many are left?';
+
+  @override
+  String get gameListen => 'Listen!';
+
+  @override
+  String get binBig => 'Big';
+
+  @override
+  String get binSmall => 'Small';
+
+  @override
+  String get binLand => 'Land';
+
+  @override
+  String get binWater => 'Water';
 }

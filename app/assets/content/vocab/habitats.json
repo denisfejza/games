@@ -1,0 +1,61 @@
+{
+ "category": "habitats",
+ "items": [
+  {
+   "id": "habitat_farm",
+   "nameKey": "vocab.habitat_farm",
+   "emoji": "🚜",
+   "tags": [
+    "habitat"
+   ]
+  },
+  {
+   "id": "habitat_home",
+   "nameKey": "vocab.habitat_home",
+   "emoji": "🏡",
+   "tags": [
+    "habitat"
+   ]
+  },
+  {
+   "id": "habitat_jungle",
+   "nameKey": "vocab.habitat_jungle",
+   "emoji": "🌴",
+   "tags": [
+    "habitat"
+   ]
+  },
+  {
+   "id": "habitat_sea",
+   "nameKey": "vocab.habitat_sea",
+   "emoji": "🌊",
+   "tags": [
+    "habitat"
+   ]
+  },
+  {
+   "id": "habitat_snow",
+   "nameKey": "vocab.habitat_snow",
+   "emoji": "❄️",
+   "tags": [
+    "habitat"
+   ]
+  },
+  {
+   "id": "habitat_garden",
+   "nameKey": "vocab.habitat_garden",
+   "emoji": "🌷",
+   "tags": [
+    "habitat"
+   ]
+  },
+  {
+   "id": "habitat_forest",
+   "nameKey": "vocab.habitat_forest",
+   "emoji": "🌲",
+   "tags": [
+    "habitat"
+   ]
+  }
+ ]
+}

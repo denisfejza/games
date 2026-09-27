@@ -5,6 +5,8 @@ import 'app/app.dart';
 import 'app/providers.dart';
 import 'core/storage/database.dart';
 import 'core/storage/settings_store.dart';
+import 'games/common/mini_game.dart';
+import 'games/registry.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,7 +14,11 @@ Future<void> main() async {
   final settings = await DriftSettingsStore(db).loadAll();
   runApp(
     ProviderScope(
-      overrides: [databaseProvider.overrideWithValue(db), initialSettingsProvider.overrideWithValue(settings)],
+      overrides: [
+        databaseProvider.overrideWithValue(db),
+        initialSettingsProvider.overrideWithValue(settings),
+        gameRegistryProvider.overrideWithValue(engines),
+      ],
       child: const PipsWorldApp(),
     ),
   );

@@ -130,6 +130,7 @@ class _EpisodeScreenState extends ConsumerState<EpisodeScreen> {
             band: ref.read(ageBandProvider),
             locale: ref.read(localeProvider).languageCode,
             random: widget.random,
+            text: (k) => lookupString(AppLocalizations.of(context), k),
             onFinished: _gameFinished,
           ),
         ),

@@ -1129,6 +1129,738 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Super!'**
   String get praiseSuper;
+
+  /// No description provided for @vocabHabitatFarm.
+  ///
+  /// In en, this message translates to:
+  /// **'Farm'**
+  String get vocabHabitatFarm;
+
+  /// No description provided for @vocabHabitatHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get vocabHabitatHome;
+
+  /// No description provided for @vocabHabitatJungle.
+  ///
+  /// In en, this message translates to:
+  /// **'Jungle'**
+  String get vocabHabitatJungle;
+
+  /// No description provided for @vocabHabitatSea.
+  ///
+  /// In en, this message translates to:
+  /// **'Sea'**
+  String get vocabHabitatSea;
+
+  /// No description provided for @vocabHabitatSnow.
+  ///
+  /// In en, this message translates to:
+  /// **'Snow'**
+  String get vocabHabitatSnow;
+
+  /// No description provided for @vocabHabitatGarden.
+  ///
+  /// In en, this message translates to:
+  /// **'Garden'**
+  String get vocabHabitatGarden;
+
+  /// No description provided for @vocabHabitatForest.
+  ///
+  /// In en, this message translates to:
+  /// **'Forest'**
+  String get vocabHabitatForest;
+
+  /// No description provided for @num0.
+  ///
+  /// In en, this message translates to:
+  /// **'zero'**
+  String get num0;
+
+  /// No description provided for @num1.
+  ///
+  /// In en, this message translates to:
+  /// **'one'**
+  String get num1;
+
+  /// No description provided for @num2.
+  ///
+  /// In en, this message translates to:
+  /// **'two'**
+  String get num2;
+
+  /// No description provided for @num3.
+  ///
+  /// In en, this message translates to:
+  /// **'three'**
+  String get num3;
+
+  /// No description provided for @num4.
+  ///
+  /// In en, this message translates to:
+  /// **'four'**
+  String get num4;
+
+  /// No description provided for @num5.
+  ///
+  /// In en, this message translates to:
+  /// **'five'**
+  String get num5;
+
+  /// No description provided for @num6.
+  ///
+  /// In en, this message translates to:
+  /// **'six'**
+  String get num6;
+
+  /// No description provided for @num7.
+  ///
+  /// In en, this message translates to:
+  /// **'seven'**
+  String get num7;
+
+  /// No description provided for @num8.
+  ///
+  /// In en, this message translates to:
+  /// **'eight'**
+  String get num8;
+
+  /// No description provided for @num9.
+  ///
+  /// In en, this message translates to:
+  /// **'nine'**
+  String get num9;
+
+  /// No description provided for @num10.
+  ///
+  /// In en, this message translates to:
+  /// **'ten'**
+  String get num10;
+
+  /// No description provided for @num11.
+  ///
+  /// In en, this message translates to:
+  /// **'eleven'**
+  String get num11;
+
+  /// No description provided for @num12.
+  ///
+  /// In en, this message translates to:
+  /// **'twelve'**
+  String get num12;
+
+  /// No description provided for @num13.
+  ///
+  /// In en, this message translates to:
+  /// **'thirteen'**
+  String get num13;
+
+  /// No description provided for @num14.
+  ///
+  /// In en, this message translates to:
+  /// **'fourteen'**
+  String get num14;
+
+  /// No description provided for @num15.
+  ///
+  /// In en, this message translates to:
+  /// **'fifteen'**
+  String get num15;
+
+  /// No description provided for @num16.
+  ///
+  /// In en, this message translates to:
+  /// **'sixteen'**
+  String get num16;
+
+  /// No description provided for @num17.
+  ///
+  /// In en, this message translates to:
+  /// **'seventeen'**
+  String get num17;
+
+  /// No description provided for @num18.
+  ///
+  /// In en, this message translates to:
+  /// **'eighteen'**
+  String get num18;
+
+  /// No description provided for @num19.
+  ///
+  /// In en, this message translates to:
+  /// **'nineteen'**
+  String get num19;
+
+  /// No description provided for @num20.
+  ///
+  /// In en, this message translates to:
+  /// **'twenty'**
+  String get num20;
+
+  /// No description provided for @letterEnA.
+  ///
+  /// In en, this message translates to:
+  /// **'a'**
+  String get letterEnA;
+
+  /// No description provided for @letterEnB.
+  ///
+  /// In en, this message translates to:
+  /// **'b'**
+  String get letterEnB;
+
+  /// No description provided for @letterEnC.
+  ///
+  /// In en, this message translates to:
+  /// **'c'**
+  String get letterEnC;
+
+  /// No description provided for @letterEnD.
+  ///
+  /// In en, this message translates to:
+  /// **'d'**
+  String get letterEnD;
+
+  /// No description provided for @letterEnE.
+  ///
+  /// In en, this message translates to:
+  /// **'e'**
+  String get letterEnE;
+
+  /// No description provided for @letterEnF.
+  ///
+  /// In en, this message translates to:
+  /// **'f'**
+  String get letterEnF;
+
+  /// No description provided for @letterEnG.
+  ///
+  /// In en, this message translates to:
+  /// **'g'**
+  String get letterEnG;
+
+  /// No description provided for @letterEnH.
+  ///
+  /// In en, this message translates to:
+  /// **'h'**
+  String get letterEnH;
+
+  /// No description provided for @letterEnI.
+  ///
+  /// In en, this message translates to:
+  /// **'i'**
+  String get letterEnI;
+
+  /// No description provided for @letterEnJ.
+  ///
+  /// In en, this message translates to:
+  /// **'j'**
+  String get letterEnJ;
+
+  /// No description provided for @letterEnK.
+  ///
+  /// In en, this message translates to:
+  /// **'k'**
+  String get letterEnK;
+
+  /// No description provided for @letterEnL.
+  ///
+  /// In en, this message translates to:
+  /// **'l'**
+  String get letterEnL;
+
+  /// No description provided for @letterEnM.
+  ///
+  /// In en, this message translates to:
+  /// **'m'**
+  String get letterEnM;
+
+  /// No description provided for @letterEnN.
+  ///
+  /// In en, this message translates to:
+  /// **'n'**
+  String get letterEnN;
+
+  /// No description provided for @letterEnO.
+  ///
+  /// In en, this message translates to:
+  /// **'o'**
+  String get letterEnO;
+
+  /// No description provided for @letterEnP.
+  ///
+  /// In en, this message translates to:
+  /// **'p'**
+  String get letterEnP;
+
+  /// No description provided for @letterEnQ.
+  ///
+  /// In en, this message translates to:
+  /// **'q'**
+  String get letterEnQ;
+
+  /// No description provided for @letterEnR.
+  ///
+  /// In en, this message translates to:
+  /// **'r'**
+  String get letterEnR;
+
+  /// No description provided for @letterEnS.
+  ///
+  /// In en, this message translates to:
+  /// **'s'**
+  String get letterEnS;
+
+  /// No description provided for @letterEnT.
+  ///
+  /// In en, this message translates to:
+  /// **'t'**
+  String get letterEnT;
+
+  /// No description provided for @letterEnU.
+  ///
+  /// In en, this message translates to:
+  /// **'u'**
+  String get letterEnU;
+
+  /// No description provided for @letterEnV.
+  ///
+  /// In en, this message translates to:
+  /// **'v'**
+  String get letterEnV;
+
+  /// No description provided for @letterEnW.
+  ///
+  /// In en, this message translates to:
+  /// **'w'**
+  String get letterEnW;
+
+  /// No description provided for @letterEnX.
+  ///
+  /// In en, this message translates to:
+  /// **'x'**
+  String get letterEnX;
+
+  /// No description provided for @letterEnY.
+  ///
+  /// In en, this message translates to:
+  /// **'y'**
+  String get letterEnY;
+
+  /// No description provided for @letterEnZ.
+  ///
+  /// In en, this message translates to:
+  /// **'z'**
+  String get letterEnZ;
+
+  /// No description provided for @letterSqA.
+  ///
+  /// In en, this message translates to:
+  /// **'a'**
+  String get letterSqA;
+
+  /// No description provided for @letterSqB.
+  ///
+  /// In en, this message translates to:
+  /// **'b'**
+  String get letterSqB;
+
+  /// No description provided for @letterSqC.
+  ///
+  /// In en, this message translates to:
+  /// **'c'**
+  String get letterSqC;
+
+  /// No description provided for @letterSqCCedilla.
+  ///
+  /// In en, this message translates to:
+  /// **'ç'**
+  String get letterSqCCedilla;
+
+  /// No description provided for @letterSqD.
+  ///
+  /// In en, this message translates to:
+  /// **'d'**
+  String get letterSqD;
+
+  /// No description provided for @letterSqDh.
+  ///
+  /// In en, this message translates to:
+  /// **'dh'**
+  String get letterSqDh;
+
+  /// No description provided for @letterSqE.
+  ///
+  /// In en, this message translates to:
+  /// **'e'**
+  String get letterSqE;
+
+  /// No description provided for @letterSqEDiaeresis.
+  ///
+  /// In en, this message translates to:
+  /// **'ë'**
+  String get letterSqEDiaeresis;
+
+  /// No description provided for @letterSqF.
+  ///
+  /// In en, this message translates to:
+  /// **'f'**
+  String get letterSqF;
+
+  /// No description provided for @letterSqG.
+  ///
+  /// In en, this message translates to:
+  /// **'g'**
+  String get letterSqG;
+
+  /// No description provided for @letterSqGj.
+  ///
+  /// In en, this message translates to:
+  /// **'gj'**
+  String get letterSqGj;
+
+  /// No description provided for @letterSqH.
+  ///
+  /// In en, this message translates to:
+  /// **'h'**
+  String get letterSqH;
+
+  /// No description provided for @letterSqI.
+  ///
+  /// In en, this message translates to:
+  /// **'i'**
+  String get letterSqI;
+
+  /// No description provided for @letterSqJ.
+  ///
+  /// In en, this message translates to:
+  /// **'j'**
+  String get letterSqJ;
+
+  /// No description provided for @letterSqK.
+  ///
+  /// In en, this message translates to:
+  /// **'k'**
+  String get letterSqK;
+
+  /// No description provided for @letterSqL.
+  ///
+  /// In en, this message translates to:
+  /// **'l'**
+  String get letterSqL;
+
+  /// No description provided for @letterSqLl.
+  ///
+  /// In en, this message translates to:
+  /// **'ll'**
+  String get letterSqLl;
+
+  /// No description provided for @letterSqM.
+  ///
+  /// In en, this message translates to:
+  /// **'m'**
+  String get letterSqM;
+
+  /// No description provided for @letterSqN.
+  ///
+  /// In en, this message translates to:
+  /// **'n'**
+  String get letterSqN;
+
+  /// No description provided for @letterSqNj.
+  ///
+  /// In en, this message translates to:
+  /// **'nj'**
+  String get letterSqNj;
+
+  /// No description provided for @letterSqO.
+  ///
+  /// In en, this message translates to:
+  /// **'o'**
+  String get letterSqO;
+
+  /// No description provided for @letterSqP.
+  ///
+  /// In en, this message translates to:
+  /// **'p'**
+  String get letterSqP;
+
+  /// No description provided for @letterSqQ.
+  ///
+  /// In en, this message translates to:
+  /// **'q'**
+  String get letterSqQ;
+
+  /// No description provided for @letterSqR.
+  ///
+  /// In en, this message translates to:
+  /// **'r'**
+  String get letterSqR;
+
+  /// No description provided for @letterSqRr.
+  ///
+  /// In en, this message translates to:
+  /// **'rr'**
+  String get letterSqRr;
+
+  /// No description provided for @letterSqS.
+  ///
+  /// In en, this message translates to:
+  /// **'s'**
+  String get letterSqS;
+
+  /// No description provided for @letterSqSh.
+  ///
+  /// In en, this message translates to:
+  /// **'sh'**
+  String get letterSqSh;
+
+  /// No description provided for @letterSqT.
+  ///
+  /// In en, this message translates to:
+  /// **'t'**
+  String get letterSqT;
+
+  /// No description provided for @letterSqTh.
+  ///
+  /// In en, this message translates to:
+  /// **'th'**
+  String get letterSqTh;
+
+  /// No description provided for @letterSqU.
+  ///
+  /// In en, this message translates to:
+  /// **'u'**
+  String get letterSqU;
+
+  /// No description provided for @letterSqV.
+  ///
+  /// In en, this message translates to:
+  /// **'v'**
+  String get letterSqV;
+
+  /// No description provided for @letterSqX.
+  ///
+  /// In en, this message translates to:
+  /// **'x'**
+  String get letterSqX;
+
+  /// No description provided for @letterSqXh.
+  ///
+  /// In en, this message translates to:
+  /// **'xh'**
+  String get letterSqXh;
+
+  /// No description provided for @letterSqY.
+  ///
+  /// In en, this message translates to:
+  /// **'y'**
+  String get letterSqY;
+
+  /// No description provided for @letterSqZ.
+  ///
+  /// In en, this message translates to:
+  /// **'z'**
+  String get letterSqZ;
+
+  /// No description provided for @letterSqZh.
+  ///
+  /// In en, this message translates to:
+  /// **'zh'**
+  String get letterSqZh;
+
+  /// No description provided for @gameFindThis.
+  ///
+  /// In en, this message translates to:
+  /// **'Find this one!'**
+  String get gameFindThis;
+
+  /// No description provided for @gameWhoSays.
+  ///
+  /// In en, this message translates to:
+  /// **'Who makes this sound?'**
+  String get gameWhoSays;
+
+  /// No description provided for @gameFindNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Find the number!'**
+  String get gameFindNumber;
+
+  /// No description provided for @gameHowMany.
+  ///
+  /// In en, this message translates to:
+  /// **'How many?'**
+  String get gameHowMany;
+
+  /// No description provided for @gameWhichMore.
+  ///
+  /// In en, this message translates to:
+  /// **'Which has more?'**
+  String get gameWhichMore;
+
+  /// No description provided for @gameWhichFewer.
+  ///
+  /// In en, this message translates to:
+  /// **'Which has fewer?'**
+  String get gameWhichFewer;
+
+  /// No description provided for @gameStartsWith.
+  ///
+  /// In en, this message translates to:
+  /// **'What starts with this sound?'**
+  String get gameStartsWith;
+
+  /// No description provided for @gameFindLetter.
+  ///
+  /// In en, this message translates to:
+  /// **'Find the letter!'**
+  String get gameFindLetter;
+
+  /// No description provided for @gameFindColour.
+  ///
+  /// In en, this message translates to:
+  /// **'Find the colour!'**
+  String get gameFindColour;
+
+  /// No description provided for @gameFindShape.
+  ///
+  /// In en, this message translates to:
+  /// **'Find the shape!'**
+  String get gameFindShape;
+
+  /// No description provided for @gameFeed.
+  ///
+  /// In en, this message translates to:
+  /// **'Give the food to the right animal!'**
+  String get gameFeed;
+
+  /// No description provided for @gameWhereLives.
+  ///
+  /// In en, this message translates to:
+  /// **'Where does it live?'**
+  String get gameWhereLives;
+
+  /// No description provided for @gameFindMummy.
+  ///
+  /// In en, this message translates to:
+  /// **'Help the baby find its mummy!'**
+  String get gameFindMummy;
+
+  /// No description provided for @gameShapeHole.
+  ///
+  /// In en, this message translates to:
+  /// **'Put the shape in its hole!'**
+  String get gameShapeHole;
+
+  /// No description provided for @gameCountTap.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap each one and count!'**
+  String get gameCountTap;
+
+  /// No description provided for @praiseCountedAll.
+  ///
+  /// In en, this message translates to:
+  /// **'You counted every one!'**
+  String get praiseCountedAll;
+
+  /// No description provided for @gameTrace.
+  ///
+  /// In en, this message translates to:
+  /// **'Trace it with your finger!'**
+  String get gameTrace;
+
+  /// No description provided for @praiseTraced.
+  ///
+  /// In en, this message translates to:
+  /// **'Beautiful tracing!'**
+  String get praiseTraced;
+
+  /// No description provided for @gameFindPairs.
+  ///
+  /// In en, this message translates to:
+  /// **'Find the pairs!'**
+  String get gameFindPairs;
+
+  /// No description provided for @praisePair.
+  ///
+  /// In en, this message translates to:
+  /// **'A pair!'**
+  String get praisePair;
+
+  /// No description provided for @gameWhatNext.
+  ///
+  /// In en, this message translates to:
+  /// **'What comes next?'**
+  String get gameWhatNext;
+
+  /// No description provided for @gameSortBins.
+  ///
+  /// In en, this message translates to:
+  /// **'Put each one in the right place!'**
+  String get gameSortBins;
+
+  /// No description provided for @gameBuildWord.
+  ///
+  /// In en, this message translates to:
+  /// **'Put the sounds together!'**
+  String get gameBuildWord;
+
+  /// No description provided for @gameBondTo5.
+  ///
+  /// In en, this message translates to:
+  /// **'How many more to make five?'**
+  String get gameBondTo5;
+
+  /// No description provided for @gameBondTo10.
+  ///
+  /// In en, this message translates to:
+  /// **'How many more to make ten?'**
+  String get gameBondTo10;
+
+  /// No description provided for @gameSumWhat.
+  ///
+  /// In en, this message translates to:
+  /// **'How many altogether?'**
+  String get gameSumWhat;
+
+  /// No description provided for @gameTakeAway.
+  ///
+  /// In en, this message translates to:
+  /// **'How many are left?'**
+  String get gameTakeAway;
+
+  /// No description provided for @gameListen.
+  ///
+  /// In en, this message translates to:
+  /// **'Listen!'**
+  String get gameListen;
+
+  /// No description provided for @binBig.
+  ///
+  /// In en, this message translates to:
+  /// **'Big'**
+  String get binBig;
+
+  /// No description provided for @binSmall.
+  ///
+  /// In en, this message translates to:
+  /// **'Small'**
+  String get binSmall;
+
+  /// No description provided for @binLand.
+  ///
+  /// In en, this message translates to:
+  /// **'Land'**
+  String get binLand;
+
+  /// No description provided for @binWater.
+  ///
+  /// In en, this message translates to:
+  /// **'Water'**
+  String get binWater;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
