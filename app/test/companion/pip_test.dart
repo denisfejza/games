@@ -101,7 +101,7 @@ void main() {
       final (deps, origin, size) = await pump(tester);
       await tester.tapAt(at(origin, size, 0.5, 0.43));
       await tester.pump();
-      expect(deps.audio.effects, contains('audio/sfx/pop.wav'));
+      expect(deps.audio.effects, contains('audio/sfx/pop.mp3'));
       expect(deps.audio.played.last, 'audio/en/vocabNose.ogg');
       await tester.pump(const Duration(seconds: 3));
     });
@@ -113,7 +113,7 @@ void main() {
         await tester.pump(const Duration(milliseconds: 150));
       }
       expect(deps.audio.played.last, 'audio/en/pipTickle.ogg');
-      expect(deps.audio.effects, contains('audio/sfx/giggle.wav'));
+      expect(deps.audio.effects, contains('audio/sfx/giggle.mp3'));
       await tester.pump(const Duration(seconds: 3));
     });
 

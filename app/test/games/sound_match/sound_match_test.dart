@@ -173,7 +173,7 @@ void main() {
     expect(results.single.hints, 1);
     expect(deps.mastery.data['test.skill']!.attempts, 3);
     expect(deps.mastery.data['test.skill']!.independent, 2);
-    expect(deps.audio.effects, contains('audio/sfx/try_again.wav'));
+    expect(deps.audio.effects, contains('audio/sfx/try_again.mp3'));
   });
 
   for (final locale in ['en', 'sq']) {

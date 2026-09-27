@@ -15,13 +15,18 @@ void main() {
 
   final arb = jsonDecode(File('lib/l10n/app_en.arb').readAsStringSync()) as Map<String, dynamic>;
   const parentOnly = ['gate', 'debug', 'parent', 'language', 'privacy', 'purchase', 'appTitle'];
-  final keys = [for (final k in arb.keys) if (!k.startsWith('@') && !parentOnly.any(k.startsWith)) k];
+  final keys = [
+    for (final k in arb.keys)
+      if (!k.startsWith('@') && !parentOnly.any(k.startsWith)) k,
+  ];
   for (final locale in ['en', 'sq']) {
-    final missing = keys.where((k) => !File('assets/audio/$locale/$k.ogg').existsSync()).length;
+    bool recorded(String k) => ['ogg', 'm4a', 'mp3'].any((e) => File('assets/audio/$locale/$k.$e').existsSync());
+    final missing = keys.where((k) => !recorded(k)).length;
     if (missing > 0) problems.add('$missing of ${keys.length} $locale recordings missing (docs/RECORDING_SCRIPT.md)');
   }
   if (!File('assets/rive/pip.riv').existsSync()) problems.add('assets/rive/pip.riv missing (docs/PIP_RIVE_SPEC.md)');
-  if (File('../docs/CURRICULUM.md').readAsStringSync().contains('DRAFT')) problems.add('docs/CURRICULUM.md is still a draft');
+  final draft = File('../docs/CURRICULUM.md').readAsStringSync().contains('DRAFT');
+  if (draft) problems.add('docs/CURRICULUM.md is still a draft');
   final unticked = '- [ ]'.allMatches(File('../docs/COMPLIANCE.md').readAsStringSync()).length;
   if (unticked > 0) problems.add('$unticked unticked items in docs/COMPLIANCE.md');
 

@@ -2413,6 +2413,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Nothing leaves this device'**
   String get parentPrivacyShort;
+
+  /// No description provided for @parentMusic.
+  ///
+  /// In en, this message translates to:
+  /// **'Music'**
+  String get parentMusic;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

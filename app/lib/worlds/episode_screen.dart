@@ -1,3 +1,5 @@
+import '../core/audio/audio_service.dart';
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -324,7 +326,9 @@ class _WindDownState extends ConsumerState<_WindDown> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       ref.read(pipControllerProvider).onEvent(PipEvent.levelDone);
-      ref.read(audioServiceProvider).say('episodeDone', interrupt: true);
+      ref.read(audioServiceProvider)
+        ..effect(Effect.star)
+        ..say('episodeDone', interrupt: true);
     });
   }
 

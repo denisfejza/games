@@ -1190,4 +1190,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get parentPrivacyShort => 'Nothing leaves this device';
+
+  @override
+  String get parentMusic => 'Music';
 }

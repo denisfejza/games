@@ -1,3 +1,5 @@
+import '../../core/audio/audio_service.dart' as audio show Effect;
+
 import 'dart:math';
 
 import 'package:flame/components.dart';
@@ -111,6 +113,7 @@ class GameCard extends PositionComponent with TapCallbacks, HasGameReference<Pip
 
   /// Turns over with a squash (skipped with reduced motion).
   Future<void> flip(bool up) async {
+    if (up) game.host.audio.effect(audio.Effect.flip);
     if (game.host.reducedMotion) {
       faceUp = up;
       return;

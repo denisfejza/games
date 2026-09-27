@@ -1,7 +1,9 @@
+import '../../core/audio/audio_service.dart';
+
 import 'dart:math';
 
 import 'package:flame/components.dart';
-import 'package:flame/effects.dart';
+import 'package:flame/effects.dart' hide Effect;
 import 'package:flame/events.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -222,6 +224,7 @@ class DieComponent extends PositionComponent with TapCallbacks, HasGameReference
     if (_rolling) return;
     _rolling = true;
     enabled = false;
+    game.host.audio.effect(Effect.dice);
     if (!game.host.reducedMotion) {
       add(RotateEffect.by(pi * 2, EffectController(duration: 0.5)));
       for (var i = 0; i < 5; i++) {

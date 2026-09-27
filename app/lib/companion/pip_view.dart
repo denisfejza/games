@@ -187,7 +187,7 @@ class _PokeablePipState extends ConsumerState<PokeablePip> {
   }
 
   void _feed(VocabItem food) {
-    ref.read(audioServiceProvider).effect(Effect.pop);
+    ref.read(audioServiceProvider).effect(Effect.munch);
     ref.read(pipControllerProvider).onEvent(PipEvent.fed);
     ref.read(audioServiceProvider).sayAll(['pipYum'], interrupt: true);
   }

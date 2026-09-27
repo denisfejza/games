@@ -25,6 +25,7 @@ class FakeAudioBackend implements AudioBackend {
   final List<String> played = [];
   final List<double> musicVolumes = [];
   final List<String> effects = [];
+  final List<String> music = [];
   int stops = 0;
 
   /// Pretend every recording exists unless told otherwise.
@@ -44,6 +45,12 @@ class FakeAudioBackend implements AudioBackend {
 
   @override
   Future<void> setMusicVolume(double volume) async => musicVolumes.add(volume);
+
+  @override
+  Future<void> startMusic(String assetPath, double volume) async => music.add(assetPath);
+
+  @override
+  Future<void> stopMusic() async => music.add('stop');
 }
 
 /// In-memory microphone driven by the test.

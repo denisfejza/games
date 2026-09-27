@@ -386,5 +386,6 @@
   "parentUnlocked": "Gjithçka është e hapur. Faleminderit!",
   "parentStoreUnavailable": "Blerjet janë të disponueshme në versionet e App Store dhe Google Play.",
   "parentPrivacy": "Privatësia",
-  "parentPrivacyShort": "Asgjë nuk largohet nga kjo pajisje"
+  "parentPrivacyShort": "Asgjë nuk largohet nga kjo pajisje",
+  "parentMusic": "Muzikë"
 }

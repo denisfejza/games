@@ -1,8 +1,10 @@
+import '../../core/audio/audio_service.dart';
+
 import 'dart:async';
 import 'dart:math';
 
 import 'package:flame/components.dart';
-import 'package:flame/effects.dart';
+import 'package:flame/effects.dart' hide Effect;
 import 'package:flame/events.dart';
 import 'package:flutter/material.dart';
 
@@ -172,6 +174,7 @@ class RollAndMoveGame extends BoardGame {
     positions[player] = min(squares - 1, positions[player] + 1);
     tokens[player].clearHint();
     tokens[player].moveTo(_spot(positions[player], player), reduced: host.reducedMotion);
+    host.audio.effect(Effect.hop);
     host.audio.say(numberKey(hopped), interrupt: true);
     if (positions[player] == squares - 1) hopsLeft = 0;
     if (hopsLeft == 0) await _landed(player);
@@ -189,6 +192,7 @@ class RollAndMoveGame extends BoardGame {
     final jump = vines[at] ?? slides[at];
     if (jump != null) {
       await host.audio.say(vines.containsKey(at) ? 'boardVineUp' : 'boardSlideDown', interrupt: true);
+      host.audio.effect(vines.containsKey(at) ? Effect.climb : Effect.slide);
       positions[player] = jump;
       tokens[player].moveTo(_spot(jump, player), reduced: host.reducedMotion, slow: true);
       await Future<void>.delayed(const Duration(milliseconds: 600));

@@ -66,7 +66,7 @@ void main() {
     await audio.effect(Effect.correct);
     audio.muted = true;
     await audio.effect(Effect.tap);
-    expect(backend.effects, ['audio/sfx/correct.wav']);
+    expect(backend.effects, ['audio/sfx/correct.mp3']);
   });
 
   test('a missing recording keeps the caption up long enough to read', () {
@@ -96,5 +96,50 @@ void main() {
       expect(audio.caption.value, isNull);
       expect(audio.speaking.value, isFalse);
     });
+  });
+
+  test('missing recordings: Pip babbles about as long as the line, a question babbles up', () async {
+    backend.recordingsExist = false;
+    final lines = {'hi': 'Hi!', 'ask': 'Can you find the cow?', 'long': 'x' * 200};
+    audio = AudioService(backend, locale: () => 'en', text: (k) => lines[k], missingHold: Duration.zero);
+    await audio.sayAll(['hi', 'ask', 'long', 'sfx.animal.cow']);
+    expect(backend.played, [
+      'audio/en/hi.ogg',
+      'audio/babble/say1.mp3',
+      'audio/en/ask.ogg',
+      'audio/babble/ask4.mp3',
+      'audio/en/long.ogg',
+      'audio/babble/say6.mp3',
+      'audio/sfx/animalCow.ogg',
+    ]);
+  });
+
+  test('recorded lines never babble', () async {
+    audio = AudioService(backend, locale: () => 'en', text: (k) => 'Hello');
+    await audio.say('helloPip');
+    expect(backend.played, ['audio/en/helloPip.ogg']);
+  });
+
+  test('music waits for the first tap and stops for mute, holds and the parent switch', () async {
+    audio.music = true;
+    expect(backend.music, isEmpty);
+    audio.userInteracted();
+    expect(backend.music, [AudioService.musicTrack]);
+    audio.holdMusic('bedtime', true);
+    audio.holdMusic('background', true);
+    audio.holdMusic('bedtime', false);
+    expect(backend.music.last, 'stop');
+    audio.holdMusic('background', false);
+    audio.muted = true;
+    audio.muted = false;
+    audio.music = false;
+    expect(backend.music, [
+      AudioService.musicTrack,
+      'stop',
+      AudioService.musicTrack,
+      'stop',
+      AudioService.musicTrack,
+      'stop',
+    ]);
   });
 }

@@ -89,6 +89,7 @@ class _Bedtime extends ConsumerStatefulWidget {
 
 class _BedtimeState extends ConsumerState<_Bedtime> {
   late final PipController _pip = ref.read(pipControllerProvider);
+  late final AudioService _audio = ref.read(audioServiceProvider);
 
   @override
   void initState() {
@@ -96,15 +97,17 @@ class _BedtimeState extends ConsumerState<_Bedtime> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       _pip.onEvent(PipEvent.bedtime);
-      final audio = ref.read(audioServiceProvider);
-      audio.effect(Effect.yawn);
-      audio.say('bedtimePipSleepy', interrupt: true);
+      _audio
+        ..holdMusic('bedtime', true)
+        ..effect(Effect.yawn)
+        ..say('bedtimePipSleepy', interrupt: true);
     });
   }
 
   @override
   void dispose() {
     _pip.onEvent(PipEvent.wake);
+    _audio.holdMusic('bedtime', false);
     super.dispose();
   }
 

@@ -29,7 +29,7 @@ child-facing app). Update this file in the same change that adds a package.
 | Asset | License | Note |
 | --- | --- | --- |
 | PipEmoji font (`app/assets/fonts/PipEmoji.ttf`) | SIL OFL 1.1 (`NotoColorEmoji-OFL.txt`) | **Placeholder art.** A 250 KB subset of Noto Color Emoji built by `tool/subset_emoji.sh`, so pictures look the same on every device until the illustrations arrive. |
-| Placeholder sounds (`app/assets/audio/placeholder.wav`, `audio/sfx/*.wav`) | Generated here | Simple tones. The soft blip stands in for missing narration recordings. |
+| Sounds (`app/assets/audio/{sfx,babble,music}/*.mp3`) | Generated here | Synthesized by `app/tool/make_sounds.py` (numpy/scipy/soundfile, dev machine only): interface effects, cartoon animal noises, Pip's babble voice (a stand-in while narration isn't recorded, not TTS) and the meadow music loop. Recordings and a real score replace them later. |
 | Nunito font (`app/assets/fonts/`) | SIL OFL 1.1 (`OFL.txt`) | Static Regular/ExtraBold instances cut from the Google Fonts variable font. Covers ë, ç, Ë, Ç. |
 
 ## Build flags

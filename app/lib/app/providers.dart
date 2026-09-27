@@ -17,7 +17,9 @@ import '../core/storage/settings_store.dart';
 import '../core/timer/play_timer.dart';
 import '../core/voice/voice_platform.dart';
 import '../core/voice/voice_service.dart';
+import '../l10n/app_localizations.dart';
 import '../parent/purchases.dart';
+import 'strings.dart';
 
 const supportedLanguages = ['sq', 'en'];
 
@@ -84,6 +86,7 @@ abstract final class SettingKeys {
   static const reducedMotion = 'reducedMotion';
   static const captions = 'captions';
   static const sound = 'sound';
+  static const music = 'music';
   static const mic = 'micEnabled';
   static const dailyLimit = 'dailyLimitMinutes';
   static const bilingual = 'bilingual';
@@ -117,6 +120,9 @@ final captionsProvider = NotifierProvider<Setting<bool>, bool>(() => _bool(Setti
 
 final soundProvider = NotifierProvider<Setting<bool>, bool>(() => _bool(SettingKeys.sound, true));
 
+/// Gentle background music under everything (ducks while Pip talks).
+final musicProvider = NotifierProvider<Setting<bool>, bool>(() => _bool(SettingKeys.music, true));
+
 /// Talk-back microphone. Off until a grown-up turns it on in the parent area.
 final micEnabledProvider = NotifierProvider<Setting<bool>, bool>(() => _bool(SettingKeys.mic, false));
 
@@ -137,9 +143,13 @@ final audioServiceProvider = Provider<AudioService>((ref) {
     locale: () => ref.read(localeProvider).languageCode,
     secondLocale: () =>
         ref.read(bilingualProvider) ? (ref.read(localeProvider).languageCode == 'sq' ? 'en' : 'sq') : null,
+    text: (key) => lookupString(lookupAppLocalizations(ref.read(localeProvider)), key),
   );
-  service.muted = !ref.read(soundProvider);
+  service
+    ..muted = !ref.read(soundProvider)
+    ..music = ref.read(musicProvider);
   ref.listen(soundProvider, (_, on) => service.muted = !on);
+  ref.listen(musicProvider, (_, on) => service.music = on);
   ref.onDispose(service.dispose);
   return service;
 });

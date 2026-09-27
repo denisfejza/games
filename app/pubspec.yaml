@@ -76,7 +76,8 @@ flutter:
     - assets/content/
     - assets/content/worlds/
     - assets/content/vocab/
-    - assets/audio/
+    - assets/audio/babble/
+    - assets/audio/music/
     - assets/audio/en/
     - assets/audio/sq/
     - assets/audio/sfx/

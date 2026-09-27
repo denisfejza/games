@@ -1190,4 +1190,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get parentPrivacyShort => 'Asgjë nuk largohet nga kjo pajisje';
+
+  @override
+  String get parentMusic => 'Muzikë';
 }

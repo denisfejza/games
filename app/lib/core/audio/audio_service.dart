@@ -19,10 +19,15 @@ abstract interface class AudioBackend {
 
   /// Background music volume, 0–1.
   Future<void> setMusicVolume(double volume);
+
+  /// Starts looping [assetPath] as background music.
+  Future<void> startMusic(String assetPath, double volume);
+
+  Future<void> stopMusic();
 }
 
 /// Short interface sounds. Language-independent, never captioned.
-enum Effect { tap, correct, tryAgain, celebrate, pop, giggle, yawn }
+enum Effect { tap, correct, tryAgain, celebrate, pop, giggle, yawn, flip, hop, slide, climb, dice, snap, star, munch }
 
 /// Narration for every screen: `say(key)` plays `audio/{locale}/{arbKey(key)}.ogg`.
 /// Keys starting with `sfx.` (animal noises) play `audio/sfx/{rest}.ogg` in any language.
@@ -35,7 +40,17 @@ class AudioService {
     required this.locale,
     this.secondLocale,
     this.missingHold = const Duration(milliseconds: 1400),
+    this.text,
   });
+
+  /// The words of a line in the current language, so Pip can babble for about
+  /// as long as the line while its recording doesn't exist yet.
+  final String? Function(String key)? text;
+
+  /// Lengths (seconds) of the babble clips `audio/babble/{say|ask}{1…}.mp3`.
+  static const babbleLengths = [0.5, 0.9, 1.3, 1.8, 2.4, 3.0];
+
+  static const musicTrack = 'audio/music/meadow.mp3';
 
   /// Bilingual mode: names are also said in this language, straight after.
   final String? Function()? secondLocale;
@@ -79,10 +94,55 @@ class AudioService {
       'audio/sfx/${switch (e) {
         Effect.tryAgain => 'try_again',
         _ => e.name,
-      }}.wav';
+      }}.mp3';
 
-  /// Parent setting: silences narration and effects (captions still show).
-  set muted(bool value) => _muted = value;
+  /// The babble clip closest in length to [line] read aloud (a question babbles up).
+  static String babblePath(String line) {
+    final t = line.trim();
+    final seconds = t.length / 13;
+    var n = babbleLengths.indexWhere((l) => l >= seconds);
+    if (n < 0) n = babbleLengths.length - 1;
+    return 'audio/babble/${t.endsWith('?') ? 'ask' : 'say'}${n + 1}.mp3';
+  }
+
+  /// Parent setting: silences narration, effects and music (captions still show).
+  set muted(bool value) {
+    _muted = value;
+    _updateMusic();
+  }
+
+  bool _musicOn = false;
+  bool _musicPlaying = false;
+  bool _interacted = false;
+  final Set<String> _musicHolds = {};
+
+  /// Parent setting: gentle background music.
+  set music(bool on) {
+    _musicOn = on;
+    _updateMusic();
+  }
+
+  /// Browsers only allow sound after the first tap, so music waits for one.
+  void userInteracted() {
+    if (_interacted) return;
+    _interacted = true;
+    _updateMusic();
+  }
+
+  /// Pauses music for a [reason] (bedtime, app in the background) until released.
+  void holdMusic(String reason, bool hold) {
+    hold ? _musicHolds.add(reason) : _musicHolds.remove(reason);
+    _updateMusic();
+  }
+
+  void _updateMusic() {
+    final want = _interacted && _musicOn && !_muted && _musicHolds.isEmpty;
+    if (want == _musicPlaying) return;
+    _musicPlaying = want;
+    unawaited(
+      want ? _backend.startMusic(musicTrack, _playing ? duckedMusicVolume : musicVolume) : _backend.stopMusic(),
+    );
+  }
 
   /// Queues [key]. With [interrupt], drops anything queued and cuts the current line.
   Future<void> say(String key, {bool interrupt = false}) async {
@@ -128,7 +188,10 @@ class AudioService {
       final key = _queue.removeFirst();
       _lastKey = key;
       caption.value = key;
-      final played = !_muted && await _backend.playNarration(assetPath(locale(), key));
+      var played = !_muted && await _backend.playNarration(assetPath(locale(), key));
+      // TODO(asset): no recording yet, so Pip babbles for about as long as the line.
+      final line = played || _muted || key.startsWith('sfx.') ? null : text?.call(key);
+      if (line != null && line.isNotEmpty) played = await _backend.playNarration(babblePath(line));
       final second = secondLocale?.call();
       if (second != null && isName(key) && !_muted) await _backend.playNarration(assetPath(second, key));
       // TODO(asset): recordings are missing; keep the caption up long enough to read,

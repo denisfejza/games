@@ -1,5 +1,7 @@
+import '../../core/audio/audio_service.dart';
+
 import 'package:flame/components.dart';
-import 'package:flame/effects.dart';
+import 'package:flame/effects.dart' hide Effect;
 import 'package:flame/events.dart';
 
 import 'game_card.dart';
@@ -67,6 +69,7 @@ class DragCard extends GameCard with DragCallbacks {
   /// Glides into [target] and stays there.
   void snapTo(Vector2 target) {
     home = target.clone();
+    game.host.audio.effect(Effect.snap);
     if (game.host.reducedMotion) {
       position = target.clone();
     } else {

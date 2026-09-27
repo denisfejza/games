@@ -458,5 +458,6 @@
   "parentUnlocked": "Everything is unlocked. Thank you!",
   "parentStoreUnavailable": "Purchases are available in the App Store and Google Play versions.",
   "parentPrivacy": "Privacy",
-  "parentPrivacyShort": "Nothing leaves this device"
+  "parentPrivacyShort": "Nothing leaves this device",
+  "parentMusic": "Music"
 }

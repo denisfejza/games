@@ -80,6 +80,12 @@ class ParentArea extends ConsumerWidget {
                 onChanged: (v) => ref.read(soundProvider.notifier).set(v),
               ),
               SwitchListTile(
+                key: const Key('music'),
+                title: Text(l.parentMusic),
+                value: ref.watch(musicProvider),
+                onChanged: (v) => ref.read(musicProvider.notifier).set(v),
+              ),
+              SwitchListTile(
                 key: const Key('captions'),
                 title: Text(l.parentCaptions),
                 value: ref.watch(captionsProvider),

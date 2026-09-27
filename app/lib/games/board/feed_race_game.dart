@@ -1,7 +1,9 @@
+import '../../core/audio/audio_service.dart';
+
 import 'dart:math';
 
 import 'package:flame/components.dart';
-import 'package:flame/effects.dart';
+import 'package:flame/effects.dart' hide Effect;
 import 'package:flutter/material.dart';
 
 import '../../content/content_loader.dart';
@@ -129,7 +131,9 @@ class FeedRaceGame extends BoardGame {
     for (final x in berries) {
       x.clearHint();
     }
-    host.audio.say(numberKey(counted), interrupt: true);
+    host.audio
+      ..effect(Effect.munch)
+      ..say(numberKey(counted), interrupt: true);
     if (!host.reducedMotion) {
       b.add(ScaleEffect.to(Vector2.all(1.2), EffectController(duration: 0.1, reverseDuration: 0.1)));
     }
