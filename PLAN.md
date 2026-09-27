@@ -85,6 +85,7 @@ Build generic Flame game types; every world's levels are JSON on top of these.
 
 Each engine: `_config.dart` parses `params`, supports the adaptive `difficulty.steps`, emits `MasteryTracker` events, has a test and a golden. Hints appear after the number of errors set by level.
 - ✅ Every engine passes a "no text needed" review, works in en/sq, and has ≥ 2 pillars scored ≥ 2 in its fixture JSON.
+> ✔ All eight engines done 2026-09-27 (docs/ENGINES.md): shared RoundController (adaptive steps, hints by step, mastery per round), GameHost feedback, Flame card kit. Each has config parsing/validation, a playthrough test and goldens in `app/test/games/`. Pillar scores live in the content JSON (Phase 3).
 
 ---
 

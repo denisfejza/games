@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Phase 2: eight game engines (sound_match, drag_to_target, tap_count, trace_path, pairs_memory,
+  sequence_pattern, sort_bins, blend_tiles) on a shared Flame kit; docs/ENGINES.md.
 - Phase 1: Pip companion (moods, event mapping, placeholder full-body fox, Rive adapter per docs/PIP_RIVE_SPEC.md,
   lip-flap while narrating); poke/tickle/feed reactions; talk-back (VAD, +6 semitone echo, in-memory only, web
   implementation, native pending); level path with stars and mastery-based unlocks (faded, never padlocked);
