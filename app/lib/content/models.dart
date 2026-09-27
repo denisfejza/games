@@ -82,6 +82,21 @@ class GameDef {
     },
   );
 
+  /// A copy with different params (engines that derive defaults, e.g. rounds).
+  static GameDef fromJsonWithParams(GameDef d, Map<String, dynamic> params) => GameDef(
+    id: d.id,
+    world: d.world,
+    level: d.level,
+    type: d.type,
+    ageBands: d.ageBands,
+    skills: d.skills,
+    params: params,
+    pillars: d.pillars,
+    offscreenKey: d.offscreenKey,
+    difficulty: d.difficulty,
+    curriculum: d.curriculum,
+  );
+
   final String id;
   final String world;
   final int level;

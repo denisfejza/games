@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'dart:io';
 import 'dart:math';
 
 import 'package:flame/game.dart';
@@ -5,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pips_world/app/strings.dart';
 import 'package:pips_world/content/content_loader.dart';
+import 'package:pips_world/content/content_schema.dart';
 import 'package:pips_world/content/models.dart';
 import 'package:pips_world/games/common/mini_game.dart';
 import 'package:pips_world/games/common/round_controller.dart';
@@ -113,3 +116,6 @@ Future<void> expectGolden(WidgetTester tester, String name) async {
 }
 
 Future<ContentLibrary> loadBundledContentForTest() => loadBundledContent();
+
+ContentSchema schemaForTest() =>
+    ContentSchema(jsonDecode(File('assets/content/schema.json').readAsStringSync()) as Map<String, dynamic>);
