@@ -1,0 +1,39 @@
+{
+ "id": "shapes_colours.more_shapes.l2.trace_more",
+ "world": "shapes_colours",
+ "level": 2,
+ "game": "trace_path",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "shapes.draw"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-NumericalPatterns",
+   "EAD-Creating"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika",
+   "Fusha: Arte"
+  ]
+ },
+ "params": {
+  "glyphs": [
+   "star",
+   "heart",
+   "diamond",
+   "rectangle"
+  ]
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 2,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.draw_shape"
+}

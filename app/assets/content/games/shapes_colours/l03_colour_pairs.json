@@ -1,0 +1,41 @@
+{
+ "id": "shapes_colours.colours.l3.colour_pairs",
+ "world": "shapes_colours",
+ "level": 3,
+ "game": "pairs_memory",
+ "ageBands": [
+  "2-3",
+  "4-5"
+ ],
+ "skills": [
+  "colours.basic",
+  "memory"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-NumericalPatterns",
+   "EAD-Creating"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika",
+   "Fusha: Arte"
+  ]
+ },
+ "params": {
+  "items": [
+   "red",
+   "blue",
+   "yellow",
+   "green"
+  ],
+  "pairs": 3
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.colour_hunt"
+}

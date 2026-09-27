@@ -1,0 +1,35 @@
+{
+ "id": "animals.echo.l8.echo_pairs",
+ "world": "animals",
+ "level": 8,
+ "game": "pairs_memory",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "listening.sounds",
+  "memory"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "UW-NaturalWorld"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Bota rreth nesh"
+  ]
+ },
+ "params": {
+  "pairing": "picture_sound",
+  "items": "tag:animal",
+  "pairs": 4
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.animal_charades"
+}

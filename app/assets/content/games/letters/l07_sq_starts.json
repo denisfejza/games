@@ -1,0 +1,55 @@
+{
+ "id": "letters.level7.l7.sq_starts",
+ "world": "letters",
+ "level": 7,
+ "game": "sound_match",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "letters.sq.sounds"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "mode": "starts_with",
+  "letters": [
+   "h",
+   "j",
+   "q",
+   "c",
+   "ç"
+  ],
+  "items": [
+   "nose",
+   "moon",
+   "dog",
+   "milk",
+   "cherry",
+   "circus",
+   "umbrella",
+   "socks",
+   "key"
+  ],
+  "rounds": 5,
+  "choices": 2
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.name_letters",
+ "locales": [
+  "sq"
+ ]
+}

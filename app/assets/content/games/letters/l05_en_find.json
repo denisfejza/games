@@ -1,0 +1,53 @@
+{
+ "id": "letters.level5.l5.en_find",
+ "world": "letters",
+ "level": 5,
+ "game": "sound_match",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "letters.en.recognise"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "mode": "letter",
+  "letters": [
+   "b",
+   "f",
+   "l"
+  ],
+  "rounds": 5
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.body_letter",
+ "difficulty": {
+  "raiseAfter": 3,
+  "lowerAfter": 2,
+  "steps": [
+   {
+    "choices": 2
+   },
+   {
+    "choices": 3
+   }
+  ]
+ },
+ "locales": [
+  "en"
+ ]
+}

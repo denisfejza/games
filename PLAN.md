@@ -113,6 +113,7 @@ Circle/square/triangle → more shapes → colour names → colour mixing paint 
 Sticker book and costumes unlocked by stars; feeding, tickling, talk-back; a "bedtime" that mirrors wind-down.
 
 - ✅ For each world: all levels load, all audio keys exist in en and sq, every game JSON has pillar scores, an educator has signed off `docs/CURRICULUM.md`.
+> ◐ Content drafted 2026-09-27 (`app/tool/levels_table.py` → 150 games, 34 levels: Animals 8, Numbers 10, Letters 10 per language, Shapes & Colours 6) plus Pip's House (feeding, tickling, talk-back, costumes and stickers unlocked by stars, bedtime). Tests: every level loads, every game's engine validates and starts in each language, every narration line has en+sq text, pillar scores ≥ 2. **Not done:** educator sign-off of docs/CURRICULUM.md (draft), native review of Albanian, and the recordings themselves (docs/RECORDING_SCRIPT.md lists every line); colour-mixing engine for Shapes L4.
 
 ---
 

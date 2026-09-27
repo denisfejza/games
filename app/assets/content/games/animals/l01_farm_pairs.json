@@ -1,0 +1,34 @@
+{
+ "id": "animals.farm.l1.farm_pairs",
+ "world": "animals",
+ "level": 1,
+ "game": "pairs_memory",
+ "ageBands": [
+  "2-3",
+  "4-5"
+ ],
+ "skills": [
+  "vocab.animals.farm",
+  "memory"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "UW-NaturalWorld"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Bota rreth nesh"
+  ]
+ },
+ "params": {
+  "items": "tags:animal+farm",
+  "pairs": 2
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.moo_like_cow"
+}

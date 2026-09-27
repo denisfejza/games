@@ -1,0 +1,50 @@
+{
+ "id": "shapes_colours.shapes_world.l6.sort_shapes3",
+ "world": "shapes_colours",
+ "level": 6,
+ "game": "sort_bins",
+ "ageBands": [
+  "6-7"
+ ],
+ "skills": [
+  "shapes.in_world"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-NumericalPatterns",
+   "EAD-Creating"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika",
+   "Fusha: Arte"
+  ]
+ },
+ "params": {
+  "by": "shape",
+  "items": "tag:object",
+  "perRound": 5,
+  "rounds": 2,
+  "bins": [
+   {
+    "value": "circle",
+    "item": "circle"
+   },
+   {
+    "value": "square",
+    "item": "square"
+   },
+   {
+    "value": "triangle",
+    "item": "triangle"
+   }
+  ]
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 2,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.shape_walk"
+}

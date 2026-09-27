@@ -1,0 +1,48 @@
+{
+ "id": "numbers.bonds10.l9.bond10",
+ "world": "numbers",
+ "level": 9,
+ "game": "sound_match",
+ "ageBands": [
+  "6-7"
+ ],
+ "skills": [
+  "number.bonds.10"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika"
+  ]
+ },
+ "params": {
+  "mode": "bond",
+  "total": 10,
+  "rounds": 5
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.ten_fingers",
+ "difficulty": {
+  "raiseAfter": 3,
+  "lowerAfter": 2,
+  "steps": [
+   {
+    "choices": 2
+   },
+   {
+    "choices": 3
+   },
+   {
+    "choices": 4
+   }
+  ]
+ }
+}

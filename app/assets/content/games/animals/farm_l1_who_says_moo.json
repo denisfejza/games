@@ -1,11 +1,1 @@
-{
-  "id": "animals.farm.l1.who_says_moo",
-  "world": "animals", "level": 1, "game": "sound_match",
-  "ageBands": ["2-3","4-5"],
-  "skills": ["vocab.animals.farm", "listening"],
-  "curriculum": {"eyfs": ["UW-NaturalWorld"], "ccss": [], "al": ["Fusha: Bota rreth nesh"]},
-  "params": {"choices": 2, "items": ["cow","sheep","pig","hen"], "rounds": 5},
-  "difficulty": {"raiseAfter": 3, "lowerAfter": 2, "steps": [{"choices":2},{"choices":3},{"choices":4}]},
-  "pillars": {"active":2,"engaged":3,"meaningful":2,"social":2},
-  "offscreen": "offscreen.walk_like_penguin"
-}
+{"id": "animals.farm.l1.who_says_moo", "world": "animals", "level": 1, "game": "sound_match", "ageBands": ["2-3", "4-5"], "skills": ["vocab.animals.farm", "listening"], "curriculum": {"eyfs": ["UW-NaturalWorld"], "ccss": [], "al": ["Fusha: Bota rreth nesh"]}, "params": {"mode": "sound", "choices": 2, "items": ["cow", "sheep", "pig", "hen"], "rounds": 5}, "difficulty": {"raiseAfter": 3, "lowerAfter": 2, "steps": [{"choices": 2}, {"choices": 3}, {"choices": 4}]}, "pillars": {"active": 2, "engaged": 3, "meaningful": 2, "social": 2}, "offscreen": "offscreen.walk_like_penguin"}

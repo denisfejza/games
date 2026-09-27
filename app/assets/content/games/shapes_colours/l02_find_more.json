@@ -1,0 +1,51 @@
+{
+ "id": "shapes_colours.more_shapes.l2.find_more",
+ "world": "shapes_colours",
+ "level": 2,
+ "game": "sound_match",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "shapes.more"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-NumericalPatterns",
+   "EAD-Creating"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika",
+   "Fusha: Arte"
+  ]
+ },
+ "params": {
+  "mode": "shape",
+  "items": "tag:shape",
+  "rounds": 5
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.draw_shape",
+ "difficulty": {
+  "raiseAfter": 3,
+  "lowerAfter": 2,
+  "steps": [
+   {
+    "choices": 2
+   },
+   {
+    "choices": 3
+   },
+   {
+    "choices": 4
+   }
+  ]
+ }
+}

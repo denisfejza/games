@@ -1,0 +1,48 @@
+{
+ "id": "letters.level10.l10.sq_word_pairs",
+ "world": "letters",
+ "level": 10,
+ "game": "pairs_memory",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "memory"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "pairing": "picture",
+  "items": [
+   "cat",
+   "sheep",
+   "flower",
+   "duck",
+   "apple",
+   "grapes",
+   "fish",
+   "rooster",
+   "pig",
+   "moon"
+  ],
+  "pairs": 4
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.read_with_grownup",
+ "locales": [
+  "sq"
+ ]
+}

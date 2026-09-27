@@ -1,0 +1,54 @@
+{
+ "id": "numbers.to5.l2.dots5",
+ "world": "numbers",
+ "level": 2,
+ "game": "sound_match",
+ "ageBands": [
+  "2-3",
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "number.subitise.to5"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika"
+  ]
+ },
+ "params": {
+  "mode": "number",
+  "numbers": [
+   1,
+   5
+  ],
+  "show": "dots",
+  "rounds": 4
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.count_toys",
+ "difficulty": {
+  "raiseAfter": 3,
+  "lowerAfter": 2,
+  "steps": [
+   {
+    "choices": 2
+   },
+   {
+    "choices": 3
+   },
+   {
+    "choices": 4
+   }
+  ]
+ }
+}

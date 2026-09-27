@@ -1,0 +1,56 @@
+{
+ "id": "letters.level4.l4.sq_starts",
+ "world": "letters",
+ "level": 4,
+ "game": "sound_match",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "letters.sq.sounds"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "mode": "starts_with",
+  "letters": [
+   "l",
+   "d",
+   "dh",
+   "ll"
+  ],
+  "items": [
+   "flower",
+   "lion",
+   "rabbit",
+   "book",
+   "sheep",
+   "pig",
+   "hand",
+   "sun",
+   "goat",
+   "gift",
+   "fox"
+  ],
+  "rounds": 5,
+  "choices": 2
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.letter_hunt",
+ "locales": [
+  "sq"
+ ]
+}

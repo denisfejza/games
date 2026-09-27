@@ -61,6 +61,7 @@ class GameDef {
     required this.offscreenKey,
     this.difficulty,
     this.curriculum = const {},
+    this.locales = const {},
   });
 
   factory GameDef.fromJson(Map<String, dynamic> json) => GameDef(
@@ -80,6 +81,7 @@ class GameDef {
       for (final e in (json['curriculum'] as Map<String, dynamic>? ?? const {}).entries)
         e.key: [for (final c in e.value as List<dynamic>) c as String],
     },
+    locales: {for (final l in json['locales'] as List<dynamic>? ?? const []) l as String},
   );
 
   /// A copy with different params (engines that derive defaults, e.g. rounds).
@@ -95,6 +97,7 @@ class GameDef {
     offscreenKey: d.offscreenKey,
     difficulty: d.difficulty,
     curriculum: d.curriculum,
+    locales: d.locales,
   );
 
   final String id;
@@ -112,6 +115,11 @@ class GameDef {
   final String offscreenKey;
   final Difficulty? difficulty;
   final Map<String, List<String>> curriculum;
+
+  /// Languages this game is for (e.g. per-language phonics); empty = all.
+  final Set<String> locales;
+
+  bool availableIn(String locale) => locales.isEmpty || locales.contains(locale);
 }
 
 class Level {
@@ -125,6 +133,12 @@ class Level {
 
   /// Age bands that have at least one game in this level.
   Set<AgeBand> get ageBands => {for (final g in games) ...g.ageBands};
+
+  /// The games a child of [band] plays in [locale].
+  List<GameDef> gamesFor(AgeBand band, String locale) => [
+    for (final g in games)
+      if (g.ageBands.contains(band) && g.availableIn(locale)) g,
+  ];
 }
 
 class World {
@@ -148,9 +162,10 @@ class World {
   /// Levels in play order (1…N), derived from the games that name this world.
   final List<Level> levels;
 
-  List<Level> levelsFor(AgeBand band) => [
+  /// Levels with at least one game for [band] (and [locale], if given).
+  List<Level> levelsFor(AgeBand band, [String? locale]) => [
     for (final l in levels)
-      if (l.ageBands.contains(band)) l,
+      if (locale == null ? l.ageBands.contains(band) : l.gamesFor(band, locale).isNotEmpty) l,
   ];
 }
 

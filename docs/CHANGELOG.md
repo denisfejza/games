@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Phase 3 (draft): curriculum table generating 150 games in 34 levels across Animals, Numbers, Letters (per
+  language) and Shapes & Colours; per-language games; sort_bins `share` mode; Pip's House with costumes, sticker
+  book, feeding, talk-back and bedtime; docs/CURRICULUM.md (draft for educator sign-off).
 - Phase 2: eight game engines (sound_match, drag_to_target, tap_count, trace_path, pairs_memory,
   sequence_pattern, sort_bins, blend_tiles) on a shared Flame kit; docs/ENGINES.md.
 - Phase 1: Pip companion (moods, event mapping, placeholder full-body fox, Rive adapter per docs/PIP_RIVE_SPEC.md,

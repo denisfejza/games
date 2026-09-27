@@ -1,0 +1,52 @@
+{
+ "id": "animals.pets.l2.pet_food",
+ "world": "animals",
+ "level": 2,
+ "game": "drag_to_target",
+ "ageBands": [
+  "2-3",
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "knowledge.animals.food"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "UW-NaturalWorld"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Bota rreth nesh"
+  ]
+ },
+ "params": {
+  "mode": "food",
+  "items": [
+   "dog",
+   "cat",
+   "rabbit",
+   "mouse"
+  ],
+  "rounds": 4
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.wag_like_dog",
+ "difficulty": {
+  "raiseAfter": 3,
+  "lowerAfter": 2,
+  "steps": [
+   {
+    "targets": 2
+   },
+   {
+    "targets": 3
+   }
+  ]
+ }
+}

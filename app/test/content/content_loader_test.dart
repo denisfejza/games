@@ -137,7 +137,7 @@ void main() {
         'board_games',
         'pips_house',
       ]);
-      expect(lib.world('animals').levels.first.games.single.id, 'animals.farm.l1.who_says_moo');
+      expect(lib.world('animals').levels.first.games.map((g) => g.id), contains('animals.farm.l1.who_says_moo'));
     });
 
     test('every string key used by content exists in en and sq', () {

@@ -1,0 +1,55 @@
+{
+ "id": "letters.level7.l7.sq_pairs",
+ "world": "letters",
+ "level": 7,
+ "game": "pairs_memory",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "letters.sq.sounds",
+  "memory"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "pairing": "letter_picture",
+  "letters": [
+   "h",
+   "j",
+   "q",
+   "c",
+   "ç"
+  ],
+  "items": [
+   "nose",
+   "moon",
+   "dog",
+   "milk",
+   "cherry",
+   "circus",
+   "umbrella",
+   "socks",
+   "key"
+  ],
+  "pairs": 3
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.name_letters",
+ "locales": [
+  "sq"
+ ]
+}

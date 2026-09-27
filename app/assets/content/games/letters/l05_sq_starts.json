@@ -1,0 +1,59 @@
+{
+ "id": "letters.level5.l5.sq_starts",
+ "world": "letters",
+ "level": 5,
+ "game": "sound_match",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "letters.sq.sounds"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "mode": "starts_with",
+  "letters": [
+   "p",
+   "b",
+   "g",
+   "gj"
+  ],
+  "items": [
+   "fish",
+   "hen",
+   "penguin",
+   "tree",
+   "bee",
+   "frog",
+   "banana",
+   "bread",
+   "crab",
+   "mouth",
+   "rooster",
+   "giraffe",
+   "snake",
+   "leaf"
+  ],
+  "rounds": 5,
+  "choices": 2
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.body_letter",
+ "locales": [
+  "sq"
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "id": "numbers.add_sub.l10.sum4",
+ "world": "numbers",
+ "level": 10,
+ "game": "sound_match",
+ "ageBands": [
+  "6-7"
+ ],
+ "skills": [
+  "number.add.within10"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika"
+  ]
+ },
+ "params": {
+  "mode": "sum",
+  "numbers": [
+   1,
+   10
+  ],
+  "choices": 4,
+  "rounds": 4
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.add_spoons"
+}

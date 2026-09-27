@@ -12,6 +12,7 @@ import '../content/models.dart';
 import '../core/parental_gate/parental_gate.dart';
 import '../l10n/app_localizations.dart';
 import 'ground.dart';
+import 'pips_house/pips_house_screen.dart';
 import 'title_banner.dart';
 import 'world_screen.dart';
 import 'world_style.dart';
@@ -183,7 +184,11 @@ class _WorldTile extends StatelessWidget {
       color: style.color,
       speakKey: world.titleKey,
       label: label,
-      onPressed: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => WorldScreen(world: world))),
+      onPressed: () => Navigator.of(context).push(
+        MaterialPageRoute<void>(
+          builder: (_) => world.id == 'pips_house' ? const PipsHouseScreen() : WorldScreen(world: world),
+        ),
+      ),
     );
   }
 }

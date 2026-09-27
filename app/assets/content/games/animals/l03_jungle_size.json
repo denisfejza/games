@@ -1,0 +1,48 @@
+{
+ "id": "animals.jungle.l3.jungle_size",
+ "world": "animals",
+ "level": 3,
+ "game": "sort_bins",
+ "ageBands": [
+  "2-3",
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "concept.size"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "UW-NaturalWorld"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Bota rreth nesh"
+  ]
+ },
+ "params": {
+  "by": "size",
+  "items": "tag:animal",
+  "perRound": 4,
+  "rounds": 2,
+  "bins": [
+   {
+    "value": "big",
+    "item": "elephant",
+    "say": "binBig"
+   },
+   {
+    "value": "small",
+    "item": "mouse",
+    "say": "binSmall"
+   }
+  ]
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 2,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.stomp_like_elephant"
+}

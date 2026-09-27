@@ -1,0 +1,53 @@
+{
+ "id": "numbers.to10.l3.find10",
+ "world": "numbers",
+ "level": 3,
+ "game": "sound_match",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "number.numerals.to10"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika"
+  ]
+ },
+ "params": {
+  "mode": "number",
+  "numbers": [
+   1,
+   10
+  ],
+  "rounds": 5,
+  "choices": 3
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.count_steps",
+ "difficulty": {
+  "raiseAfter": 3,
+  "lowerAfter": 2,
+  "steps": [
+   {
+    "choices": 2
+   },
+   {
+    "choices": 3
+   },
+   {
+    "choices": 4
+   }
+  ]
+ }
+}

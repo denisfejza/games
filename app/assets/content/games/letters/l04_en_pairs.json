@@ -1,0 +1,58 @@
+{
+ "id": "letters.level4.l4.en_pairs",
+ "world": "letters",
+ "level": 4,
+ "game": "pairs_memory",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "letters.en.sounds",
+  "memory"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "pairing": "letter_picture",
+  "letters": [
+   "e",
+   "u",
+   "r",
+   "h"
+  ],
+  "items": [
+   "egg",
+   "elephant",
+   "umbrella",
+   "rabbit",
+   "rain",
+   "rainbow",
+   "rooster",
+   "hat",
+   "horse",
+   "hen",
+   "house",
+   "hand",
+   "honey"
+  ],
+  "pairs": 3
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.letter_hunt",
+ "locales": [
+  "en"
+ ]
+}

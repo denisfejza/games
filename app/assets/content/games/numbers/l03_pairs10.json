@@ -1,0 +1,38 @@
+{
+ "id": "numbers.to10.l3.pairs10",
+ "world": "numbers",
+ "level": 3,
+ "game": "pairs_memory",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "number.numerals.to10",
+  "memory"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika"
+  ]
+ },
+ "params": {
+  "pairing": "numeral_dots",
+  "numbers": [
+   1,
+   10
+  ],
+  "pairs": 4
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.count_steps"
+}

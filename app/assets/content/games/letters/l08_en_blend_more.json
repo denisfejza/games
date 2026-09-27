@@ -1,0 +1,43 @@
+{
+ "id": "letters.level8.l8.en_blend_more",
+ "world": "letters",
+ "level": 8,
+ "game": "blend_tiles",
+ "ageBands": [
+  "6-7"
+ ],
+ "skills": [
+  "letters.en.blend"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "words": {
+   "en": [
+    "cat",
+    "dog",
+    "pig",
+    "sun",
+    "hen"
+   ]
+  },
+  "rounds": 3
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.letter_hunt",
+ "locales": [
+  "en"
+ ]
+}

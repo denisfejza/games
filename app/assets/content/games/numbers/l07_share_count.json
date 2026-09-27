@@ -1,0 +1,41 @@
+{
+ "id": "numbers.share.l7.share_count",
+ "world": "numbers",
+ "level": 7,
+ "game": "tap_count",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "number.count.to10"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika"
+  ]
+ },
+ "params": {
+  "numbers": [
+   4,
+   8
+  ],
+  "items": [
+   "cherry",
+   "strawberry",
+   "apple"
+  ],
+  "rounds": 3
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 2,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.share_snack"
+}

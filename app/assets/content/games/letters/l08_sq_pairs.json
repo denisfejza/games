@@ -1,0 +1,53 @@
+{
+ "id": "letters.level8.l8.sq_pairs",
+ "world": "letters",
+ "level": 8,
+ "game": "pairs_memory",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "letters.sq.sounds",
+  "memory"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "pairing": "letter_picture",
+  "letters": [
+   "x",
+   "xh",
+   "y",
+   "nj",
+   "rr",
+   "th",
+   "ë"
+  ],
+  "items": [
+   "jacket",
+   "star_obj",
+   "rainbow",
+   "grapes",
+   "boar"
+  ],
+  "pairs": 3
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.letter_hunt",
+ "locales": [
+  "sq"
+ ]
+}

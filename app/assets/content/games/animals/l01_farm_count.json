@@ -1,0 +1,37 @@
+{
+ "id": "animals.farm.l1.farm_count",
+ "world": "animals",
+ "level": 1,
+ "game": "tap_count",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "number.count.to5"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "UW-NaturalWorld"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Bota rreth nesh"
+  ]
+ },
+ "params": {
+  "items": "tags:animal+farm",
+  "numbers": [
+   1,
+   5
+  ],
+  "rounds": 3
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 2,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.moo_like_cow"
+}

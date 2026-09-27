@@ -1,0 +1,52 @@
+{
+ "id": "numbers.add_sub.l10.sum",
+ "world": "numbers",
+ "level": 10,
+ "game": "sound_match",
+ "ageBands": [
+  "6-7"
+ ],
+ "skills": [
+  "number.add.within10"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika"
+  ]
+ },
+ "params": {
+  "mode": "sum",
+  "numbers": [
+   1,
+   10
+  ],
+  "items": "tag:food",
+  "rounds": 5
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.add_spoons",
+ "difficulty": {
+  "raiseAfter": 3,
+  "lowerAfter": 2,
+  "steps": [
+   {
+    "choices": 2
+   },
+   {
+    "choices": 3
+   },
+   {
+    "choices": 4
+   }
+  ]
+ }
+}

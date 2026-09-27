@@ -1,0 +1,60 @@
+{
+ "id": "letters.level1.l1.en_pairs",
+ "world": "letters",
+ "level": 1,
+ "game": "pairs_memory",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "letters.en.sounds",
+  "memory"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "pairing": "letter_picture",
+  "letters": [
+   "s",
+   "a",
+   "t",
+   "p"
+  ],
+  "items": [
+   "sun",
+   "snake",
+   "socks",
+   "seal",
+   "ant",
+   "apple",
+   "tiger",
+   "tent",
+   "tree",
+   "train",
+   "pig",
+   "penguin",
+   "panda",
+   "pear",
+   "pizza"
+  ],
+  "pairs": 3
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.letter_hunt",
+ "locales": [
+  "en"
+ ]
+}

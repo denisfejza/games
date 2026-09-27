@@ -1,0 +1,43 @@
+{
+ "id": "letters.level8.l8.en_word_pairs",
+ "world": "letters",
+ "level": 8,
+ "game": "pairs_memory",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "memory"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "pairing": "picture",
+  "items": [
+   "cat",
+   "dog",
+   "pig",
+   "sun",
+   "hen"
+  ],
+  "pairs": 4
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.letter_hunt",
+ "locales": [
+  "en"
+ ]
+}

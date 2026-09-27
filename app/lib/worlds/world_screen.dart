@@ -34,7 +34,9 @@ class _WorldScreenState extends ConsumerState<WorldScreen> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
-      final hasLevels = widget.world.levelsFor(ref.read(ageBandProvider)).isNotEmpty;
+      final hasLevels = widget.world
+          .levelsFor(ref.read(ageBandProvider), ref.read(localeProvider).languageCode)
+          .isNotEmpty;
       ref.read(audioServiceProvider).say(hasLevels ? widget.world.titleKey : 'comingSoon', interrupt: true);
     });
   }
@@ -59,7 +61,7 @@ class _WorldScreenState extends ConsumerState<WorldScreen> {
     final l = AppLocalizations.of(context);
     final tokens = AgeBandTheme.of(context);
     final style = WorldStyle.of(widget.world.icon);
-    final levels = widget.world.levelsFor(ref.watch(ageBandProvider));
+    final levels = widget.world.levelsFor(ref.watch(ageBandProvider), ref.watch(localeProvider).languageCode);
     final statuses = ref.watch(levelStatusProvider(widget.world.id)).value ?? const {};
     final tile = MediaQuery.sizeOf(context).shortestSide >= 600 ? 150.0 : 116.0;
     return Scaffold(

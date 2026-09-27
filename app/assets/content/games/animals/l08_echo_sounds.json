@@ -1,0 +1,50 @@
+{
+ "id": "animals.echo.l8.echo_sounds",
+ "world": "animals",
+ "level": 8,
+ "game": "sound_match",
+ "ageBands": [
+  "2-3",
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "listening.sounds"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "UW-NaturalWorld"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Bota rreth nesh"
+  ]
+ },
+ "params": {
+  "mode": "sound",
+  "items": "tag:animal",
+  "rounds": 5
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.animal_charades",
+ "difficulty": {
+  "raiseAfter": 3,
+  "lowerAfter": 2,
+  "steps": [
+   {
+    "choices": 2
+   },
+   {
+    "choices": 3
+   },
+   {
+    "choices": 4
+   }
+  ]
+ }
+}

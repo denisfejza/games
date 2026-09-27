@@ -1,0 +1,37 @@
+{
+ "id": "shapes_colours.more_shapes.l2.holes_more",
+ "world": "shapes_colours",
+ "level": 2,
+ "game": "drag_to_target",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "shapes.more"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-NumericalPatterns",
+   "EAD-Creating"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika",
+   "Fusha: Arte"
+  ]
+ },
+ "params": {
+  "mode": "shape_hole",
+  "items": "tag:shape",
+  "targets": 3,
+  "rounds": 4
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.draw_shape"
+}

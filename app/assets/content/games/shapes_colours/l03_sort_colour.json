@@ -1,0 +1,49 @@
+{
+ "id": "shapes_colours.colours.l3.sort_colour",
+ "world": "shapes_colours",
+ "level": 3,
+ "game": "sort_bins",
+ "ageBands": [
+  "2-3",
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "colours.basic",
+  "sorting"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-NumericalPatterns",
+   "EAD-Creating"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika",
+   "Fusha: Arte"
+  ]
+ },
+ "params": {
+  "by": "colour",
+  "items": "tag:food",
+  "perRound": 4,
+  "rounds": 2,
+  "bins": [
+   {
+    "value": "red",
+    "item": "red"
+   },
+   {
+    "value": "yellow",
+    "item": "yellow"
+   }
+  ]
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 2,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.colour_hunt"
+}

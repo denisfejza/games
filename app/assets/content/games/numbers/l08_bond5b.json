@@ -1,0 +1,35 @@
+{
+ "id": "numbers.bonds5.l8.bond5b",
+ "world": "numbers",
+ "level": 8,
+ "game": "sound_match",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "number.bonds.5"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika"
+  ]
+ },
+ "params": {
+  "mode": "bond",
+  "total": 5,
+  "rounds": 5,
+  "choices": 3
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.five_fingers"
+}

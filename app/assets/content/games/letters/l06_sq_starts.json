@@ -1,0 +1,55 @@
+{
+ "id": "letters.level6.l6.sq_starts",
+ "world": "letters",
+ "level": 6,
+ "game": "sound_match",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "letters.sq.sounds"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "mode": "starts_with",
+  "letters": [
+   "f",
+   "v",
+   "z",
+   "zh"
+  ],
+  "items": [
+   "seal",
+   "nest",
+   "butterfly",
+   "egg",
+   "boat",
+   "ear",
+   "bird",
+   "zebra",
+   "heart_obj",
+   "toad"
+  ],
+  "rounds": 5,
+  "choices": 2
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.sound_walk",
+ "locales": [
+  "sq"
+ ]
+}

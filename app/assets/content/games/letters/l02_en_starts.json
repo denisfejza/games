@@ -1,0 +1,56 @@
+{
+ "id": "letters.level2.l2.en_starts",
+ "world": "letters",
+ "level": 2,
+ "game": "sound_match",
+ "ageBands": [
+  "2-3",
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "letters.en.sounds"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "mode": "starts_with",
+  "letters": [
+   "i",
+   "n",
+   "m",
+   "d"
+  ],
+  "items": [
+   "ladybird",
+   "nose",
+   "nest",
+   "mouse",
+   "moon",
+   "monkey",
+   "milk",
+   "dog",
+   "duck",
+   "dolphin"
+  ],
+  "rounds": 5,
+  "choices": 2
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.body_letter",
+ "locales": [
+  "en"
+ ]
+}

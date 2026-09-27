@@ -403,6 +403,19 @@
    "props": {
     "colour": "red"
    }
+  },
+  {
+   "id": "plate",
+   "nameKey": "vocab.plate",
+   "emoji": "🍽️",
+   "tags": [
+    "object",
+    "home"
+   ],
+   "props": {
+    "colour": "white",
+    "shape": "circle"
+   }
   }
  ]
 }

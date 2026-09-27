@@ -17,7 +17,8 @@ import '../common/pools.dart';
 /// `sort_bins`: drag several items into 2–3 bins.
 ///
 /// Params:
-/// - `by`: `size` · `lives` · `colour` · `first_letter` · `tag` (which fact to sort by)
+/// - `by`: `size` · `lives` · `colour` · `shape` · `first_letter` · `tag` (which fact to sort by),
+///   or `share`: share `perRound` copies of the first item fairly between the bins
 /// - `bins`: list of `{"value": "big", "item": "elephant", "say": "binBig"}`; for
 ///   `first_letter` use `{"value": "sh"}` (the bin shows the letter)
 /// - `items` pool, `perRound` items to sort (default 4), `rounds`
@@ -27,7 +28,7 @@ class SortBinsConfig {
   factory SortBinsConfig.parse(Map<String, dynamic> params, ContentLibrary lib) =>
       SortBinsConfig._(params, resolveItems(lib, params['items'] ?? 'tag:animal'));
 
-  static const sorts = {'size', 'lives', 'colour', 'first_letter', 'tag'};
+  static const sorts = {'size', 'lives', 'colour', 'shape', 'first_letter', 'tag', 'share'};
 
   final Map<String, dynamic> params;
   final List<VocabItem> items;
@@ -68,6 +69,11 @@ class SortRound {
 }
 
 SortRound nextSort(SortBinsConfig c, Random r, {required String? Function(String) text, required String locale}) {
+  if (c.by == 'share') {
+    // Any plate is fine until it has its fair share (-1 = any bin).
+    final count = c.perRound - c.perRound % c.bins.length;
+    return SortRound(items: List.filled(count, c.items.first), values: List.filled(count, -1), bins: c.bins);
+  }
   final byBin = <int, List<VocabItem>>{};
   for (final item in c.items) {
     final v = c.valueOf(item, text, locale);
@@ -195,7 +201,10 @@ class SortBinsGame extends PipGame {
     final bin = nearestTarget(bins, at, reach: 0.9);
     if (bin == null) return false;
     final i = card.value! as int;
-    if (bin.value == r.values[i]) {
+    final binIndex = bin.value! as int;
+    final fair = r.items.length ~/ r.bins.length;
+    final fits = r.values[i] == -1 ? _inBin.values.where((b) => b == binIndex).length < fair : binIndex == r.values[i];
+    if (fits) {
       _inBin[i] = bin.value! as int;
       card
         ..done = true
@@ -211,7 +220,11 @@ class SortBinsGame extends PipGame {
     }
     bin.wiggle();
     if (host.tryAgain()) {
-      bins[r.values[i]].hint();
+      final target = r.values[i] >= 0
+          ? r.values[i]
+          : [for (var b = 0; b < bins.length; b++) b]
+                .firstWhere((b) => _inBin.values.where((x) => x == b).length < fair);
+      bins[target].hint();
       host.hintShown();
     }
     return false;

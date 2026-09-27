@@ -1,0 +1,40 @@
+{
+ "id": "letters.level3.l3.sq_trace",
+ "world": "letters",
+ "level": 3,
+ "game": "trace_path",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "letters.sq.write"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "glyphs": [
+   "s",
+   "sh",
+   "k",
+   "u"
+  ]
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 2,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.sound_walk",
+ "locales": [
+  "sq"
+ ]
+}

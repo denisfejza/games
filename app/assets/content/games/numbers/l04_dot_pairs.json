@@ -1,0 +1,38 @@
+{
+ "id": "numbers.subitise.l4.dot_pairs",
+ "world": "numbers",
+ "level": 4,
+ "game": "pairs_memory",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "number.subitise.to6",
+  "memory"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika"
+  ]
+ },
+ "params": {
+  "pairing": "numeral_dots",
+  "numbers": [
+   1,
+   6
+  ],
+  "pairs": 4
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.find_dots"
+}

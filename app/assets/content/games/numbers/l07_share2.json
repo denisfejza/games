@@ -1,0 +1,47 @@
+{
+ "id": "numbers.share.l7.share2",
+ "world": "numbers",
+ "level": 7,
+ "game": "sort_bins",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "number.share"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika"
+  ]
+ },
+ "params": {
+  "by": "share",
+  "items": [
+   "cherry"
+  ],
+  "perRound": 4,
+  "rounds": 3,
+  "bins": [
+   {
+    "value": "a",
+    "item": "plate"
+   },
+   {
+    "value": "b",
+    "item": "plate"
+   }
+  ]
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 2,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.share_snack"
+}

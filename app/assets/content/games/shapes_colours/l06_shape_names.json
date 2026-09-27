@@ -1,0 +1,37 @@
+{
+ "id": "shapes_colours.shapes_world.l6.shape_names",
+ "world": "shapes_colours",
+ "level": 6,
+ "game": "sound_match",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "shapes.more"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-NumericalPatterns",
+   "EAD-Creating"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika",
+   "Fusha: Arte"
+  ]
+ },
+ "params": {
+  "mode": "shape",
+  "items": "tag:shape",
+  "rounds": 5,
+  "choices": 3
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.shape_walk"
+}

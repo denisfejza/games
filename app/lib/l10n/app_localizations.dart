@@ -1861,6 +1861,246 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Water'**
   String get binWater;
+
+  /// No description provided for @vocabPlate.
+  ///
+  /// In en, this message translates to:
+  /// **'Plate'**
+  String get vocabPlate;
+
+  /// No description provided for @offscreenMooLikeCow.
+  ///
+  /// In en, this message translates to:
+  /// **'Moo like a cow and crawl on all fours!'**
+  String get offscreenMooLikeCow;
+
+  /// No description provided for @offscreenWagLikeDog.
+  ///
+  /// In en, this message translates to:
+  /// **'Wag your tail like a happy dog!'**
+  String get offscreenWagLikeDog;
+
+  /// No description provided for @offscreenStompLikeElephant.
+  ///
+  /// In en, this message translates to:
+  /// **'Stomp like an elephant: one, two, three!'**
+  String get offscreenStompLikeElephant;
+
+  /// No description provided for @offscreenSwimLikeFish.
+  ///
+  /// In en, this message translates to:
+  /// **'Swim like a fish around the room!'**
+  String get offscreenSwimLikeFish;
+
+  /// No description provided for @offscreenHugGrownUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Give a grown-up a big bear hug!'**
+  String get offscreenHugGrownUp;
+
+  /// No description provided for @offscreenBuildDen.
+  ///
+  /// In en, this message translates to:
+  /// **'Build a cosy den with cushions!'**
+  String get offscreenBuildDen;
+
+  /// No description provided for @offscreenAnimalCharades.
+  ///
+  /// In en, this message translates to:
+  /// **'Act like an animal. Can a grown-up guess which one?'**
+  String get offscreenAnimalCharades;
+
+  /// No description provided for @offscreenJumpCount.
+  ///
+  /// In en, this message translates to:
+  /// **'Jump three times and count out loud!'**
+  String get offscreenJumpCount;
+
+  /// No description provided for @offscreenCountToys.
+  ///
+  /// In en, this message translates to:
+  /// **'Count five toys and line them up!'**
+  String get offscreenCountToys;
+
+  /// No description provided for @offscreenCountSteps.
+  ///
+  /// In en, this message translates to:
+  /// **'Count your steps to the door!'**
+  String get offscreenCountSteps;
+
+  /// No description provided for @offscreenFindDots.
+  ///
+  /// In en, this message translates to:
+  /// **'Find something with dots on it!'**
+  String get offscreenFindDots;
+
+  /// No description provided for @offscreenMoreLessBlocks.
+  ///
+  /// In en, this message translates to:
+  /// **'Make two piles of blocks. Which has more?'**
+  String get offscreenMoreLessBlocks;
+
+  /// No description provided for @offscreenAirWrite.
+  ///
+  /// In en, this message translates to:
+  /// **'Write a number in the air with your finger!'**
+  String get offscreenAirWrite;
+
+  /// No description provided for @offscreenShareSnack.
+  ///
+  /// In en, this message translates to:
+  /// **'Share a snack fairly with someone!'**
+  String get offscreenShareSnack;
+
+  /// No description provided for @offscreenFiveFingers.
+  ///
+  /// In en, this message translates to:
+  /// **'Show five fingers, then hide some. How many are hiding?'**
+  String get offscreenFiveFingers;
+
+  /// No description provided for @offscreenTenFingers.
+  ///
+  /// In en, this message translates to:
+  /// **'Show ten fingers! Bend some down and count the rest.'**
+  String get offscreenTenFingers;
+
+  /// No description provided for @offscreenAddSpoons.
+  ///
+  /// In en, this message translates to:
+  /// **'Put two spoons and one more on the table. How many?'**
+  String get offscreenAddSpoons;
+
+  /// No description provided for @offscreenLetterHunt.
+  ///
+  /// In en, this message translates to:
+  /// **'Find something at home that starts with the same sound!'**
+  String get offscreenLetterHunt;
+
+  /// No description provided for @offscreenBodyLetter.
+  ///
+  /// In en, this message translates to:
+  /// **'Make the letter\'s shape with your body!'**
+  String get offscreenBodyLetter;
+
+  /// No description provided for @offscreenSoundWalk.
+  ///
+  /// In en, this message translates to:
+  /// **'Say the sound every time you take a step!'**
+  String get offscreenSoundWalk;
+
+  /// No description provided for @offscreenReadWithGrownup.
+  ///
+  /// In en, this message translates to:
+  /// **'Read a picture book with a grown-up!'**
+  String get offscreenReadWithGrownup;
+
+  /// No description provided for @offscreenNameLetters.
+  ///
+  /// In en, this message translates to:
+  /// **'Find the first letter of your name somewhere!'**
+  String get offscreenNameLetters;
+
+  /// No description provided for @offscreenShapeHunt.
+  ///
+  /// In en, this message translates to:
+  /// **'Find something round and something square!'**
+  String get offscreenShapeHunt;
+
+  /// No description provided for @offscreenDrawShape.
+  ///
+  /// In en, this message translates to:
+  /// **'Draw a big circle in the air!'**
+  String get offscreenDrawShape;
+
+  /// No description provided for @offscreenColourHunt.
+  ///
+  /// In en, this message translates to:
+  /// **'Find three red things at home!'**
+  String get offscreenColourHunt;
+
+  /// No description provided for @offscreenMixColours.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask a grown-up to help you mix two paints!'**
+  String get offscreenMixColours;
+
+  /// No description provided for @offscreenClapPattern.
+  ///
+  /// In en, this message translates to:
+  /// **'Clap a pattern: clap, stamp, clap, stamp!'**
+  String get offscreenClapPattern;
+
+  /// No description provided for @offscreenShapeWalk.
+  ///
+  /// In en, this message translates to:
+  /// **'Walk around the room and name the shapes you see!'**
+  String get offscreenShapeWalk;
+
+  /// No description provided for @pipHouseHello.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome to my house!'**
+  String get pipHouseHello;
+
+  /// No description provided for @pipGoodnight.
+  ///
+  /// In en, this message translates to:
+  /// **'Goodnight! Sweet dreams.'**
+  String get pipGoodnight;
+
+  /// No description provided for @pipWakeUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Good morning! I\'m awake.'**
+  String get pipWakeUp;
+
+  /// No description provided for @houseStickers.
+  ///
+  /// In en, this message translates to:
+  /// **'My stickers'**
+  String get houseStickers;
+
+  /// No description provided for @houseWardrobe.
+  ///
+  /// In en, this message translates to:
+  /// **'Dress up Pip'**
+  String get houseWardrobe;
+
+  /// No description provided for @houseFeed.
+  ///
+  /// In en, this message translates to:
+  /// **'Feed Pip'**
+  String get houseFeed;
+
+  /// No description provided for @houseTalk.
+  ///
+  /// In en, this message translates to:
+  /// **'Talk to Pip'**
+  String get houseTalk;
+
+  /// No description provided for @houseBedtime.
+  ///
+  /// In en, this message translates to:
+  /// **'Pip\'s bedtime'**
+  String get houseBedtime;
+
+  /// No description provided for @stickersMore.
+  ///
+  /// In en, this message translates to:
+  /// **'Collect stars to find more stickers!'**
+  String get stickersMore;
+
+  /// No description provided for @costumeMore.
+  ///
+  /// In en, this message translates to:
+  /// **'Collect more stars for this one!'**
+  String get costumeMore;
+
+  /// No description provided for @pipLovesIt.
+  ///
+  /// In en, this message translates to:
+  /// **'I love it!'**
+  String get pipLovesIt;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

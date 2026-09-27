@@ -1,0 +1,48 @@
+{
+ "id": "animals.baby_mummy.l6.find_mummy",
+ "world": "animals",
+ "level": 6,
+ "game": "drag_to_target",
+ "ageBands": [
+  "2-3",
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "concept.size",
+  "vocab.animals.farm"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "UW-NaturalWorld"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Bota rreth nesh"
+  ]
+ },
+ "params": {
+  "mode": "baby",
+  "items": "tags:animal+farm",
+  "rounds": 4
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.hug_grown_up",
+ "difficulty": {
+  "raiseAfter": 3,
+  "lowerAfter": 2,
+  "steps": [
+   {
+    "targets": 2
+   },
+   {
+    "targets": 3
+   }
+  ]
+ }
+}

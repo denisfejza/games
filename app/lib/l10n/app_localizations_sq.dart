@@ -905,4 +905,124 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get binWater => 'Ujë';
+
+  @override
+  String get vocabPlate => 'Pjatë';
+
+  @override
+  String get offscreenMooLikeCow => 'Bëj mu si lopa dhe ec me katër këmbë!';
+
+  @override
+  String get offscreenWagLikeDog => 'Tunde bishtin si një qen i gëzuar!';
+
+  @override
+  String get offscreenStompLikeElephant => 'Shkel fort si elefanti: një, dy, tre!';
+
+  @override
+  String get offscreenSwimLikeFish => 'Noto si peshk nëpër dhomë!';
+
+  @override
+  String get offscreenHugGrownUp => 'Përqafo fort një të rritur!';
+
+  @override
+  String get offscreenBuildDen => 'Ndërto një strofull të ngrohtë me jastëkë!';
+
+  @override
+  String get offscreenAnimalCharades => 'Luaj si një kafshë. A e gjen i rrituri cila është?';
+
+  @override
+  String get offscreenJumpCount => 'Kërce tri herë dhe numëro me zë!';
+
+  @override
+  String get offscreenCountToys => 'Numëro pesë lodra dhe rreshtoji!';
+
+  @override
+  String get offscreenCountSteps => 'Numëro hapat deri te dera!';
+
+  @override
+  String get offscreenFindDots => 'Gjej diçka me pika!';
+
+  @override
+  String get offscreenMoreLessBlocks => 'Bëj dy grumbuj me kube. Cili ka më shumë?';
+
+  @override
+  String get offscreenAirWrite => 'Shkruaj një numër në ajër me gisht!';
+
+  @override
+  String get offscreenShareSnack => 'Ndaje një ushqim në mënyrë të drejtë me dikë!';
+
+  @override
+  String get offscreenFiveFingers => 'Trego pesë gishta, pastaj fshih disa. Sa janë fshehur?';
+
+  @override
+  String get offscreenTenFingers => 'Trego dhjetë gishta! Palos disa dhe numëro të tjerët.';
+
+  @override
+  String get offscreenAddSpoons => 'Vendos dy lugë dhe një tjetër në tavolinë. Sa janë?';
+
+  @override
+  String get offscreenLetterHunt => 'Gjej diçka në shtëpi që fillon me të njëjtin tingull!';
+
+  @override
+  String get offscreenBodyLetter => 'Bëje formën e shkronjës me trupin tënd!';
+
+  @override
+  String get offscreenSoundWalk => 'Thuaj tingullin sa herë që bën një hap!';
+
+  @override
+  String get offscreenReadWithGrownup => 'Lexo një libër me figura me një të rritur!';
+
+  @override
+  String get offscreenNameLetters => 'Gjej diku shkronjën e parë të emrit tënd!';
+
+  @override
+  String get offscreenShapeHunt => 'Gjej diçka të rrumbullakët dhe diçka katrore!';
+
+  @override
+  String get offscreenDrawShape => 'Vizato një rreth të madh në ajër!';
+
+  @override
+  String get offscreenColourHunt => 'Gjej tri gjëra të kuqe në shtëpi!';
+
+  @override
+  String get offscreenMixColours => 'Kërkoji një të rrituri të të ndihmojë të përziesh dy bojëra!';
+
+  @override
+  String get offscreenClapPattern => 'Duartrokit një model: duartrokit, shkel, duartrokit, shkel!';
+
+  @override
+  String get offscreenShapeWalk => 'Ec nëpër dhomë dhe thuaj emrat e formave që sheh!';
+
+  @override
+  String get pipHouseHello => 'Mirë se erdhe në shtëpinë time!';
+
+  @override
+  String get pipGoodnight => 'Natën e mirë! Ëndrra të ëmbla.';
+
+  @override
+  String get pipWakeUp => 'Mirëmëngjes! U zgjova.';
+
+  @override
+  String get houseStickers => 'Ngjitëset e mia';
+
+  @override
+  String get houseWardrobe => 'Vishe Pipin';
+
+  @override
+  String get houseFeed => 'Ushqeje Pipin';
+
+  @override
+  String get houseTalk => 'Fol me Pipin';
+
+  @override
+  String get houseBedtime => 'Koha e gjumit për Pipin';
+
+  @override
+  String get stickersMore => 'Mblidh yje për të gjetur më shumë ngjitëse!';
+
+  @override
+  String get costumeMore => 'Mblidh më shumë yje për këtë!';
+
+  @override
+  String get pipLovesIt => 'Më pëlqen shumë!';
 }

@@ -188,6 +188,17 @@
         "offscreen": {
           "type": "string",
           "pattern": "^offscreen\\.[a-z0-9_]+$"
+        },
+        "locales": {
+          "description": "Only for these languages (per-language phonics). Empty/absent = all.",
+          "type": "array",
+          "items": {
+            "enum": [
+              "en",
+              "sq"
+            ]
+          },
+          "uniqueItems": true
         }
       }
     },

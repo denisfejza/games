@@ -139,6 +139,186 @@ warm, slow, smiling). Lines with `{…}` placeholders are recorded per value, e.
 | `shapeHeart` | Heart | Zemër | — | — |
 | `shapeOval` | Oval | Vezak | — | — |
 | `shapeDiamond` | Diamond | Romb | — | — |
+| `pipBelly` | Belly | Bark | — | — |
+| `pipTickle` | Hee hee! That tickles! | Hi hi! Më gudulis! | — | — |
+| `pipYum` | Mmm! Thank you! | Mmm! Faleminderit! | — | — |
+| `pipHmm` | Hmm, let's look again. | Hmm, le ta shohim përsëri. | — | — |
+| `episodeIntro` | Let's play together! | Hajde të luajmë bashkë! | — | — |
+| `companionClap` | Clap with Pip! | Duartrokit me Pipin! | — | — |
+| `companionThanks` | Yay! You're a great friend. | Urra! Je shok i mrekullueshëm. | — | — |
+| `offscreenIntro` | Now a game away from the screen! | Tani një lojë larg ekranit! | — | — |
+| `offscreenDone` | We did it! | E bëmë! | — | — |
+| `episodeDone` | All done! You played so well. | Mbaruam! Luajte shumë bukur. | — | — |
+| `levelNotYet` | Let's play this one first! | Le ta luajmë këtë më parë! | — | — |
+| `bedtimePipSleepy` | Pip is getting sleepy. Time to rest! | Pipit po i vjen gjumë. Është koha për pushim! | — | — |
+| `bedtimeAllDone` | All done for today | Mbaruam për sot | — | — |
+| `talkBackPrompt` | Say something to Pip! | Thuaji diçka Pipit! | — | — |
+| `praiseGreat` | Great job! | Shumë mirë! | — | — |
+| `praiseWellDone` | Well done! | Të lumtë! | — | — |
+| `praiseYouDidIt` | You did it! | Ia dole! | — | — |
+| `praiseSuper` | Super! | Super! | — | — |
+| `vocabHabitatFarm` | Farm | Fermë | — | — |
+| `vocabHabitatHome` | Home | Shtëpi | — | — |
+| `vocabHabitatJungle` | Jungle | Xhungël | — | — |
+| `vocabHabitatSea` | Sea | Det | — | — |
+| `vocabHabitatSnow` | Snow | Borë | — | — |
+| `vocabHabitatGarden` | Garden | Kopsht | — | — |
+| `vocabHabitatForest` | Forest | Pyll | — | — |
+| `num0` | zero | zero | — | — |
+| `num1` | one | një | — | — |
+| `num2` | two | dy | — | — |
+| `num3` | three | tre | — | — |
+| `num4` | four | katër | — | — |
+| `num5` | five | pesë | — | — |
+| `num6` | six | gjashtë | — | — |
+| `num7` | seven | shtatë | — | — |
+| `num8` | eight | tetë | — | — |
+| `num9` | nine | nëntë | — | — |
+| `num10` | ten | dhjetë | — | — |
+| `num11` | eleven | njëmbëdhjetë | — | — |
+| `num12` | twelve | dymbëdhjetë | — | — |
+| `num13` | thirteen | trembëdhjetë | — | — |
+| `num14` | fourteen | katërmbëdhjetë | — | — |
+| `num15` | fifteen | pesëmbëdhjetë | — | — |
+| `num16` | sixteen | gjashtëmbëdhjetë | — | — |
+| `num17` | seventeen | shtatëmbëdhjetë | — | — |
+| `num18` | eighteen | tetëmbëdhjetë | — | — |
+| `num19` | nineteen | nëntëmbëdhjetë | — | — |
+| `num20` | twenty | njëzet | — | — |
+| `letterEnA` | a | a | — | — |
+| `letterEnB` | b | b | — | — |
+| `letterEnC` | c | c | — | — |
+| `letterEnD` | d | d | — | — |
+| `letterEnE` | e | e | — | — |
+| `letterEnF` | f | f | — | — |
+| `letterEnG` | g | g | — | — |
+| `letterEnH` | h | h | — | — |
+| `letterEnI` | i | i | — | — |
+| `letterEnJ` | j | j | — | — |
+| `letterEnK` | k | k | — | — |
+| `letterEnL` | l | l | — | — |
+| `letterEnM` | m | m | — | — |
+| `letterEnN` | n | n | — | — |
+| `letterEnO` | o | o | — | — |
+| `letterEnP` | p | p | — | — |
+| `letterEnQ` | q | q | — | — |
+| `letterEnR` | r | r | — | — |
+| `letterEnS` | s | s | — | — |
+| `letterEnT` | t | t | — | — |
+| `letterEnU` | u | u | — | — |
+| `letterEnV` | v | v | — | — |
+| `letterEnW` | w | w | — | — |
+| `letterEnX` | x | x | — | — |
+| `letterEnY` | y | y | — | — |
+| `letterEnZ` | z | z | — | — |
+| `letterSqA` | a | a | — | — |
+| `letterSqB` | b | b | — | — |
+| `letterSqC` | c | c | — | — |
+| `letterSqCCedilla` | ç | ç | — | — |
+| `letterSqD` | d | d | — | — |
+| `letterSqDh` | dh | dh | — | — |
+| `letterSqE` | e | e | — | — |
+| `letterSqEDiaeresis` | ë | ë | — | — |
+| `letterSqF` | f | f | — | — |
+| `letterSqG` | g | g | — | — |
+| `letterSqGj` | gj | gj | — | — |
+| `letterSqH` | h | h | — | — |
+| `letterSqI` | i | i | — | — |
+| `letterSqJ` | j | j | — | — |
+| `letterSqK` | k | k | — | — |
+| `letterSqL` | l | l | — | — |
+| `letterSqLl` | ll | ll | — | — |
+| `letterSqM` | m | m | — | — |
+| `letterSqN` | n | n | — | — |
+| `letterSqNj` | nj | nj | — | — |
+| `letterSqO` | o | o | — | — |
+| `letterSqP` | p | p | — | — |
+| `letterSqQ` | q | q | — | — |
+| `letterSqR` | r | r | — | — |
+| `letterSqRr` | rr | rr | — | — |
+| `letterSqS` | s | s | — | — |
+| `letterSqSh` | sh | sh | — | — |
+| `letterSqT` | t | t | — | — |
+| `letterSqTh` | th | th | — | — |
+| `letterSqU` | u | u | — | — |
+| `letterSqV` | v | v | — | — |
+| `letterSqX` | x | x | — | — |
+| `letterSqXh` | xh | xh | — | — |
+| `letterSqY` | y | y | — | — |
+| `letterSqZ` | z | z | — | — |
+| `letterSqZh` | zh | zh | — | — |
+| `gameFindThis` | Find this one! | Gjeje këtë! | — | — |
+| `gameWhoSays` | Who makes this sound? | Kush e bën këtë zë? | — | — |
+| `gameFindNumber` | Find the number! | Gjej numrin! | — | — |
+| `gameHowMany` | How many? | Sa janë? | — | — |
+| `gameWhichMore` | Which has more? | Cili ka më shumë? | — | — |
+| `gameWhichFewer` | Which has fewer? | Cili ka më pak? | — | — |
+| `gameStartsWith` | What starts with this sound? | Çfarë fillon me këtë tingull? | — | — |
+| `gameFindLetter` | Find the letter! | Gjej shkronjën! | — | — |
+| `gameFindColour` | Find the colour! | Gjej ngjyrën! | — | — |
+| `gameFindShape` | Find the shape! | Gjej formën! | — | — |
+| `gameFeed` | Give the food to the right animal! | Jepi ushqimin kafshës së duhur! | — | — |
+| `gameWhereLives` | Where does it live? | Ku jeton? | — | — |
+| `gameFindMummy` | Help the baby find its mummy! | Ndihmoje të voglin të gjejë mamanë! | — | — |
+| `gameShapeHole` | Put the shape in its hole! | Vendose formën në vrimën e saj! | — | — |
+| `gameCountTap` | Tap each one and count! | Prek secilin dhe numëro! | — | — |
+| `praiseCountedAll` | You counted every one! | I numërove një nga një! | — | — |
+| `gameTrace` | Trace it with your finger! | Ndiqe me gisht! | — | — |
+| `praiseTraced` | Beautiful tracing! | Shumë bukur! | — | — |
+| `gameFindPairs` | Find the pairs! | Gjej çiftet! | — | — |
+| `praisePair` | A pair! | Një çift! | — | — |
+| `gameWhatNext` | What comes next? | Çfarë vjen më pas? | — | — |
+| `gameSortBins` | Put each one in the right place! | Vendose secilin në vendin e duhur! | — | — |
+| `gameBuildWord` | Put the sounds together! | Bashko tingujt! | — | — |
+| `gameBondTo5` | How many more to make five? | Sa duhen që të bëhen pesë? | — | — |
+| `gameBondTo10` | How many more to make ten? | Sa duhen që të bëhen dhjetë? | — | — |
+| `gameSumWhat` | How many altogether? | Sa janë gjithsej? | — | — |
+| `gameTakeAway` | How many are left? | Sa mbeten? | — | — |
+| `gameListen` | Listen! | Dëgjo! | — | — |
+| `binBig` | Big | I madh | — | — |
+| `binSmall` | Small | I vogël | — | — |
+| `binLand` | Land | Tokë | — | — |
+| `binWater` | Water | Ujë | — | — |
+| `vocabPlate` | Plate | Pjatë | — | — |
+| `offscreenMooLikeCow` | Moo like a cow and crawl on all fours! | Bëj mu si lopa dhe ec me katër këmbë! | — | — |
+| `offscreenWagLikeDog` | Wag your tail like a happy dog! | Tunde bishtin si një qen i gëzuar! | — | — |
+| `offscreenStompLikeElephant` | Stomp like an elephant: one, two, three! | Shkel fort si elefanti: një, dy, tre! | — | — |
+| `offscreenSwimLikeFish` | Swim like a fish around the room! | Noto si peshk nëpër dhomë! | — | — |
+| `offscreenHugGrownUp` | Give a grown-up a big bear hug! | Përqafo fort një të rritur! | — | — |
+| `offscreenBuildDen` | Build a cosy den with cushions! | Ndërto një strofull të ngrohtë me jastëkë! | — | — |
+| `offscreenAnimalCharades` | Act like an animal. Can a grown-up guess which one? | Luaj si një kafshë. A e gjen i rrituri cila është? | — | — |
+| `offscreenJumpCount` | Jump three times and count out loud! | Kërce tri herë dhe numëro me zë! | — | — |
+| `offscreenCountToys` | Count five toys and line them up! | Numëro pesë lodra dhe rreshtoji! | — | — |
+| `offscreenCountSteps` | Count your steps to the door! | Numëro hapat deri te dera! | — | — |
+| `offscreenFindDots` | Find something with dots on it! | Gjej diçka me pika! | — | — |
+| `offscreenMoreLessBlocks` | Make two piles of blocks. Which has more? | Bëj dy grumbuj me kube. Cili ka më shumë? | — | — |
+| `offscreenAirWrite` | Write a number in the air with your finger! | Shkruaj një numër në ajër me gisht! | — | — |
+| `offscreenShareSnack` | Share a snack fairly with someone! | Ndaje një ushqim në mënyrë të drejtë me dikë! | — | — |
+| `offscreenFiveFingers` | Show five fingers, then hide some. How many are hiding? | Trego pesë gishta, pastaj fshih disa. Sa janë fshehur? | — | — |
+| `offscreenTenFingers` | Show ten fingers! Bend some down and count the rest. | Trego dhjetë gishta! Palos disa dhe numëro të tjerët. | — | — |
+| `offscreenAddSpoons` | Put two spoons and one more on the table. How many? | Vendos dy lugë dhe një tjetër në tavolinë. Sa janë? | — | — |
+| `offscreenLetterHunt` | Find something at home that starts with the same sound! | Gjej diçka në shtëpi që fillon me të njëjtin tingull! | — | — |
+| `offscreenBodyLetter` | Make the letter's shape with your body! | Bëje formën e shkronjës me trupin tënd! | — | — |
+| `offscreenSoundWalk` | Say the sound every time you take a step! | Thuaj tingullin sa herë që bën një hap! | — | — |
+| `offscreenReadWithGrownup` | Read a picture book with a grown-up! | Lexo një libër me figura me një të rritur! | — | — |
+| `offscreenNameLetters` | Find the first letter of your name somewhere! | Gjej diku shkronjën e parë të emrit tënd! | — | — |
+| `offscreenShapeHunt` | Find something round and something square! | Gjej diçka të rrumbullakët dhe diçka katrore! | — | — |
+| `offscreenDrawShape` | Draw a big circle in the air! | Vizato një rreth të madh në ajër! | — | — |
+| `offscreenColourHunt` | Find three red things at home! | Gjej tri gjëra të kuqe në shtëpi! | — | — |
+| `offscreenMixColours` | Ask a grown-up to help you mix two paints! | Kërkoji një të rrituri të të ndihmojë të përziesh dy bojëra! | — | — |
+| `offscreenClapPattern` | Clap a pattern: clap, stamp, clap, stamp! | Duartrokit një model: duartrokit, shkel, duartrokit, shkel! | — | — |
+| `offscreenShapeWalk` | Walk around the room and name the shapes you see! | Ec nëpër dhomë dhe thuaj emrat e formave që sheh! | — | — |
+| `pipHouseHello` | Welcome to my house! | Mirë se erdhe në shtëpinë time! | — | — |
+| `pipGoodnight` | Goodnight! Sweet dreams. | Natën e mirë! Ëndrra të ëmbla. | — | — |
+| `pipWakeUp` | Good morning! I'm awake. | Mirëmëngjes! U zgjova. | — | — |
+| `houseStickers` | My stickers | Ngjitëset e mia | — | — |
+| `houseWardrobe` | Dress up Pip | Vishe Pipin | — | — |
+| `houseFeed` | Feed Pip | Ushqeje Pipin | — | — |
+| `houseTalk` | Talk to Pip | Fol me Pipin | — | — |
+| `houseBedtime` | Pip's bedtime | Koha e gjumit për Pipin | — | — |
+| `stickersMore` | Collect stars to find more stickers! | Mblidh yje për të gjetur më shumë ngjitëse! | — | — |
+| `costumeMore` | Collect more stars for this one! | Mblidh më shumë yje për këtë! | — | — |
+| `pipLovesIt` | I love it! | Më pëlqen shumë! | — | — |
 
 ## Animal sounds (language-independent)
 
@@ -177,4 +357,4 @@ Record as `app/assets/audio/sfx/<name>.ogg`.
 | `audio/sfx/animalToad.ogg` | — |
 | `audio/sfx/animalWhale.ogg` | — |
 
-**Progress:** 0 of 131 lines recorded in both languages; 0 of 30 animal sounds.
+**Progress:** 0 of 311 lines recorded in both languages; 0 of 30 animal sounds.

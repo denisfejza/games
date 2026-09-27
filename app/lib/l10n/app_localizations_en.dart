@@ -905,4 +905,124 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get binWater => 'Water';
+
+  @override
+  String get vocabPlate => 'Plate';
+
+  @override
+  String get offscreenMooLikeCow => 'Moo like a cow and crawl on all fours!';
+
+  @override
+  String get offscreenWagLikeDog => 'Wag your tail like a happy dog!';
+
+  @override
+  String get offscreenStompLikeElephant => 'Stomp like an elephant: one, two, three!';
+
+  @override
+  String get offscreenSwimLikeFish => 'Swim like a fish around the room!';
+
+  @override
+  String get offscreenHugGrownUp => 'Give a grown-up a big bear hug!';
+
+  @override
+  String get offscreenBuildDen => 'Build a cosy den with cushions!';
+
+  @override
+  String get offscreenAnimalCharades => 'Act like an animal. Can a grown-up guess which one?';
+
+  @override
+  String get offscreenJumpCount => 'Jump three times and count out loud!';
+
+  @override
+  String get offscreenCountToys => 'Count five toys and line them up!';
+
+  @override
+  String get offscreenCountSteps => 'Count your steps to the door!';
+
+  @override
+  String get offscreenFindDots => 'Find something with dots on it!';
+
+  @override
+  String get offscreenMoreLessBlocks => 'Make two piles of blocks. Which has more?';
+
+  @override
+  String get offscreenAirWrite => 'Write a number in the air with your finger!';
+
+  @override
+  String get offscreenShareSnack => 'Share a snack fairly with someone!';
+
+  @override
+  String get offscreenFiveFingers => 'Show five fingers, then hide some. How many are hiding?';
+
+  @override
+  String get offscreenTenFingers => 'Show ten fingers! Bend some down and count the rest.';
+
+  @override
+  String get offscreenAddSpoons => 'Put two spoons and one more on the table. How many?';
+
+  @override
+  String get offscreenLetterHunt => 'Find something at home that starts with the same sound!';
+
+  @override
+  String get offscreenBodyLetter => 'Make the letter\'s shape with your body!';
+
+  @override
+  String get offscreenSoundWalk => 'Say the sound every time you take a step!';
+
+  @override
+  String get offscreenReadWithGrownup => 'Read a picture book with a grown-up!';
+
+  @override
+  String get offscreenNameLetters => 'Find the first letter of your name somewhere!';
+
+  @override
+  String get offscreenShapeHunt => 'Find something round and something square!';
+
+  @override
+  String get offscreenDrawShape => 'Draw a big circle in the air!';
+
+  @override
+  String get offscreenColourHunt => 'Find three red things at home!';
+
+  @override
+  String get offscreenMixColours => 'Ask a grown-up to help you mix two paints!';
+
+  @override
+  String get offscreenClapPattern => 'Clap a pattern: clap, stamp, clap, stamp!';
+
+  @override
+  String get offscreenShapeWalk => 'Walk around the room and name the shapes you see!';
+
+  @override
+  String get pipHouseHello => 'Welcome to my house!';
+
+  @override
+  String get pipGoodnight => 'Goodnight! Sweet dreams.';
+
+  @override
+  String get pipWakeUp => 'Good morning! I\'m awake.';
+
+  @override
+  String get houseStickers => 'My stickers';
+
+  @override
+  String get houseWardrobe => 'Dress up Pip';
+
+  @override
+  String get houseFeed => 'Feed Pip';
+
+  @override
+  String get houseTalk => 'Talk to Pip';
+
+  @override
+  String get houseBedtime => 'Pip\'s bedtime';
+
+  @override
+  String get stickersMore => 'Collect stars to find more stickers!';
+
+  @override
+  String get costumeMore => 'Collect more stars for this one!';
+
+  @override
+  String get pipLovesIt => 'I love it!';
 }

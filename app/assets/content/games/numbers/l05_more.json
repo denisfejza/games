@@ -1,0 +1,39 @@
+{
+ "id": "numbers.compare.l5.more",
+ "world": "numbers",
+ "level": 5,
+ "game": "sound_match",
+ "ageBands": [
+  "2-3",
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "number.compare.more"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika"
+  ]
+ },
+ "params": {
+  "mode": "more",
+  "numbers": [
+   1,
+   8
+  ],
+  "items": "tag:food",
+  "rounds": 5
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.more_less_blocks"
+}

@@ -9,6 +9,7 @@ import '../app/ui/motion.dart';
 import '../app/ui/palm_rejecting_gesture_detector.dart';
 import '../content/vocab.dart';
 import '../core/audio/audio_service.dart';
+import 'costumes.dart';
 import 'pip_controller.dart';
 import 'pip_painter.dart';
 import 'pip_rive.dart';
@@ -101,6 +102,27 @@ class _PipViewState extends ConsumerState<PipView> with TickerProviderStateMixin
           )
         : drawn;
 
+    final costumeId = ref.watch(pipCostumeProvider);
+    final costume = costumes.where((c) => c.id == costumeId).firstOrNull;
+    final dressed = costume == null
+        ? pip
+        : Stack(
+            clipBehavior: Clip.none,
+            children: [
+              pip,
+              Positioned(
+                top: -size.width * (costume.id == 'glasses' ? -0.22 : (costume.id == 'scarf' ? -0.55 : 0.08)),
+                left: 0,
+                right: 0,
+                child: Center(
+                  child: Text(
+                    costume.emoji,
+                    style: TextStyle(fontFamily: 'PipEmoji', fontSize: size.width * 0.34),
+                  ),
+                ),
+              ),
+            ],
+          );
     return Semantics(
       label: 'Pip',
       button: widget.onPart != null,
@@ -112,9 +134,9 @@ class _PipViewState extends ConsumerState<PipView> with TickerProviderStateMixin
                 final part = PipPainter.partAt(pos, size);
                 if (part != null) widget.onPart!(part);
               },
-              child: pip,
+              child: dressed,
             )
-          : pip,
+          : dressed,
     );
   }
 }

@@ -1,0 +1,43 @@
+{
+ "id": "letters.level9.l9.en_blend_more",
+ "world": "letters",
+ "level": 9,
+ "game": "blend_tiles",
+ "ageBands": [
+  "6-7"
+ ],
+ "skills": [
+  "letters.en.blend"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "words": {
+   "en": [
+    "bus",
+    "fox",
+    "bed",
+    "hat",
+    "cup"
+   ]
+  },
+  "rounds": 3
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.read_with_grownup",
+ "locales": [
+  "en"
+ ]
+}

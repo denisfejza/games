@@ -1,0 +1,48 @@
+{
+ "id": "animals.farm.l1.farm_names",
+ "world": "animals",
+ "level": 1,
+ "game": "sound_match",
+ "ageBands": [
+  "2-3",
+  "4-5"
+ ],
+ "skills": [
+  "vocab.animals.farm"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "UW-NaturalWorld"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Bota rreth nesh"
+  ]
+ },
+ "params": {
+  "items": "tags:animal+farm",
+  "rounds": 5
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.moo_like_cow",
+ "difficulty": {
+  "raiseAfter": 3,
+  "lowerAfter": 2,
+  "steps": [
+   {
+    "choices": 2
+   },
+   {
+    "choices": 3
+   },
+   {
+    "choices": 4
+   }
+  ]
+ }
+}

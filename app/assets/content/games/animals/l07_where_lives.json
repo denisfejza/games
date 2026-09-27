@@ -1,0 +1,47 @@
+{
+ "id": "animals.homes.l7.where_lives",
+ "world": "animals",
+ "level": 7,
+ "game": "drag_to_target",
+ "ageBands": [
+  "2-3",
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "knowledge.animals.habitat"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "UW-NaturalWorld"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Bota rreth nesh"
+  ]
+ },
+ "params": {
+  "mode": "habitat",
+  "items": "tag:animal",
+  "rounds": 5
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.build_den",
+ "difficulty": {
+  "raiseAfter": 3,
+  "lowerAfter": 2,
+  "steps": [
+   {
+    "targets": 2
+   },
+   {
+    "targets": 3
+   }
+  ]
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "id": "letters.level2.l2.sq_starts",
+ "world": "letters",
+ "level": 2,
+ "game": "sound_match",
+ "ageBands": [
+  "2-3",
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "letters.sq.sounds"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "mode": "starts_with",
+  "letters": [
+   "o",
+   "t",
+   "r",
+   "n"
+  ],
+  "items": [
+   "octopus",
+   "clock",
+   "tiger",
+   "tent",
+   "train",
+   "cake",
+   "duck",
+   "ball"
+  ],
+  "rounds": 5,
+  "choices": 2
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 2,
+  "social": 2
+ },
+ "offscreen": "offscreen.body_letter",
+ "locales": [
+  "sq"
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "id": "shapes_colours.patterns.l5.pattern_ab",
+ "world": "shapes_colours",
+ "level": 5,
+ "game": "sequence_pattern",
+ "ageBands": [
+  "2-3",
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "pattern.ab"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-NumericalPatterns",
+   "EAD-Creating"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika",
+   "Fusha: Arte"
+  ]
+ },
+ "params": {
+  "items": [
+   "red",
+   "blue",
+   "yellow",
+   "green"
+  ],
+  "patterns": [
+   "AB"
+  ],
+  "rounds": 4
+ },
+ "pillars": {
+  "active": 2,
+  "engaged": 2,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.clap_pattern"
+}

@@ -1,0 +1,47 @@
+{
+ "id": "animals.homes.l7.homes_land_water",
+ "world": "animals",
+ "level": 7,
+ "game": "sort_bins",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "knowledge.animals.habitat"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "UW-NaturalWorld"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Bota rreth nesh"
+  ]
+ },
+ "params": {
+  "by": "lives",
+  "items": "tag:animal",
+  "perRound": 6,
+  "rounds": 2,
+  "bins": [
+   {
+    "value": "land",
+    "item": "tree",
+    "say": "binLand"
+   },
+   {
+    "value": "water",
+    "item": "habitat_sea",
+    "say": "binWater"
+   }
+  ]
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 2,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.build_den"
+}

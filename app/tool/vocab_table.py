@@ -121,6 +121,7 @@ OBJECTS = [
     ("foot", "🦶", "Foot", "Këmbë", "body", "", ""),
     ("nest", "🪺", "Nest", "Fole", "nature", "brown", ""),
     ("circus", "🎪", "Circus", "Cirk", "toy", "red", ""),
+    ("plate", "🍽️", "Plate", "Pjatë", "home", "white", "circle"),
 ]
 
 # id, emoji, en, sq  (drag_to_target "where does it live?")

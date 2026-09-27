@@ -35,13 +35,17 @@ class EpisodeScreen extends ConsumerStatefulWidget {
   final ContentLibrary content;
   final Random? random;
 
-  /// Games for [band]: those tagged for it, at most five.
-  static List<GameDef> gamesFor(Level level, AgeBand band) {
-    final games = [
-      for (final g in level.games)
-        if (g.ageBands.contains(band)) g,
-    ];
-    return (games.isEmpty ? level.games : games).take(5).toList();
+  /// Games for [band] in [locale], at most five.
+  static List<GameDef> gamesFor(Level level, AgeBand band, [String locale = 'en']) {
+    final games = level.gamesFor(band, locale);
+    return (games.isEmpty
+            ? [
+                for (final g in level.games)
+                  if (g.availableIn(locale)) g,
+              ]
+            : games)
+        .take(5)
+        .toList();
   }
 
   @override
@@ -53,7 +57,11 @@ class _EpisodeScreenState extends ConsumerState<EpisodeScreen> {
   int _game = 0;
   int _hints = 0;
   int? _stars;
-  late final List<GameDef> _games = EpisodeScreen.gamesFor(widget.level, ref.read(ageBandProvider));
+  late final List<GameDef> _games = EpisodeScreen.gamesFor(
+    widget.level,
+    ref.read(ageBandProvider),
+    ref.read(localeProvider).languageCode,
+  );
   late final Setting<bool> _active = ref.read(episodeActiveProvider.notifier);
 
   @override

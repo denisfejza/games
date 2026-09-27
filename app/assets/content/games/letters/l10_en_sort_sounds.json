@@ -1,0 +1,55 @@
+{
+ "id": "letters.level10.l10.en_sort_sounds",
+ "world": "letters",
+ "level": 10,
+ "game": "sort_bins",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "letters.en.sounds"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "L-WordReading"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Gjuha dhe komunikimi"
+  ]
+ },
+ "params": {
+  "by": "first_letter",
+  "items": [
+   "sun",
+   "snake",
+   "socks",
+   "seal",
+   "tiger",
+   "tent",
+   "tree",
+   "train"
+  ],
+  "perRound": 4,
+  "rounds": 2,
+  "bins": [
+   {
+    "value": "s"
+   },
+   {
+    "value": "t"
+   }
+  ]
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 2,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.read_with_grownup",
+ "locales": [
+  "en"
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "id": "numbers.to10.l3.count10",
+ "world": "numbers",
+ "level": 3,
+ "game": "tap_count",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "number.count.to10"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Matematika"
+  ]
+ },
+ "params": {
+  "numbers": [
+   5,
+   10
+  ],
+  "items": "tag:object",
+  "rounds": 3
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 2,
+  "meaningful": 3,
+  "social": 2
+ },
+ "offscreen": "offscreen.count_steps"
+}
