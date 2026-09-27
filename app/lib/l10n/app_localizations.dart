@@ -2305,6 +2305,114 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Play a real board game with your family!'**
   String get offscreenFamilyGame;
+
+  /// No description provided for @parentProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Progress'**
+  String get parentProgress;
+
+  /// No description provided for @parentSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get parentSettings;
+
+  /// No description provided for @parentStars.
+  ///
+  /// In en, this message translates to:
+  /// **'{stars} stars'**
+  String parentStars(int stars);
+
+  /// No description provided for @parentLevelsDone.
+  ///
+  /// In en, this message translates to:
+  /// **'{done} of {total} levels'**
+  String parentLevelsDone(int done, int total);
+
+  /// No description provided for @parentSkillsMastered.
+  ///
+  /// In en, this message translates to:
+  /// **'{mastered} of {total} skills mastered'**
+  String parentSkillsMastered(int mastered, int total);
+
+  /// No description provided for @parentTodayIdea.
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s idea away from the screen'**
+  String get parentTodayIdea;
+
+  /// No description provided for @parentBilingual.
+  ///
+  /// In en, this message translates to:
+  /// **'Bilingual mode (names in both languages)'**
+  String get parentBilingual;
+
+  /// No description provided for @parentLargeTargets.
+  ///
+  /// In en, this message translates to:
+  /// **'Extra-large buttons'**
+  String get parentLargeTargets;
+
+  /// No description provided for @parentLeftUnfinished.
+  ///
+  /// In en, this message translates to:
+  /// **'Games often left unfinished'**
+  String get parentLeftUnfinished;
+
+  /// No description provided for @parentNone.
+  ///
+  /// In en, this message translates to:
+  /// **'None yet'**
+  String get parentNone;
+
+  /// No description provided for @parentFullVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'Full version'**
+  String get parentFullVersion;
+
+  /// No description provided for @parentSamplerInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'The free version has the first two levels of every world. One purchase unlocks everything, forever. No ads, no subscriptions.'**
+  String get parentSamplerInfo;
+
+  /// No description provided for @parentBuy.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock everything for {price}'**
+  String parentBuy(String price);
+
+  /// No description provided for @parentRestore.
+  ///
+  /// In en, this message translates to:
+  /// **'Restore purchase'**
+  String get parentRestore;
+
+  /// No description provided for @parentUnlocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Everything is unlocked. Thank you!'**
+  String get parentUnlocked;
+
+  /// No description provided for @parentStoreUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Purchases are available in the App Store and Google Play versions.'**
+  String get parentStoreUnavailable;
+
+  /// No description provided for @parentPrivacy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy'**
+  String get parentPrivacy;
+
+  /// No description provided for @parentPrivacyShort.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing leaves this device'**
+  String get parentPrivacyShort;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

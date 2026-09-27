@@ -1127,4 +1127,67 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get offscreenFamilyGame => 'Play a real board game with your family!';
+
+  @override
+  String get parentProgress => 'Progress';
+
+  @override
+  String get parentSettings => 'Settings';
+
+  @override
+  String parentStars(int stars) {
+    return '$stars stars';
+  }
+
+  @override
+  String parentLevelsDone(int done, int total) {
+    return '$done of $total levels';
+  }
+
+  @override
+  String parentSkillsMastered(int mastered, int total) {
+    return '$mastered of $total skills mastered';
+  }
+
+  @override
+  String get parentTodayIdea => 'Today\'s idea away from the screen';
+
+  @override
+  String get parentBilingual => 'Bilingual mode (names in both languages)';
+
+  @override
+  String get parentLargeTargets => 'Extra-large buttons';
+
+  @override
+  String get parentLeftUnfinished => 'Games often left unfinished';
+
+  @override
+  String get parentNone => 'None yet';
+
+  @override
+  String get parentFullVersion => 'Full version';
+
+  @override
+  String get parentSamplerInfo =>
+      'The free version has the first two levels of every world. One purchase unlocks everything, forever. No ads, no subscriptions.';
+
+  @override
+  String parentBuy(String price) {
+    return 'Unlock everything for $price';
+  }
+
+  @override
+  String get parentRestore => 'Restore purchase';
+
+  @override
+  String get parentUnlocked => 'Everything is unlocked. Thank you!';
+
+  @override
+  String get parentStoreUnavailable => 'Purchases are available in the App Store and Google Play versions.';
+
+  @override
+  String get parentPrivacy => 'Privacy';
+
+  @override
+  String get parentPrivacyShort => 'Nothing leaves this device';
 }

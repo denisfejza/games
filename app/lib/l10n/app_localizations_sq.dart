@@ -1127,4 +1127,67 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get offscreenFamilyGame => 'Luaj një lojë të vërtetë tavoline me familjen!';
+
+  @override
+  String get parentProgress => 'Përparimi';
+
+  @override
+  String get parentSettings => 'Cilësimet';
+
+  @override
+  String parentStars(int stars) {
+    return '$stars yje';
+  }
+
+  @override
+  String parentLevelsDone(int done, int total) {
+    return '$done nga $total nivele';
+  }
+
+  @override
+  String parentSkillsMastered(int mastered, int total) {
+    return '$mastered nga $total aftësi të zotëruara';
+  }
+
+  @override
+  String get parentTodayIdea => 'Ideja e sotme larg ekranit';
+
+  @override
+  String get parentBilingual => 'Mënyra dygjuhëshe (emrat në të dy gjuhët)';
+
+  @override
+  String get parentLargeTargets => 'Butona shumë të mëdhenj';
+
+  @override
+  String get parentLeftUnfinished => 'Lojëra që shpesh lihen pa mbaruar';
+
+  @override
+  String get parentNone => 'Asnjë ende';
+
+  @override
+  String get parentFullVersion => 'Versioni i plotë';
+
+  @override
+  String get parentSamplerInfo =>
+      'Versioni falas ka dy nivelet e para të çdo bote. Një blerje i hap të gjitha, përgjithmonë. Pa reklama, pa abonime.';
+
+  @override
+  String parentBuy(String price) {
+    return 'Hapi të gjitha për $price';
+  }
+
+  @override
+  String get parentRestore => 'Rikthe blerjen';
+
+  @override
+  String get parentUnlocked => 'Gjithçka është e hapur. Faleminderit!';
+
+  @override
+  String get parentStoreUnavailable => 'Blerjet janë të disponueshme në versionet e App Store dhe Google Play.';
+
+  @override
+  String get parentPrivacy => 'Privatësia';
+
+  @override
+  String get parentPrivacyShort => 'Asgjë nuk largohet nga kjo pajisje';
 }

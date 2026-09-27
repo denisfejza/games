@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -8,9 +9,16 @@ import 'pip_controller.dart';
 /// Where the artist's file goes. Also add `- assets/rive/` to pubspec.yaml.
 const pipRiveAsset = 'assets/rive/pip.riv';
 
-/// True once `assets/rive/pip.riv` is bundled. The Rive runtime is only
-/// started then, so builds without the file load nothing extra.
+/// On the web the Rive runtime downloads its WebAssembly from a third-party CDN
+/// (cdn.jsdelivr.net) unless the build names our own host:
+/// `--dart-define=RIVE_NATIVE_WASM_HOST=./rive/` with the wasm files copied to web/rive/.
+/// Without that, web builds keep the drawn Pip so nothing is fetched from outside.
+const riveWasmSelfHosted = bool.hasEnvironment('RIVE_NATIVE_WASM_HOST');
+
+/// True once `assets/rive/pip.riv` is bundled (and, on the web, self-hosted).
+/// The Rive runtime is only started then, so builds without it load nothing extra.
 final pipRiveAvailableProvider = FutureProvider<bool>((ref) async {
+  if (kIsWeb && !riveWasmSelfHosted) return false;
   final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
   if (!manifest.listAssets().contains(pipRiveAsset)) return false;
   return rive.RiveNative.init();

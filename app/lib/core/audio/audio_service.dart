@@ -29,7 +29,22 @@ enum Effect { tap, correct, tryAgain, celebrate, pop, giggle, yawn }
 /// Lines play one after another. Music ducks while anything is speaking.
 /// [caption] exposes the key being spoken so the caption bar can show it.
 class AudioService {
-  AudioService(this._backend, {required this.locale, this.missingHold = const Duration(milliseconds: 1400)});
+  AudioService(
+    this._backend, {
+    required this.locale,
+    this.secondLocale,
+    this.missingHold = const Duration(milliseconds: 1400),
+  });
+
+  /// Bilingual mode: names are also said in this language, straight after.
+  final String? Function()? secondLocale;
+
+  /// Keys that are names of things (said in both languages in bilingual mode).
+  static bool isName(String key) =>
+      key.startsWith('vocab.') ||
+      key.startsWith('colour.') ||
+      key.startsWith('shape.') ||
+      RegExp(r'^num\d+$').hasMatch(key);
 
   static const musicVolume = 0.6;
   static const duckedMusicVolume = 0.15;
@@ -109,6 +124,8 @@ class AudioService {
       _lastKey = key;
       caption.value = key;
       final played = !_muted && await _backend.playNarration(assetPath(locale(), key));
+      final second = secondLocale?.call();
+      if (second != null && isName(key) && !_muted) await _backend.playNarration(assetPath(second, key));
       // TODO(asset): recordings are missing; keep the caption up long enough to read.
       if (!played && _queue.isEmpty) await Future<void>.delayed(missingHold);
     }

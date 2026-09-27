@@ -9,7 +9,7 @@ child-facing app). Update this file in the same change that adds a package.
 | Package | Version | License | Why | Child-safety note |
 | --- | --- | --- | --- | --- |
 | `flame` | ^1.38.2 | MIT | 2D game engine for the mini-games | No network, ads or analytics. |
-| `rive` (+ `rive_native`) | ^0.14.11 | MIT | Pip and interactive animations | Prebuilt native libraries are downloaded at **build time**. Nothing is fetched at runtime so far (checked in the browser: no outside requests). Check again when Pip's `.riv` file is first loaded (PLAN 1.1). |
+| `rive` (+ `rive_native`) | ^0.14.11 | MIT | Pip and interactive animations | Prebuilt native libraries are downloaded at **build time**. **On the web, the runtime would download its WebAssembly from cdn.jsdelivr.net** unless built with `--dart-define=RIVE_NATIVE_WASM_HOST=<our path>`; `pip_rive.dart` refuses to start Rive on the web without it (falls back to the drawn Pip). Rive files must embed their images/fonts — CDN-hosted Rive assets are not allowed. |
 | `flutter_riverpod` | ^3.4.3 | MIT | App state | Pure Dart. |
 | `drift`, `drift_flutter` | ^2.35.0, ^0.3.1 | MIT | On-device database (mastery, profiles). Chosen over Isar, see [ADR 0001](adr/0001-drift-instead-of-isar.md). | Local SQLite only. On web it needs `app/web/sqlite3.wasm` (from sqlite3.dart 3.5.2) and `app/web/drift_worker.js` (from drift 2.35.0), served from our own site. **Update both files whenever `sqlite3` or `drift` is upgraded.** |
 | `audioplayers` | ^6.8.1 | MIT | Narration, sound effects, music | Pulls in `http` for URL sources. We only ever use `AssetSource` (bundled files). The 5.4 audit should flag any `UrlSource`. |

@@ -406,5 +406,57 @@
   "offscreenSpyRoom": "Play I Spy in your room with a grown-up!",
   "offscreenFeedTeddy": "Give your teddy three pretend berries!",
   "offscreenLineUp": "Line up your shoes, matching pairs!",
-  "offscreenFamilyGame": "Play a real board game with your family!"
+  "offscreenFamilyGame": "Play a real board game with your family!",
+  "parentProgress": "Progress",
+  "parentSettings": "Settings",
+  "parentStars": "{stars} stars",
+  "@parentStars": {
+    "placeholders": {
+      "stars": {
+        "type": "int"
+      }
+    }
+  },
+  "parentLevelsDone": "{done} of {total} levels",
+  "@parentLevelsDone": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "parentSkillsMastered": "{mastered} of {total} skills mastered",
+  "@parentSkillsMastered": {
+    "placeholders": {
+      "mastered": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "parentTodayIdea": "Today's idea away from the screen",
+  "parentBilingual": "Bilingual mode (names in both languages)",
+  "parentLargeTargets": "Extra-large buttons",
+  "parentLeftUnfinished": "Games often left unfinished",
+  "parentNone": "None yet",
+  "parentFullVersion": "Full version",
+  "parentSamplerInfo": "The free version has the first two levels of every world. One purchase unlocks everything, forever. No ads, no subscriptions.",
+  "parentBuy": "Unlock everything for {price}",
+  "@parentBuy": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "parentRestore": "Restore purchase",
+  "parentUnlocked": "Everything is unlocked. Thank you!",
+  "parentStoreUnavailable": "Purchases are available in the App Store and Google Play versions.",
+  "parentPrivacy": "Privacy",
+  "parentPrivacyShort": "Nothing leaves this device"
 }

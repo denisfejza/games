@@ -49,6 +49,13 @@ class _GameScreenState extends ConsumerState<GameScreen> {
   );
   late final FlameGame _game = widget.create(_host);
 
+  /// On-device only: which games children tend to leave early (playtest insight, PLAN 6.3).
+  void _recordLeftUnfinished() {
+    final store = ref.read(settingsStoreProvider);
+    final key = 'abandon.${widget.context.def.id}';
+    store.loadAll().then((all) => store.write(key, '${(int.tryParse(all[key] ?? '') ?? 0) + 1}'));
+  }
+
   @override
   Widget build(BuildContext context) {
     final tokens = AgeBandTheme.of(context);
@@ -69,7 +76,10 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                       key: const Key('game.home'),
                       icon: Icons.home_rounded,
                       color: tokens.secondary,
-                      onPressed: widget.onExit ?? () => Navigator.of(context).maybePop(),
+                      onPressed: () {
+                        if (!_rounds.finished) _recordLeftUnfinished();
+                        (widget.onExit ?? () => Navigator.of(context).maybePop())();
+                      },
                     ),
                     Expanded(
                       child: _Progress(done: _rounds.round, total: _rounds.totalRounds),

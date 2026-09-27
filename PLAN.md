@@ -144,6 +144,7 @@ Rules for this world: turns are narrated, no timers, a "winner" screen always ce
 **5.3 Privacy**: plain-language + child-friendly privacy policy screens; data-retention note ("nothing stored off-device"); store listings for Apple Kids Category and Google Play Families; complete both data-safety forms.
 **5.4 SDK audit**: script that fails CI if any dependency touches network, ads, or analytics.
 - ✅ Legal review checklist in `docs/COMPLIANCE.md` fully ticked before store submission.
+> ◐ Code done 2026-09-27: dashboard (stars, levels, skills mastered per world, today's off-screen idea, games left unfinished), settings incl. bilingual mode and extra-large buttons; free sampler (first 2 levels) + one-time unlock via in_app_purchase with price shown up front, only in the parent area; plain-language privacy page (en/sq) + docs/PRIVACY_POLICY.md; docs/STORE_LISTINGS.md drafts; `tool/audit_dependencies.dart` in CI and tests (fails on ads/analytics packages or network use; Rive CDN blocked on web). **Not done (people):** legal review, store products and forms — docs/COMPLIANCE.md has 11 open items.
 
 ---
 
@@ -155,6 +156,7 @@ Rules for this world: turns are narrated, no timers, a "winner" screen always ce
 **6.4 Accessibility pass**: reduced motion, captions, switch-access large-target mode, left-handed tracing.
 **6.5 Soft launch**: Albania/Kosovo + one diaspora market (e.g., Germany or Italy) + UK/US English. Track only aggregate, opt-in, on-device metrics.
 
+> ◐ Phase 6 prepared 2026-09-27: `tool/release_check.dart` fails until every placeholder, recording and sign-off is done; docs/RELEASE.md covers performance budgets and how to measure, the playtest protocol (on-device hints/unfinished counts in the dashboard), accessibility status (reduced motion, captions, non-colour cues, +30% targets done; screen-reader check open) and the soft-launch plan. Asset swap, device performance runs, playtests and launch need people and devices.
 ---
 
 ## Backlog (post-launch ideas)

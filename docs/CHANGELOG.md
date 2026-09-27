@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Phase 5/6: parent dashboard, bilingual mode, extra-large buttons, sampler + one-time unlock (in_app_purchase),
+  privacy page and policy, store listing drafts, compliance checklist, CI child-safety audit, release check, Rive
+  web CDN blocked unless self-hosted.
 - Phase 4: Board Games world — Jungle Race, Animal Dominoes, Picture Bingo, Memory table, Tic-Tac-Zoo, Jigsaw,
   I Spy / Spot the difference, Feed the Animals; pass-and-play or with Pip; 8 levels.
 - Phase 3 (draft): curriculum table generating 150 games in 34 levels across Animals, Numbers, Letters (per

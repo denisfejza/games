@@ -11,6 +11,7 @@ import '../app/ui/patterns.dart';
 import '../app/ui/tokens.dart';
 import '../content/models.dart';
 import '../l10n/app_localizations.dart';
+import '../parent/purchases.dart';
 import 'episode_screen.dart';
 import 'ground.dart';
 import 'level_status.dart';
@@ -61,7 +62,11 @@ class _WorldScreenState extends ConsumerState<WorldScreen> {
     final l = AppLocalizations.of(context);
     final tokens = AgeBandTheme.of(context);
     final style = WorldStyle.of(widget.world.icon);
-    final levels = widget.world.levelsFor(ref.watch(ageBandProvider), ref.watch(localeProvider).languageCode);
+    // Sampler: children only ever see the levels they can play (no locks, no prices).
+    final levels = visibleLevels(
+      widget.world.levelsFor(ref.watch(ageBandProvider), ref.watch(localeProvider).languageCode),
+      unlocked: ref.watch(fullUnlockProvider),
+    );
     final statuses = ref.watch(levelStatusProvider(widget.world.id)).value ?? const {};
     final tile = MediaQuery.sizeOf(context).shortestSide >= 600 ? 150.0 : 116.0;
     return Scaffold(

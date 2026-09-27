@@ -40,6 +40,13 @@ so keep the body parts roughly here:
 | hands | 0.06–0.30 and 0.70–0.94, from 0.68 to 1.00 |
 | feet | 0.20, 1.04, 0.80, 1.20 |
 
+## Export rules (privacy)
+
+- Export with **all assets embedded** (images, fonts). Rive can otherwise load assets from its CDN, which the app
+  must never do.
+- Web builds must self-host the Rive WebAssembly: copy the `@rive-app/flutter-native-wasm` files to `app/web/rive/`
+  and build with `--dart-define=RIVE_NATIVE_WASM_HOST=./rive/`. Without it the web build keeps the drawn Pip.
+
 ## Style
 
 Friendly orange fox, cream muzzle and belly, dark ear tips, thick white outline (sticker look) so Pip reads on

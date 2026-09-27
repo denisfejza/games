@@ -62,8 +62,10 @@ class AgeBandTokens {
   };
 
   /// Touch target for this screen: 25% bigger on tablets.
+  /// 30% bigger again in large-target mode (switch access / motor support).
   double targetFor(BuildContext context) =>
-      MediaQuery.sizeOf(context).shortestSide >= 600 ? minTarget * 1.25 : minTarget;
+      (MediaQuery.sizeOf(context).shortestSide >= 600 ? minTarget * 1.25 : minTarget) *
+      (LargeTargets.of(context) ? 1.3 : 1);
 }
 
 const fontFamily = 'Nunito';
@@ -97,4 +99,16 @@ class AgeBandTheme extends ThemeExtension<AgeBandTheme> {
 
   @override
   AgeBandTheme lerp(AgeBandTheme? other, double t) => t < 0.5 || other == null ? this : other;
+}
+
+/// Whether the parent turned on extra-large buttons (set above the app by PipsWorldApp).
+class LargeTargets extends InheritedWidget {
+  const LargeTargets({super.key, required this.enabled, required super.child});
+
+  final bool enabled;
+
+  static bool of(BuildContext context) => context.dependOnInheritedWidgetOfExactType<LargeTargets>()?.enabled ?? false;
+
+  @override
+  bool updateShouldNotify(LargeTargets old) => old.enabled != enabled;
 }

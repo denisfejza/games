@@ -24,7 +24,10 @@ class PipsWorldApp extends ConsumerWidget {
       GlobalCupertinoLocalizations.delegate,
     ],
     theme: buildTheme(ref.watch(ageBandProvider)),
-    builder: (context, child) => PlayTimeGuard(child: child!),
+    builder: (context, child) => LargeTargets(
+      enabled: ref.watch(largeTargetsProvider),
+      child: PlayTimeGuard(child: child!),
+    ),
     home: const WorldMapScreen(),
   );
 }

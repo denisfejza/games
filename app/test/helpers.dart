@@ -18,6 +18,7 @@ import 'package:pips_world/core/voice/voice_service.dart';
 import 'package:pips_world/games/common/mini_game.dart';
 import 'package:pips_world/games/common/round_controller.dart';
 import 'package:pips_world/l10n/app_localizations.dart';
+import 'package:pips_world/parent/purchases.dart';
 
 /// Records what would have played instead of playing it.
 class FakeAudioBackend implements AudioBackend {
@@ -104,6 +105,36 @@ class FakePlayer implements ClipPlayer {
   }
 }
 
+/// A store that answers from memory.
+class FakePurchaseService implements PurchaseService {
+  bool storeAvailable = true;
+  String? storePrice = '€4.99';
+  int buys = 0;
+  int restores = 0;
+  VoidCallback? _unlock;
+
+  /// What the store would report after a successful purchase.
+  void completePurchase() => _unlock?.call();
+
+  @override
+  Future<bool> available() async => storeAvailable;
+
+  @override
+  Future<String?> price() async => storePrice;
+
+  @override
+  Future<void> buy() async => buys++;
+
+  @override
+  Future<void> restore() async => restores++;
+
+  @override
+  set onUnlocked(VoidCallback callback) => _unlock = callback;
+
+  @override
+  void dispose() {}
+}
+
 /// A game engine that finishes straight away with the given result, for runner tests.
 class StubEngine implements GameEngine {
   StubEngine(this.type, {this.hints = 0});
@@ -175,7 +206,9 @@ class TestDeps {
     FakeRecorder? recorder,
     FakePlayer? player,
     Map<String, GameEngine>? engines,
-  }) : audio = audio ?? FakeAudioBackend(),
+    FakePurchaseService? store,
+  }) : store = store ?? FakePurchaseService(),
+       audio = audio ?? FakeAudioBackend(),
        settings = settings ?? MemorySettingsStore(),
        mastery = mastery ?? MemoryMasteryStore(),
        progress = progress ?? MemoryProgressStore(),
@@ -190,6 +223,7 @@ class TestDeps {
   final FakeRecorder recorder;
   final FakePlayer player;
   final Map<String, GameEngine> engines;
+  final FakePurchaseService store;
 }
 
 /// Wraps [child] like the real app does, with fakes for everything with side effects.
@@ -219,6 +253,10 @@ Widget testApp({
       progressStoreProvider.overrideWithValue(d.progress),
       talkBackProvider.overrideWithValue(TalkBack(d.recorder, d.player)),
       gameRegistryProvider.overrideWithValue(d.engines),
+      purchaseServiceProvider.overrideWith((ref) {
+        d.store.onUnlocked = () => ref.read(fullUnlockProvider.notifier).set(true);
+        return d.store;
+      }),
       if (content != null) contentProvider.overrideWith((ref) => content),
     ],
     child: Consumer(

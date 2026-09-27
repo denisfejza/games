@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/foundation.dart' show kIsWeb;
+
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -15,6 +17,7 @@ import '../core/storage/settings_store.dart';
 import '../core/timer/play_timer.dart';
 import '../core/voice/voice_platform.dart';
 import '../core/voice/voice_service.dart';
+import '../parent/purchases.dart';
 
 const supportedLanguages = ['sq', 'en'];
 
@@ -83,6 +86,9 @@ abstract final class SettingKeys {
   static const sound = 'sound';
   static const mic = 'micEnabled';
   static const dailyLimit = 'dailyLimitMinutes';
+  static const bilingual = 'bilingual';
+  static const largeTargets = 'largeTargets';
+  static const fullUnlock = 'fullUnlock';
 }
 
 final localeProvider = NotifierProvider<Setting<Locale>, Locale>(
@@ -119,8 +125,19 @@ final dailyLimitProvider = NotifierProvider<Setting<int>, int>(
   () => PersistedSetting(SettingKeys.dailyLimit, 0, decode: int.tryParse, encode: (v) => '$v'),
 );
 
+/// Names are said in the main language, then the other one (PLAN 5.1 "bilingual mode").
+final bilingualProvider = NotifierProvider<Setting<bool>, bool>(() => _bool(SettingKeys.bilingual, false));
+
+/// Switch-access / motor support: every touch target grows by 30% (PLAN 6.4).
+final largeTargetsProvider = NotifierProvider<Setting<bool>, bool>(() => _bool(SettingKeys.largeTargets, false));
+
 final audioServiceProvider = Provider<AudioService>((ref) {
-  final service = AudioService(AudioplayersBackend(), locale: () => ref.read(localeProvider).languageCode);
+  final service = AudioService(
+    AudioplayersBackend(),
+    locale: () => ref.read(localeProvider).languageCode,
+    secondLocale: () =>
+        ref.read(bilingualProvider) ? (ref.read(localeProvider).languageCode == 'sq' ? 'en' : 'sq') : null,
+  );
   service.muted = !ref.read(soundProvider);
   ref.listen(soundProvider, (_, on) => service.muted = !on);
   ref.onDispose(service.dispose);
@@ -147,3 +164,13 @@ final playTimerProvider = Provider<PlayTimer>((ref) {
 });
 
 final talkBackProvider = Provider<TalkBack>((ref) => createTalkBack());
+
+/// Full version bought (or restored). Preview builds can unlock everything.
+final fullUnlockProvider = NotifierProvider<Setting<bool>, bool>(() => _bool(SettingKeys.fullUnlock, unlockAllBuild));
+
+final purchaseServiceProvider = Provider<PurchaseService>((ref) {
+  final PurchaseService s = kIsWeb ? NoStorePurchaseService() : StorePurchaseService();
+  s.onUnlocked = () => ref.read(fullUnlockProvider.notifier).set(true);
+  ref.onDispose(s.dispose);
+  return s;
+});

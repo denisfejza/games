@@ -7,9 +7,11 @@ import '../content/models.dart';
 import '../core/voice/voice_service.dart';
 import '../l10n/app_localizations.dart';
 import '../worlds/world_map_screen.dart' show showDebugMenu;
+import 'dashboard.dart';
+import 'privacy_screen.dart';
 
-/// Settings for grown-ups. Only reachable through the parental gate.
-/// TODO(5.1): progress dashboard (skills, time played, off-screen suggestion).
+/// Progress, settings, the full version and privacy for grown-ups.
+/// Only reachable through the parental gate (CLAUDE.md hard rule 3).
 class ParentArea extends ConsumerWidget {
   const ParentArea({super.key});
 
@@ -30,8 +32,18 @@ class ParentArea extends ConsumerWidget {
           child: ListView(
             padding: const EdgeInsets.fromLTRB(24, 0, 24, 32),
             children: [
-              heading(l.parentLanguage),
+              heading(l.parentProgress),
+              const ProgressDashboard(),
+              heading(l.parentSettings),
+              Text(l.parentLanguage, style: theme.textTheme.titleSmall),
+              const SizedBox(height: 8),
               const LocaleSwitcher(),
+              SwitchListTile(
+                key: const Key('bilingual'),
+                title: Text(l.parentBilingual),
+                value: ref.watch(bilingualProvider),
+                onChanged: (v) => ref.read(bilingualProvider.notifier).set(v),
+              ),
               heading(l.parentAgeBand),
               SegmentedButton<AgeBand>(
                 key: const Key('ageBand'),
@@ -79,7 +91,23 @@ class ParentArea extends ConsumerWidget {
                 value: ref.watch(reducedMotionProvider),
                 onChanged: (v) => ref.read(reducedMotionProvider.notifier).set(v),
               ),
+              SwitchListTile(
+                key: const Key('largeTargets'),
+                title: Text(l.parentLargeTargets),
+                value: ref.watch(largeTargetsProvider),
+                onChanged: (v) => ref.read(largeTargetsProvider.notifier).set(v),
+              ),
               const _MicSwitch(),
+              heading(l.parentFullVersion),
+              const _FullVersion(),
+              heading(l.parentPrivacy),
+              ListTile(
+                key: const Key('privacy'),
+                leading: const Icon(Icons.lock_outline_rounded),
+                title: Text(l.parentPrivacyShort),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const PrivacyScreen())),
+              ),
               if (showDebugMenu)
                 ListTile(
                   key: const Key('pipDemo'),
@@ -146,6 +174,61 @@ class LocaleSwitcher extends ConsumerWidget {
       ],
       selected: {ref.watch(localeProvider).languageCode},
       onSelectionChanged: (s) => ref.read(localeProvider.notifier).set(Locale(s.single)),
+    );
+  }
+}
+
+/// Price shown up front; buying and restoring only here (PLAN 5.2).
+class _FullVersion extends ConsumerStatefulWidget {
+  const _FullVersion();
+
+  @override
+  ConsumerState<_FullVersion> createState() => _FullVersionState();
+}
+
+class _FullVersionState extends ConsumerState<_FullVersion> {
+  late final Future<(bool, String?)> _store = () async {
+    final s = ref.read(purchaseServiceProvider);
+    final ok = await s.available();
+    return (ok, ok ? await s.price() : null);
+  }();
+
+  @override
+  Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
+    if (ref.watch(fullUnlockProvider)) {
+      return ListTile(leading: const Icon(Icons.check_circle), title: Text(l.parentUnlocked));
+    }
+    return FutureBuilder<(bool, String?)>(
+      future: _store,
+      builder: (context, snap) {
+        final (available, price) = snap.data ?? (false, null);
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(l.parentSamplerInfo),
+            const SizedBox(height: 8),
+            if (!available)
+              Text(l.parentStoreUnavailable, key: const Key('store.unavailable'))
+            else
+              Wrap(
+                spacing: 12,
+                children: [
+                  FilledButton(
+                    key: const Key('store.buy'),
+                    onPressed: price == null ? null : () => ref.read(purchaseServiceProvider).buy(),
+                    child: Text(l.parentBuy(price ?? '…')),
+                  ),
+                  OutlinedButton(
+                    key: const Key('store.restore'),
+                    onPressed: () => ref.read(purchaseServiceProvider).restore(),
+                    child: Text(l.parentRestore),
+                  ),
+                ],
+              ),
+          ],
+        );
+      },
     );
   }
 }
