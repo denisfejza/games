@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Phase 4: Board Games world — Jungle Race, Animal Dominoes, Picture Bingo, Memory table, Tic-Tac-Zoo, Jigsaw,
+  I Spy / Spot the difference, Feed the Animals; pass-and-play or with Pip; 8 levels.
 - Phase 3 (draft): curriculum table generating 150 games in 34 levels across Animals, Numbers, Letters (per
   language) and Shapes & Colours; per-language games; sort_bins `share` mode; Pip's House with costumes, sticker
   book, feeding, talk-back and bedtime; docs/CURRICULUM.md (draft for educator sign-off).

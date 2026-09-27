@@ -1,0 +1,37 @@
+{
+ "id": "board_games.memory_table.l2.memory_table",
+ "world": "board_games",
+ "level": 2,
+ "game": "pairs_memory",
+ "ageBands": [
+  "2-3",
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "memory",
+  "social.turns"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "PSED-BuildingRelationships",
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Zhvillimi personal dhe shoqëror"
+  ]
+ },
+ "params": {
+  "pairs": 4,
+  "players": 2,
+  "items": "tag:animal"
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 3
+ },
+ "offscreen": "offscreen.memory_objects"
+}

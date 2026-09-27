@@ -95,7 +95,14 @@
             "pairs_memory",
             "sequence_pattern",
             "sort_bins",
-            "blend_tiles"
+            "blend_tiles",
+            "roll_and_move",
+            "dominoes",
+            "bingo",
+            "tic_tac_zoo",
+            "jigsaw",
+            "i_spy",
+            "feed_race"
           ]
         },
         "ageBands": {

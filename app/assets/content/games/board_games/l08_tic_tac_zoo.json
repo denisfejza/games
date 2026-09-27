@@ -1,0 +1,33 @@
+{
+ "id": "board_games.tic_tac_zoo.l8.tic_tac_zoo",
+ "world": "board_games",
+ "level": 8,
+ "game": "tic_tac_zoo",
+ "ageBands": [
+  "6-7"
+ ],
+ "skills": [
+  "strategy.lines",
+  "social.turns"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "PSED-BuildingRelationships",
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Zhvillimi personal dhe shoqëror"
+  ]
+ },
+ "params": {
+  "boards": 2
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 3
+ },
+ "offscreen": "offscreen.family_game"
+}

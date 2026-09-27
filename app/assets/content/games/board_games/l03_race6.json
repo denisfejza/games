@@ -1,0 +1,33 @@
+{
+ "id": "board_games.jungle_race.l3.race6",
+ "world": "board_games",
+ "level": 3,
+ "game": "roll_and_move",
+ "ageBands": [
+  "6-7"
+ ],
+ "skills": [
+  "number.count.to6",
+  "social.turns"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "PSED-BuildingRelationships",
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Zhvillimi personal dhe shoqëror"
+  ]
+ },
+ "params": {
+  "dice": 6
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 3
+ },
+ "offscreen": "offscreen.hop_race"
+}

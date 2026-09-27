@@ -1,0 +1,34 @@
+{
+ "id": "board_games.i_spy.l7.spot_difference",
+ "world": "board_games",
+ "level": 7,
+ "game": "i_spy",
+ "ageBands": [
+  "6-7"
+ ],
+ "skills": [
+  "attention.differences",
+  "social.turns"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "PSED-BuildingRelationships",
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Zhvillimi personal dhe shoqëror"
+  ]
+ },
+ "params": {
+  "mode": "difference",
+  "rounds": 3
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 3
+ },
+ "offscreen": "offscreen.spy_room"
+}

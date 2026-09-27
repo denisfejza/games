@@ -53,6 +53,19 @@
 | 9. bonds10 | hear it, tap it (bond)<br>hear it, tap it (bond)<br>hear it, tap it (number) | 6-7 | number.bonds.10, number.subitise.to10 | Show ten fingers! Bend some down and count the rest. / Trego dhjetë gishta! Palos disa dhe numëro të tjerët. |
 | 10. add sub | hear it, tap it (sum)<br>hear it, tap it (take_away)<br>hear it, tap it (sum) | 6-7 | number.add.within10, number.subtract.within10 | Put two spoons and one more on the table. How many? / Vendos dy lugë dhe një tjetër në tavolinë. Sa janë? |
 
+## Board Games
+
+| Level | Games | Ages | Skills | Off-screen challenge |
+| --- | --- | --- | --- | --- |
+| 1. jigsaw | Jigsaw<br>Jigsaw | 2-3, 4-5, 6-7 | spatial.puzzle | Do a real puzzle with a grown-up! / Bëj një enigmë të vërtetë me një të rritur! |
+| 2. memory table | memory pairs | 2-3, 4-5, 6-7 | memory, social.turns | Hide three toys under cups. Where is the teddy? / Fshih tri lodra nën gota. Ku është arushi? |
+| 3. jungle race | Jungle Race<br>Jungle Race | 2-3, 4-5, 6-7 | number.count.to3, number.count.to6, social.turns | Have a hopping race with a grown-up. Everyone wins! / Bëni një garë me kërcime me një të rritur. Të gjithë fitojnë! |
+| 4. bingo | Picture Bingo | 2-3, 4-5, 6-7 | listening, social.turns, vocab.animals.all | Play I Spy in your room with a grown-up! / Luaj «Shoh diçka» në dhomën tënde me një të rritur! |
+| 5. feed race | Feed the Animals<br>Feed the Animals | 2-3, 4-5, 6-7 | number.count.to3, number.count.to6, social.turns | Give your teddy three pretend berries! / Jepi arushit tënd tri kokrra për lojë! |
+| 6. dominoes | Animal Dominoes (picture)<br>Animal Dominoes (numeral_dots) | 4-5, 6-7 | matching, number.numerals.to6, social.turns | Line up your shoes, matching pairs! / Rreshto këpucët, çift pas çifti! |
+| 7. i spy | I Spy / Spot the difference (colour)<br>I Spy / Spot the difference (difference) | 4-5, 6-7 | attention.differences, colours.basic, social.turns | Play I Spy in your room with a grown-up! / Luaj «Shoh diçka» në dhomën tënde me një të rritur! |
+| 8. tic tac zoo | Tic-Tac-Zoo | 6-7 | social.turns, strategy.lines | Play a real board game with your family! / Luaj një lojë të vërtetë tavoline me familjen! |
+
 ## Shapes & Colours
 
 | Level | Games | Ages | Skills | Off-screen challenge |

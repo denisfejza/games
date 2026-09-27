@@ -1,0 +1,45 @@
+{
+ "id": "board_games.jungle_race.l3.race3",
+ "world": "board_games",
+ "level": 3,
+ "game": "roll_and_move",
+ "ageBands": [
+  "2-3",
+  "4-5"
+ ],
+ "skills": [
+  "number.count.to3",
+  "social.turns"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "PSED-BuildingRelationships",
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Zhvillimi personal dhe shoqëror"
+  ]
+ },
+ "params": {
+  "dice": 3,
+  "squares": 15,
+  "vines": {
+   "3": 8
+  },
+  "slides": {
+   "11": 6
+  },
+  "questions": [
+   5,
+   13
+  ]
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 3
+ },
+ "offscreen": "offscreen.hop_race"
+}

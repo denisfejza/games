@@ -1025,4 +1025,106 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get pipLovesIt => 'Më pëlqen shumë!';
+
+  @override
+  String get turnRabbit => 'Radha e lepurit!';
+
+  @override
+  String get turnTurtle => 'Radha e breshkës!';
+
+  @override
+  String get turnPip => 'Radha e Pipit!';
+
+  @override
+  String get boardChoosePlayers => 'Kush po luan?';
+
+  @override
+  String get boardTwoFriends => 'Dy shokë';
+
+  @override
+  String get boardWithPip => 'Luaj me Pipin';
+
+  @override
+  String get boardEveryoneWins => 'Urra! Të gjithë luajtën shumë bukur!';
+
+  @override
+  String get boardRoll => 'Prek zarin!';
+
+  @override
+  String get boardHop => 'Prek kafshën tënde që të kërcejë!';
+
+  @override
+  String get boardVineUp => 'Një hardhi! Ngjitu lart!';
+
+  @override
+  String get boardSlideDown => 'Uiii! Një rrëshqitëse!';
+
+  @override
+  String get boardFinish => 'Arrite në fund!';
+
+  @override
+  String get boardQuestion => 'Një pyetje e vogël!';
+
+  @override
+  String get dominoPlay => 'Gjej një pllakë që përputhet me një skaj!';
+
+  @override
+  String get dominoDraw => 'Asnjë përputhje. Merr një pllakë të re!';
+
+  @override
+  String get bingoFind => 'A është në kartën tënde?';
+
+  @override
+  String get bingoLine => 'Bingo! Një rresht i plotë!';
+
+  @override
+  String get ticTacTurn => 'Zgjidh një katror!';
+
+  @override
+  String get ticTacLine => 'Tre në një rresht!';
+
+  @override
+  String get ticTacDraw => 'Tabela u mbush. Lojë e bukur!';
+
+  @override
+  String get jigsawPlace => 'Vendosi pjesët në vendet e tyre!';
+
+  @override
+  String get ispyColour => 'Gjej diçka me këtë ngjyrë!';
+
+  @override
+  String get ispyAnimal => 'Gjej këtë kafshë!';
+
+  @override
+  String get ispyDifference => 'Gjej çfarë është ndryshe!';
+
+  @override
+  String get feedRaceRoll => 'Hidh zarin dhe ushqe kafshën tënde!';
+
+  @override
+  String get feedRaceTap => 'Prek një kokërr për çdo pikë!';
+
+  @override
+  String get feedRaceFull => 'Barku plot!';
+
+  @override
+  String get offscreenRealPuzzle => 'Bëj një enigmë të vërtetë me një të rritur!';
+
+  @override
+  String get offscreenMemoryObjects => 'Fshih tri lodra nën gota. Ku është arushi?';
+
+  @override
+  String get offscreenHopRace => 'Bëni një garë me kërcime me një të rritur. Të gjithë fitojnë!';
+
+  @override
+  String get offscreenSpyRoom => 'Luaj «Shoh diçka» në dhomën tënde me një të rritur!';
+
+  @override
+  String get offscreenFeedTeddy => 'Jepi arushit tënd tri kokrra për lojë!';
+
+  @override
+  String get offscreenLineUp => 'Rreshto këpucët, çift pas çifti!';
+
+  @override
+  String get offscreenFamilyGame => 'Luaj një lojë të vërtetë tavoline me familjen!';
 }

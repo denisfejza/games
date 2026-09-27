@@ -16,10 +16,13 @@ MID = ["4-5", "6-7"]
 OLD = ["6-7"]
 
 # Default pillar estimates per engine (active, engaged, meaningful, social).
+PILLARS_BOARD = (3, 3, 2, 3)
+
 PILLARS = {
     "sound_match": (2, 2, 2, 2), "drag_to_target": (3, 3, 2, 2), "tap_count": (3, 2, 3, 2),
     "trace_path": (3, 2, 3, 2), "pairs_memory": (2, 3, 2, 2), "sequence_pattern": (2, 2, 3, 2),
     "sort_bins": (3, 2, 3, 2), "blend_tiles": (3, 3, 3, 2),
+    **{k: PILLARS_BOARD for k in ["roll_and_move", "dominoes", "bingo", "tic_tac_zoo", "jigsaw", "i_spy", "feed_race"]},
 }
 
 # ARB key -> (English, Albanian). Albanian needs native review.
@@ -53,10 +56,17 @@ OFFSCREEN = {
     "mix_colours": ("Ask a grown-up to help you mix two paints!", "Kërkoji një të rrituri të të ndihmojë të përziesh dy bojëra!"),
     "clap_pattern": ("Clap a pattern: clap, stamp, clap, stamp!", "Duartrokit një model: duartrokit, shkel, duartrokit, shkel!"),
     "shape_walk": ("Walk around the room and name the shapes you see!", "Ec nëpër dhomë dhe thuaj emrat e formave që sheh!"),
+    "real_puzzle": ("Do a real puzzle with a grown-up!", "Bëj një enigmë të vërtetë me një të rritur!"),
+    "memory_objects": ("Hide three toys under cups. Where is the teddy?", "Fshih tri lodra nën gota. Ku është arushi?"),
+    "hop_race": ("Have a hopping race with a grown-up. Everyone wins!", "Bëni një garë me kërcime me një të rritur. Të gjithë fitojnë!"),
+    "spy_room": ("Play I Spy in your room with a grown-up!", "Luaj «Shoh diçka» në dhomën tënde me një të rritur!"),
+    "feed_teddy": ("Give your teddy three pretend berries!", "Jepi arushit tënd tri kokrra për lojë!"),
+    "line_up": ("Line up your shoes, matching pairs!", "Rreshto këpucët, çift pas çifti!"),
+    "family_game": ("Play a real board game with your family!", "Luaj një lojë të vërtetë tavoline me familjen!"),
 }
 
-EYFS = {"animals": ["UW-NaturalWorld"], "numbers": ["M-Number"], "letters": ["L-WordReading"], "shapes_colours": ["M-NumericalPatterns", "EAD-Creating"]}
-AL = {"animals": ["Fusha: Bota rreth nesh"], "numbers": ["Fusha: Matematika"], "letters": ["Fusha: Gjuha dhe komunikimi"], "shapes_colours": ["Fusha: Matematika", "Fusha: Arte"]}
+EYFS = {"board_games": ["PSED-BuildingRelationships", "M-Number"], "animals": ["UW-NaturalWorld"], "numbers": ["M-Number"], "letters": ["L-WordReading"], "shapes_colours": ["M-NumericalPatterns", "EAD-Creating"]}
+AL = {"board_games": ["Fusha: Zhvillimi personal dhe shoqëror"], "animals": ["Fusha: Bota rreth nesh"], "numbers": ["Fusha: Matematika"], "letters": ["Fusha: Gjuha dhe komunikimi"], "shapes_colours": ["Fusha: Matematika", "Fusha: Arte"]}
 
 STEPS_CHOICES = {"raiseAfter": 3, "lowerAfter": 2, "steps": [{"choices": 2}, {"choices": 3}, {"choices": 4}]}
 STEPS_UP_TO_3 = {"raiseAfter": 3, "lowerAfter": 2, "steps": [{"choices": 2}, {"choices": 3}]}
@@ -168,6 +178,38 @@ LEVELS = {
             g("sum", "sound_match", {"mode": "sum", "numbers": [1, 10], "items": "tag:food", "rounds": 5}, OLD, ["number.add.within10"], STEPS_CHOICES),
             g("take_away", "sound_match", {"mode": "take_away", "numbers": [1, 10], "items": "tag:food", "rounds": 5}, OLD, ["number.subtract.within10"], STEPS_CHOICES),
             g("sum4", "sound_match", {"mode": "sum", "numbers": [1, 10], "choices": 4, "rounds": 4}, OLD, ["number.add.within10"]),
+        ]),
+    ],
+    # One board game per level; pass-and-play or with Pip (chosen at the start).
+    "board_games": [
+        ("jigsaw", "real_puzzle", [
+            g("jigsaw4", "jigsaw", {"pieces": 4, "items": "tag:animal", "rounds": 2}, YOUNG, ["spatial.puzzle"]),
+            g("jigsaw9", "jigsaw", {"pieces": 9, "items": "tag:animal", "rounds": 2}, OLD, ["spatial.puzzle"]),
+        ]),
+        ("memory_table", "memory_objects", [
+            g("memory_table", "pairs_memory", {"pairs": 4, "players": 2, "items": "tag:animal"}, ALL, ["memory", "social.turns"], pillars=PILLARS_BOARD),
+        ]),
+        ("jungle_race", "hop_race", [
+            g("race3", "roll_and_move", {"dice": 3, "squares": 15, "vines": {"3": 8}, "slides": {"11": 6}, "questions": [5, 13]}, YOUNG, ["number.count.to3", "social.turns"]),
+            g("race6", "roll_and_move", {"dice": 6}, OLD, ["number.count.to6", "social.turns"]),
+        ]),
+        ("bingo", "spy_room", [
+            g("bingo_animals", "bingo", {"items": "tag:animal"}, ALL, ["vocab.animals.all", "listening", "social.turns"]),
+        ]),
+        ("feed_race", "feed_teddy", [
+            g("feed3", "feed_race", {"dice": 3, "goal": 6, "food": "cherry"}, YOUNG, ["number.count.to3", "social.turns"]),
+            g("feed6", "feed_race", {"dice": 6, "goal": 12, "food": "strawberry"}, OLD, ["number.count.to6", "social.turns"]),
+        ]),
+        ("dominoes", "line_up", [
+            g("dominoes_pictures", "dominoes", {"mode": "picture", "items": "tags:animal+farm"}, MID, ["matching", "social.turns"]),
+            g("dominoes_numbers", "dominoes", {"mode": "numeral_dots", "values": 5}, OLD, ["number.numerals.to6", "social.turns"]),
+        ]),
+        ("i_spy", "spy_room", [
+            g("spy_colours", "i_spy", {"mode": "colour", "rounds": 4}, MID, ["colours.basic", "social.turns"]),
+            g("spot_difference", "i_spy", {"mode": "difference", "rounds": 3}, OLD, ["attention.differences", "social.turns"]),
+        ]),
+        ("tic_tac_zoo", "family_game", [
+            g("tic_tac_zoo", "tic_tac_zoo", {"boards": 2}, OLD, ["strategy.lines", "social.turns"]),
         ]),
     ],
     "shapes_colours": [
@@ -317,6 +359,8 @@ ENGINE_WHAT = {
     "sound_match": "hear it, tap it", "drag_to_target": "drag to the right place", "tap_count": "tap and count",
     "trace_path": "trace", "pairs_memory": "memory pairs", "sequence_pattern": "what comes next",
     "sort_bins": "sort into bins", "blend_tiles": "build the word",
+    "roll_and_move": "Jungle Race", "dominoes": "Animal Dominoes", "bingo": "Picture Bingo", "tic_tac_zoo": "Tic-Tac-Zoo",
+    "jigsaw": "Jigsaw", "i_spy": "I Spy / Spot the difference", "feed_race": "Feed the Animals",
 }
 
 HEADER = """# Curriculum map — DRAFT for educator review
@@ -350,7 +394,7 @@ HEADER = """# Curriculum map — DRAFT for educator review
 
 def write_curriculum_md(worlds):
     out = [HEADER]
-    names = {"animals": "Animals", "numbers": "Numbers", "letters": "Letters", "shapes_colours": "Shapes & Colours"}
+    names = {"board_games": "Board Games", "animals": "Animals", "numbers": "Numbers", "letters": "Letters", "shapes_colours": "Shapes & Colours"}
     for world, levels in worlds.items():
         out.append(f"## {names[world]}\n")
         out.append("| Level | Games | Ages | Skills | Off-screen challenge |")

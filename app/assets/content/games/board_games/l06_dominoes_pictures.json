@@ -1,0 +1,35 @@
+{
+ "id": "board_games.dominoes.l6.dominoes_pictures",
+ "world": "board_games",
+ "level": 6,
+ "game": "dominoes",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "matching",
+  "social.turns"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "PSED-BuildingRelationships",
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Zhvillimi personal dhe shoqëror"
+  ]
+ },
+ "params": {
+  "mode": "picture",
+  "items": "tags:animal+farm"
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 3
+ },
+ "offscreen": "offscreen.line_up"
+}

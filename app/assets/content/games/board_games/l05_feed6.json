@@ -1,0 +1,35 @@
+{
+ "id": "board_games.feed_race.l5.feed6",
+ "world": "board_games",
+ "level": 5,
+ "game": "feed_race",
+ "ageBands": [
+  "6-7"
+ ],
+ "skills": [
+  "number.count.to6",
+  "social.turns"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "PSED-BuildingRelationships",
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Zhvillimi personal dhe shoqëror"
+  ]
+ },
+ "params": {
+  "dice": 6,
+  "goal": 12,
+  "food": "strawberry"
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 3
+ },
+ "offscreen": "offscreen.feed_teddy"
+}

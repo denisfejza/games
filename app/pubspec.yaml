@@ -84,6 +84,7 @@ flutter:
     - assets/content/games/numbers/
     - assets/content/games/letters/
     - assets/content/games/shapes_colours/
+    - assets/content/games/board_games/
 
   fonts:
     # Nunito (SIL Open Font License, see assets/fonts/OFL.txt). Covers ë/ç/Ë/Ç.

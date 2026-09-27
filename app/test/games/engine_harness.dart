@@ -50,6 +50,7 @@ Future<(G, List<MiniGameResult>, TestDeps)> pumpEngine<G extends FlameGame>(
   String locale = 'en',
   Size screen = tablet,
   TestDeps? deps,
+  bool twoFriends = false,
 }) async {
   setScreen(tester, screen);
   final d = deps ?? TestDeps();
@@ -76,6 +77,16 @@ Future<(G, List<MiniGameResult>, TestDeps)> pumpEngine<G extends FlameGame>(
   );
   for (var i = 0; i < 5; i++) {
     await tester.pump(const Duration(milliseconds: 50));
+  }
+  // Board games ask who is playing first (first tap names the button, second chooses).
+  final chooser = find.byKey(Key(twoFriends ? 'board.twoFriends' : 'board.withPip'));
+  if (chooser.evaluate().isNotEmpty) {
+    await tester.tap(chooser);
+    await tester.pump(const Duration(milliseconds: 400));
+    await tester.tap(chooser);
+    for (var i = 0; i < 5; i++) {
+      await tester.pump(const Duration(milliseconds: 50));
+    }
   }
   final game = tester.widget<GameWidget<FlameGame>>(find.byType(GameWidget<FlameGame>)).game! as G;
   return (game, results, d);
@@ -119,3 +130,24 @@ Future<ContentLibrary> loadBundledContentForTest() => loadBundledContent();
 
 ContentSchema schemaForTest() =>
     ContentSchema(jsonDecode(File('assets/content/schema.json').readAsStringSync()) as Map<String, dynamic>);
+
+void setScreenForTest(WidgetTester tester) => setScreen(tester, tablet);
+
+/// The app frame around an engine, without pumping (for chooser goldens).
+Widget testAppFor(GameEngine engine, GameDef def, ContentLibrary content, {String locale = 'en'}) => testApp(
+  content: content,
+  locale: locale,
+  child: Builder(
+    builder: (context) => engine.build(
+      GameContext(
+        def: def,
+        content: content,
+        band: AgeBand.preschool,
+        locale: locale,
+        random: Random(1),
+        text: stringsFor(locale),
+        onFinished: (_) {},
+      ),
+    ),
+  ),
+);

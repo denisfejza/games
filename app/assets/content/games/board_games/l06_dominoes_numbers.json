@@ -1,0 +1,34 @@
+{
+ "id": "board_games.dominoes.l6.dominoes_numbers",
+ "world": "board_games",
+ "level": 6,
+ "game": "dominoes",
+ "ageBands": [
+  "6-7"
+ ],
+ "skills": [
+  "number.numerals.to6",
+  "social.turns"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "PSED-BuildingRelationships",
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Zhvillimi personal dhe shoqëror"
+  ]
+ },
+ "params": {
+  "mode": "numeral_dots",
+  "values": 5
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 3
+ },
+ "offscreen": "offscreen.line_up"
+}

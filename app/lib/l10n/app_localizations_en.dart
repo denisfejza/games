@@ -1025,4 +1025,106 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get pipLovesIt => 'I love it!';
+
+  @override
+  String get turnRabbit => 'Rabbit\'s turn!';
+
+  @override
+  String get turnTurtle => 'Turtle\'s turn!';
+
+  @override
+  String get turnPip => 'Pip\'s turn!';
+
+  @override
+  String get boardChoosePlayers => 'Who is playing?';
+
+  @override
+  String get boardTwoFriends => 'Two friends';
+
+  @override
+  String get boardWithPip => 'Play with Pip';
+
+  @override
+  String get boardEveryoneWins => 'Hooray! Everyone played so well!';
+
+  @override
+  String get boardRoll => 'Tap the dice!';
+
+  @override
+  String get boardHop => 'Tap your animal to hop!';
+
+  @override
+  String get boardVineUp => 'A vine! Climb up!';
+
+  @override
+  String get boardSlideDown => 'Wheee! A slide!';
+
+  @override
+  String get boardFinish => 'You reached the end!';
+
+  @override
+  String get boardQuestion => 'A little question!';
+
+  @override
+  String get dominoPlay => 'Find a tile that matches an end!';
+
+  @override
+  String get dominoDraw => 'No match. Take a new tile!';
+
+  @override
+  String get bingoFind => 'Is it on your card?';
+
+  @override
+  String get bingoLine => 'Bingo! A full row!';
+
+  @override
+  String get ticTacTurn => 'Pick a square!';
+
+  @override
+  String get ticTacLine => 'Three in a row!';
+
+  @override
+  String get ticTacDraw => 'The board is full. Good game!';
+
+  @override
+  String get jigsawPlace => 'Put the pieces in their places!';
+
+  @override
+  String get ispyColour => 'Find something this colour!';
+
+  @override
+  String get ispyAnimal => 'Find this animal!';
+
+  @override
+  String get ispyDifference => 'Find what is different!';
+
+  @override
+  String get feedRaceRoll => 'Roll the dice and feed your animal!';
+
+  @override
+  String get feedRaceTap => 'Tap a berry for each dot!';
+
+  @override
+  String get feedRaceFull => 'Full tummy!';
+
+  @override
+  String get offscreenRealPuzzle => 'Do a real puzzle with a grown-up!';
+
+  @override
+  String get offscreenMemoryObjects => 'Hide three toys under cups. Where is the teddy?';
+
+  @override
+  String get offscreenHopRace => 'Have a hopping race with a grown-up. Everyone wins!';
+
+  @override
+  String get offscreenSpyRoom => 'Play I Spy in your room with a grown-up!';
+
+  @override
+  String get offscreenFeedTeddy => 'Give your teddy three pretend berries!';
+
+  @override
+  String get offscreenLineUp => 'Line up your shoes, matching pairs!';
+
+  @override
+  String get offscreenFamilyGame => 'Play a real board game with your family!';
 }

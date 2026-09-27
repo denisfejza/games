@@ -133,6 +133,7 @@ Digital versions of classic kids' board games, redesigned for touch and no losin
 
 Rules for this world: turns are narrated, no timers, a "winner" screen always celebrates everyone, games end in ≤ 8 minutes.
 - ✅ Each game playable by a 3-year-old with an adult and by a 6-year-old alone; integration test for 2-player turn flow.
+> ✔ Done 2026-09-27 with placeholder art: all eight board games (4.1–4.8) as engines + 8 Board Games levels; chooser (two friends / with Pip), narrated turns, gentle Pip (Tic-Tac-Zoo Pip blocks only sometimes), no timers, everyone celebrated. Tests: 2-player turn-flow integration test, a full playthrough of each game, goldens. **Not verified:** real play sessions with a 3-year-old + adult and a 6-year-old alone (playtests, PLAN 6.3).
 
 ---
 

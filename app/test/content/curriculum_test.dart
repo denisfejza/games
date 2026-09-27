@@ -22,6 +22,7 @@ void main() {
       expect(levels('numbers', locale), 10);
       expect(levels('letters', locale), 10, reason: 'letters per language');
       expect(levels('shapes_colours', locale), 6);
+      expect(levels('board_games', locale), 8);
     }
   });
 
@@ -39,7 +40,8 @@ void main() {
   });
 
   test('a level plays 3–5 games for the middle age band, never more than 5 for anyone', () {
-    for (final w in lib.worlds) {
+    // Board Games levels are one (longer) board game each.
+    for (final w in lib.worlds.where((w) => w.id != 'board_games')) {
       for (final level in w.levels) {
         for (final locale in ['en', 'sq']) {
           if (!level.games.any((g) => g.availableIn(locale))) continue;

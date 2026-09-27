@@ -1,0 +1,35 @@
+{
+ "id": "board_games.i_spy.l7.spy_colours",
+ "world": "board_games",
+ "level": 7,
+ "game": "i_spy",
+ "ageBands": [
+  "4-5",
+  "6-7"
+ ],
+ "skills": [
+  "colours.basic",
+  "social.turns"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "PSED-BuildingRelationships",
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Zhvillimi personal dhe shoqëror"
+  ]
+ },
+ "params": {
+  "mode": "colour",
+  "rounds": 4
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 3
+ },
+ "offscreen": "offscreen.spy_room"
+}

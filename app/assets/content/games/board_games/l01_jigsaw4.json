@@ -1,0 +1,35 @@
+{
+ "id": "board_games.jigsaw.l1.jigsaw4",
+ "world": "board_games",
+ "level": 1,
+ "game": "jigsaw",
+ "ageBands": [
+  "2-3",
+  "4-5"
+ ],
+ "skills": [
+  "spatial.puzzle"
+ ],
+ "curriculum": {
+  "eyfs": [
+   "PSED-BuildingRelationships",
+   "M-Number"
+  ],
+  "ccss": [],
+  "al": [
+   "Fusha: Zhvillimi personal dhe shoqëror"
+  ]
+ },
+ "params": {
+  "pieces": 4,
+  "items": "tag:animal",
+  "rounds": 2
+ },
+ "pillars": {
+  "active": 3,
+  "engaged": 3,
+  "meaningful": 2,
+  "social": 3
+ },
+ "offscreen": "offscreen.real_puzzle"
+}

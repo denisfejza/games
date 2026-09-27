@@ -185,6 +185,14 @@ class SmallFace extends CardFace {
   );
 }
 
+/// Nothing (a card that draws its own content).
+class EmptyFace extends CardFace {
+  const EmptyFace();
+
+  @override
+  void paint(Canvas canvas, Rect rect) {}
+}
+
 /// Question mark for an empty slot (patterns).
 class BlankFace extends CardFace {
   const BlankFace();

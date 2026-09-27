@@ -2101,6 +2101,210 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'I love it!'**
   String get pipLovesIt;
+
+  /// No description provided for @turnRabbit.
+  ///
+  /// In en, this message translates to:
+  /// **'Rabbit\'s turn!'**
+  String get turnRabbit;
+
+  /// No description provided for @turnTurtle.
+  ///
+  /// In en, this message translates to:
+  /// **'Turtle\'s turn!'**
+  String get turnTurtle;
+
+  /// No description provided for @turnPip.
+  ///
+  /// In en, this message translates to:
+  /// **'Pip\'s turn!'**
+  String get turnPip;
+
+  /// No description provided for @boardChoosePlayers.
+  ///
+  /// In en, this message translates to:
+  /// **'Who is playing?'**
+  String get boardChoosePlayers;
+
+  /// No description provided for @boardTwoFriends.
+  ///
+  /// In en, this message translates to:
+  /// **'Two friends'**
+  String get boardTwoFriends;
+
+  /// No description provided for @boardWithPip.
+  ///
+  /// In en, this message translates to:
+  /// **'Play with Pip'**
+  String get boardWithPip;
+
+  /// No description provided for @boardEveryoneWins.
+  ///
+  /// In en, this message translates to:
+  /// **'Hooray! Everyone played so well!'**
+  String get boardEveryoneWins;
+
+  /// No description provided for @boardRoll.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the dice!'**
+  String get boardRoll;
+
+  /// No description provided for @boardHop.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap your animal to hop!'**
+  String get boardHop;
+
+  /// No description provided for @boardVineUp.
+  ///
+  /// In en, this message translates to:
+  /// **'A vine! Climb up!'**
+  String get boardVineUp;
+
+  /// No description provided for @boardSlideDown.
+  ///
+  /// In en, this message translates to:
+  /// **'Wheee! A slide!'**
+  String get boardSlideDown;
+
+  /// No description provided for @boardFinish.
+  ///
+  /// In en, this message translates to:
+  /// **'You reached the end!'**
+  String get boardFinish;
+
+  /// No description provided for @boardQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'A little question!'**
+  String get boardQuestion;
+
+  /// No description provided for @dominoPlay.
+  ///
+  /// In en, this message translates to:
+  /// **'Find a tile that matches an end!'**
+  String get dominoPlay;
+
+  /// No description provided for @dominoDraw.
+  ///
+  /// In en, this message translates to:
+  /// **'No match. Take a new tile!'**
+  String get dominoDraw;
+
+  /// No description provided for @bingoFind.
+  ///
+  /// In en, this message translates to:
+  /// **'Is it on your card?'**
+  String get bingoFind;
+
+  /// No description provided for @bingoLine.
+  ///
+  /// In en, this message translates to:
+  /// **'Bingo! A full row!'**
+  String get bingoLine;
+
+  /// No description provided for @ticTacTurn.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick a square!'**
+  String get ticTacTurn;
+
+  /// No description provided for @ticTacLine.
+  ///
+  /// In en, this message translates to:
+  /// **'Three in a row!'**
+  String get ticTacLine;
+
+  /// No description provided for @ticTacDraw.
+  ///
+  /// In en, this message translates to:
+  /// **'The board is full. Good game!'**
+  String get ticTacDraw;
+
+  /// No description provided for @jigsawPlace.
+  ///
+  /// In en, this message translates to:
+  /// **'Put the pieces in their places!'**
+  String get jigsawPlace;
+
+  /// No description provided for @ispyColour.
+  ///
+  /// In en, this message translates to:
+  /// **'Find something this colour!'**
+  String get ispyColour;
+
+  /// No description provided for @ispyAnimal.
+  ///
+  /// In en, this message translates to:
+  /// **'Find this animal!'**
+  String get ispyAnimal;
+
+  /// No description provided for @ispyDifference.
+  ///
+  /// In en, this message translates to:
+  /// **'Find what is different!'**
+  String get ispyDifference;
+
+  /// No description provided for @feedRaceRoll.
+  ///
+  /// In en, this message translates to:
+  /// **'Roll the dice and feed your animal!'**
+  String get feedRaceRoll;
+
+  /// No description provided for @feedRaceTap.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap a berry for each dot!'**
+  String get feedRaceTap;
+
+  /// No description provided for @feedRaceFull.
+  ///
+  /// In en, this message translates to:
+  /// **'Full tummy!'**
+  String get feedRaceFull;
+
+  /// No description provided for @offscreenRealPuzzle.
+  ///
+  /// In en, this message translates to:
+  /// **'Do a real puzzle with a grown-up!'**
+  String get offscreenRealPuzzle;
+
+  /// No description provided for @offscreenMemoryObjects.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide three toys under cups. Where is the teddy?'**
+  String get offscreenMemoryObjects;
+
+  /// No description provided for @offscreenHopRace.
+  ///
+  /// In en, this message translates to:
+  /// **'Have a hopping race with a grown-up. Everyone wins!'**
+  String get offscreenHopRace;
+
+  /// No description provided for @offscreenSpyRoom.
+  ///
+  /// In en, this message translates to:
+  /// **'Play I Spy in your room with a grown-up!'**
+  String get offscreenSpyRoom;
+
+  /// No description provided for @offscreenFeedTeddy.
+  ///
+  /// In en, this message translates to:
+  /// **'Give your teddy three pretend berries!'**
+  String get offscreenFeedTeddy;
+
+  /// No description provided for @offscreenLineUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Line up your shoes, matching pairs!'**
+  String get offscreenLineUp;
+
+  /// No description provided for @offscreenFamilyGame.
+  ///
+  /// In en, this message translates to:
+  /// **'Play a real board game with your family!'**
+  String get offscreenFamilyGame;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

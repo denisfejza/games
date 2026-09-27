@@ -319,6 +319,40 @@ warm, slow, smiling). Lines with `{…}` placeholders are recorded per value, e.
 | `stickersMore` | Collect stars to find more stickers! | Mblidh yje për të gjetur më shumë ngjitëse! | — | — |
 | `costumeMore` | Collect more stars for this one! | Mblidh më shumë yje për këtë! | — | — |
 | `pipLovesIt` | I love it! | Më pëlqen shumë! | — | — |
+| `turnRabbit` | Rabbit's turn! | Radha e lepurit! | — | — |
+| `turnTurtle` | Turtle's turn! | Radha e breshkës! | — | — |
+| `turnPip` | Pip's turn! | Radha e Pipit! | — | — |
+| `boardChoosePlayers` | Who is playing? | Kush po luan? | — | — |
+| `boardTwoFriends` | Two friends | Dy shokë | — | — |
+| `boardWithPip` | Play with Pip | Luaj me Pipin | — | — |
+| `boardEveryoneWins` | Hooray! Everyone played so well! | Urra! Të gjithë luajtën shumë bukur! | — | — |
+| `boardRoll` | Tap the dice! | Prek zarin! | — | — |
+| `boardHop` | Tap your animal to hop! | Prek kafshën tënde që të kërcejë! | — | — |
+| `boardVineUp` | A vine! Climb up! | Një hardhi! Ngjitu lart! | — | — |
+| `boardSlideDown` | Wheee! A slide! | Uiii! Një rrëshqitëse! | — | — |
+| `boardFinish` | You reached the end! | Arrite në fund! | — | — |
+| `boardQuestion` | A little question! | Një pyetje e vogël! | — | — |
+| `dominoPlay` | Find a tile that matches an end! | Gjej një pllakë që përputhet me një skaj! | — | — |
+| `dominoDraw` | No match. Take a new tile! | Asnjë përputhje. Merr një pllakë të re! | — | — |
+| `bingoFind` | Is it on your card? | A është në kartën tënde? | — | — |
+| `bingoLine` | Bingo! A full row! | Bingo! Një rresht i plotë! | — | — |
+| `ticTacTurn` | Pick a square! | Zgjidh një katror! | — | — |
+| `ticTacLine` | Three in a row! | Tre në një rresht! | — | — |
+| `ticTacDraw` | The board is full. Good game! | Tabela u mbush. Lojë e bukur! | — | — |
+| `jigsawPlace` | Put the pieces in their places! | Vendosi pjesët në vendet e tyre! | — | — |
+| `ispyColour` | Find something this colour! | Gjej diçka me këtë ngjyrë! | — | — |
+| `ispyAnimal` | Find this animal! | Gjej këtë kafshë! | — | — |
+| `ispyDifference` | Find what is different! | Gjej çfarë është ndryshe! | — | — |
+| `feedRaceRoll` | Roll the dice and feed your animal! | Hidh zarin dhe ushqe kafshën tënde! | — | — |
+| `feedRaceTap` | Tap a berry for each dot! | Prek një kokërr për çdo pikë! | — | — |
+| `feedRaceFull` | Full tummy! | Barku plot! | — | — |
+| `offscreenRealPuzzle` | Do a real puzzle with a grown-up! | Bëj një enigmë të vërtetë me një të rritur! | — | — |
+| `offscreenMemoryObjects` | Hide three toys under cups. Where is the teddy? | Fshih tri lodra nën gota. Ku është arushi? | — | — |
+| `offscreenHopRace` | Have a hopping race with a grown-up. Everyone wins! | Bëni një garë me kërcime me një të rritur. Të gjithë fitojnë! | — | — |
+| `offscreenSpyRoom` | Play I Spy in your room with a grown-up! | Luaj «Shoh diçka» në dhomën tënde me një të rritur! | — | — |
+| `offscreenFeedTeddy` | Give your teddy three pretend berries! | Jepi arushit tënd tri kokrra për lojë! | — | — |
+| `offscreenLineUp` | Line up your shoes, matching pairs! | Rreshto këpucët, çift pas çifti! | — | — |
+| `offscreenFamilyGame` | Play a real board game with your family! | Luaj një lojë të vërtetë tavoline me familjen! | — | — |
 
 ## Animal sounds (language-independent)
 
@@ -357,4 +391,4 @@ Record as `app/assets/audio/sfx/<name>.ogg`.
 | `audio/sfx/animalToad.ogg` | — |
 | `audio/sfx/animalWhale.ogg` | — |
 
-**Progress:** 0 of 311 lines recorded in both languages; 0 of 30 animal sounds.
+**Progress:** 0 of 345 lines recorded in both languages; 0 of 30 animal sounds.
